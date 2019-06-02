@@ -11,10 +11,11 @@ function Home(props) {
 function LandingPage(props) {
   return (
     <div>
-      <h1>LandingPage</h1>
-      <div>
-        <Link to={ROUTES.ABOUT}>About</Link>
-      </div>
+      {/* <h1>Software Developer giving digital artists a hand in tech and getting them back to creating.</h1> */}
+      {/* <h1>Vancouver-based Software Engineer giving back creators their creative authority in digital workflows.</h1> */}
+      <h1>Vancouver-based Software Engineer giving creators more creative agency in their digital workflows.</h1>
+      {/* <h1>Giving you more creative agency in digital workflows.</h1> */}
+      {/* <h3>By automating processes in 3D modeling, animation, rendering,  dynamic simulations, and publishing instead of executing and managing them manually, I can help you achieve increased operational efficiency, agility and visibility.</h3> */}
     </div>
   );
 }
