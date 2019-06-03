@@ -19,9 +19,9 @@ function App(props) {
                 <li>
                   <Link to={ROUTES.WORKS}>Works</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to={ROUTES.IDEAS}>Ideas</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to={ROUTES.ABOUT}>About</Link>
                 </li>

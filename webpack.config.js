@@ -1,11 +1,10 @@
-// var path = require('path');
+var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {  
   entry: './src/index.js', 
   output: {
-    path: __dirname + '/dist', 
-    // path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/', 
     filename: 'bundle.js'  }, 
   devServer: {
@@ -25,6 +24,3 @@ module.exports = {
       }]
   },
 };
-
-
-console.log("###############", __dirname + '/dist')
