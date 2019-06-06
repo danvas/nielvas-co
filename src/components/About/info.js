@@ -11,7 +11,7 @@ function Octicon() {
 
 function InfoFooter(props) {
   return (
-    <footer className="page-footer font-small bg-warning pt-4">
+    <footer className="page-footer font-small pt-4 px-2">
       <div className="container-fluid text-center text-md-left">
         <div className="row">
         {/* <div className="col-md-6 mt-md-0 mt-3"> */}
@@ -37,7 +37,7 @@ function InfoFooter(props) {
         </div>
         </div>
       </div>
-      <div className="footer-copyright font-weight-light text-center text-small text-muted bg-light py-3">
+      <div className="footer-copyright font-weight-light text-center text-small text-muted py-3">
         © 2019 Daniel Vasquez. All Rights Reserved.
       </div>
     </footer>

@@ -16,11 +16,11 @@ import * as ROUTES from '../../constants/routes';
 
 function App(props) {
   return (
-    <div className="container">
+    <div>
       <Router>
         <div>
           <header>
-          <Navbar bg="light" expand="sm">
+          <Navbar bg="" expand="sm">
             <LinkContainer to={ROUTES.LANDING}><Navbar.Brand className="mb-0 h1">Daniel Vasquez</Navbar.Brand></LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

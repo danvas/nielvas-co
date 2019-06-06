@@ -43,6 +43,14 @@ module.exports = {
         }, {
           loader: 'sass-loader' // compiles Sass to CSS
         }]
+      },
+      {
+        test: /\.(ttf|eot|svg|woff2|gif|png|jpg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        // include: path.resolve(__dirname, 'scss'),
+        exclude: /node_modules/, 
+        use: [{
+            loader: 'file-loader'
+        }]
       }
     ]
   },
