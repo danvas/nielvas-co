@@ -2,46 +2,43 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from 'react-router-dom';
-import { About, Contact } from '../About';
+import { 
+  About,
+  Contact,
+  InfoFooter } from '../About';
 import LandingPage, { Home } from '../Landing';
+import Works from '../Works';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import { LinkContainer } from 'react-router-bootstrap'
 import * as ROUTES from '../../constants/routes';
 
 function App(props) {
   return (
-    <div>
+    <div className="container">
       <Router>
         <div>
           <header>
-            <div>
-              <ul>
-                <li>
-                  <Link to={ROUTES.WORKS}>Works</Link>
-                </li>
-                {/* <li>
-                  <Link to={ROUTES.IDEAS}>Ideas</Link>
-                </li> */}
-                <li>
-                  <Link to={ROUTES.ABOUT}>About</Link>
-                </li>
-                {/* <li>
-                  <Link to={ROUTES.CONTACT}>Contact</Link>
-                </li> */}
-              </ul>
-            </div>
+          <Navbar bg="light" expand="sm">
+            <LinkContainer to={ROUTES.LANDING}><Navbar.Brand className="mb-0 h1">Daniel Vasquez</Navbar.Brand></LinkContainer>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav>
+                <LinkContainer to={ROUTES.WORKS}><Nav.Link>Work</Nav.Link></LinkContainer>
+                <LinkContainer to={ROUTES.ABOUT}><Nav.Link>About</Nav.Link></LinkContainer>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
           </header>
           <main role="main">
             <Route exact path={ROUTES.LANDING} component={LandingPage} />
-            <Route path={ROUTES.HOME} component={Home} />
+            <Route path={ROUTES.HOME} component={LandingPage} />
+            <Route path={ROUTES.WORKS} component={Works} />
             <Route path={ROUTES.ABOUT} component={About} />
             <Route path={ROUTES.CONTACT} component={Contact} />
           </main>
-          <footer>
-            <p>
-              <a href="mailto:d@nielvas.co?&amp;subject=Hello%20👋&amp;body=Hello Daniel,%0A">Say hello</a>
-            </p>
-          </footer>
+          <InfoFooter />
         </div>
       </Router>
     </div>
