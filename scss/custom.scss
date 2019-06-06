@@ -1,0 +1,91 @@
+// Override any default variables before the import
+// @import url(https://fonts.googleapis.com/css?family=Inconsolata|Didact+Gothic|Montserrat|Libre+Franklin);
+
+// $primary: #180015; 
+// $secondary: #c3ebd8;
+// $danger: #ce4e4e;
+// $warning: #ff9797;
+// $dark: #282b29;
+// $black: #1d1d20;
+// $white: #f5f4f0;
+// $light: #f5f5e7;
+// $info: #7ba0a0;
+
+// $body-bg: $light;
+
+// $font-family-sans-serif:   "Didact Gothic",;
+// $font-family-sans-serif: "Inconsolata",;
+// $font-family-sans-serif:   "Libre Franklin",;
+// $font-family-sans-serif: "Montserrat",;
+
+// Import Bootstrap and its default variables
+@import 'bootstrap/scss/bootstrap.scss';
+
+// .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+//   color: #fff;
+//   background-color: #8300db;
+//   border-color: #1b0cee; /*set the color you want here*/
+// }
+
+$blur-intensity: 3px;
+
+.blur {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -webkit-filter: blur($blur-intensity);
+  -moz-filter: blur($blur-intensity);
+  -ms-filter: blur($blur-intensity);
+  -o-filter: blur($blur-intensity);
+  filter: blur($blur-intensity);
+  z-index: 2
+  }
+
+.bg-animated {
+  animation: fade 5s infinite;
+  animation-direction: forward;
+}
+
+@keyframes fade {
+  0% {
+    background-color: $secondary;
+  }
+  50% {
+    background-color: $white;
+  }
+  100% {
+    background-color: $secondary;
+  }
+}
+.bg-animated-primary {
+  animation: fadePrimary 5s infinite;
+  animation-direction: forward;
+}
+
+@keyframes fadePrimary {
+  0% {
+    background-color: $white;
+  }
+  50% {
+    background-color: $primary;
+  }
+  100% {
+    background-color: $white;
+  }
+}
+.animated-primary-inverse {
+  animation: fadePrimaryInv 5s infinite;
+  animation-direction: forward;
+}
+
+@keyframes fadePrimaryInv {
+  0% {
+    background-color: $primary;
+  }
+  50% {
+    background-color: $white;
+  }
+  100% {
+    background-color: $primary;
+  }
+}
