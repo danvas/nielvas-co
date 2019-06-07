@@ -2,7 +2,7 @@ import React from "react";
 
 function About(props) {
   return (
-    <div className="bg-light">
+    <div className="bg-light p-5">
       <h1>About</h1>
       <b>I'm a Vancouver-based Software Developer</b>
       <p>

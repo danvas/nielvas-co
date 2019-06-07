@@ -5,7 +5,7 @@ import * as ROUTES from '../../constants/routes';
 
 function Works(props) {
   return (
-    <div className="bg-light">
+    <div className="bg-light p-5">
       <nav id="navbar-example3" className="navbar navbar-light bg-light">
         <a className="navbar-brand" href="#">Navbar</a>
         <nav className="nav nav-pills flex-column">

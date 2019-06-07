@@ -10,13 +10,13 @@ function Home(props) {
 
 function LandingPage(props) {
   return (
-    <div className="container d-flex flex-column align-items-stretch my-5">
-      <div className="display-4"><span className="bg-black text-white px-2">Software  tool  maker</span> for Creatives, Artists, and Innovators.</div>
-      <div className="align-middle d-flex my-5">
-      {/* <button type="button" className="btn mx-auto rounded-pill btn-outline-primary btn-lg">See Projects</button> */}
-      <LinkContainer to={ROUTES.WORKS}><Button className="rounded-pill mx-auto" size="lg" variant="outline-primary">See More</Button></LinkContainer>
+    <div className="container d-flex flex-column">
+      <div className="col-xs-12" style={{height:"6rem"}}></div>
+      <div className="display-4 px-2"><span className="bg-black text-white">Software toolmaker</span> for Creatives, Artists, and Innovators.</div>
+      <div className="align-middle mx-auto my-5">
+        <LinkContainer to={ROUTES.WORKS}><Button className="rounded-pill mx-auto" size="lg" variant="outline-primary">See More</Button></LinkContainer>
       </div>
-      {/* <div className="col-xs-12" style={{height:"5rem"}}></div> */}
+      <div className="col-xs-12" style={{height:"6rem"}}></div>
     </div>
   );
 }
