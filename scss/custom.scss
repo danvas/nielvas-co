@@ -19,6 +19,15 @@
 // Import Bootstrap and its default variables
 @import 'bootstrap/scss/bootstrap.scss';
 
+body {
+  // background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../src/images/cloud.jpg') no-repeat center center fixed;
+  background:  url('../src/images/cloud.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
 // From https://gist.github.com/jareware/4738651
 @each $name in 'cloud' {
   .bg-#{$name} {
@@ -33,11 +42,38 @@
   }
 }
 
-// .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-//   color: #fff;
-//   background-color: #8300db;
-//   border-color: #1b0cee; /*set the color you want here*/
-// }
+// Menu styling
+.menu-link {
+  color: $dark;
+  outline: 0.15rem solid transparent;
+  @extend .p-1
+}
+
+.menu-link:hover {
+  color: $light;
+  outline-color: $light;
+  text-decoration: none;
+  @extend .menu-link
+}
+
+.menu-link-active {
+  color: $light;
+  @extend .menu-link
+}
+
+.menu-link-active:hover {
+  text-decoration: none;
+  @extend .menu-link-active
+}
+
+.modal-full {
+  min-width: 100%;
+  margin: 0;
+}
+
+.modal-full .modal-content {
+  min-height: 100vh;
+}
 
 $blur-intensity: 3px;
 
