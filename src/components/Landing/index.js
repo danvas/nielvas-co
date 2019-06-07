@@ -10,11 +10,8 @@ function Home(props) {
 
 function LandingPage(props) {
   return (
-    <div className="container mt-5">
-      {/* <h1>Giving you more creative agency in digital workflows.</h1> */}
-      {/* <h1>Toolmaking for Creatives, Artists, and Innovators.</h1> */}
-        
-      <div className="display-4">Software tools for Creatives, Artists, and Innovators.</div>
+    <div className="container d-flex flex-column align-items-stretch my-5">
+      <div className="display-4"><span className="bg-black text-white px-2">Software  tool  maker</span> for Creatives, Artists, and Innovators.</div>
       <div className="align-middle d-flex my-5">
       {/* <button type="button" className="btn mx-auto rounded-pill btn-outline-primary btn-lg">See Projects</button> */}
       <LinkContainer to={ROUTES.WORKS}><Button className="rounded-pill mx-auto" size="lg" variant="outline-primary">See More</Button></LinkContainer>

@@ -2,7 +2,7 @@ import React from "react";
 
 function About(props) {
   return (
-    <div>
+    <div className="bg-light">
       <h1>About</h1>
       <b>I'm a Vancouver-based Software Developer</b>
       <p>
@@ -16,8 +16,10 @@ function About(props) {
       </p>
 
       <h3>Areas of Practice</h3>
+      <div className="card p-4 m-5">
       <h5>Television & Film</h5>
       <p>By automating processes in 3D modeling, animation, rendering, dynamic simulations, and publishing instead of executing and managing them manually, I can help you achieve increased operational efficiency, agility and visibility.</p>
+      </div>
       <h5>Digital Media & Technology</h5>
       <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
       <h5>Computational Biology</h5>

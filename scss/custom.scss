@@ -1,17 +1,14 @@
 // Override any default variables before the import
-// @import url(https://fonts.googleapis.com/css?family=Inconsolata|Didact+Gothic|Montserrat|Libre+Franklin);
+// @import url(https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata|Didact+Gothic|Montserrat|Libre+Franklin);
 
-// $primary: #180015; 
-// $secondary: #c3ebd8;
-// $danger: #ce4e4e;
-// $warning: #ff9797;
-// $dark: #282b29;
-// $black: #1d1d20;
-// $white: #f5f4f0;
-// $light: #f5f5e7;
-// $info: #7ba0a0;
 
-// $body-bg: $light;
+// $theme-colors: (
+//   "primary": #c3ebd8,
+//   "secondary": #c3ebd8,
+//   "danger": #ce4e4e,
+//   "white": #f5f4f0,
+//   "light": #f5f5e7
+// );
 
 // $font-family-sans-serif:   "Didact Gothic",;
 // $font-family-sans-serif: "Inconsolata",;
@@ -22,13 +19,18 @@
 // Import Bootstrap and its default variables
 @import 'bootstrap/scss/bootstrap.scss';
 
-
-body {
-  background: url('../src/images/cloud01.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+// From https://gist.github.com/jareware/4738651
+@each $name in 'cloud' {
+  .bg-#{$name} {
+      background: url('../src/images/#{$name}.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
 }
 
 // .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
@@ -52,7 +54,7 @@ $blur-intensity: 3px;
   }
 
 .bg-animated {
-  animation: fade 5s infinite;
+  animation: fade 15s infinite;
   animation-direction: forward;
 }
 
@@ -60,13 +62,27 @@ $blur-intensity: 3px;
   0% {
     background-color: $secondary;
   }
+  25% {
+    background-color: $primary;
+  }
   50% {
-    background-color: $white;
+    background-color: $danger;
   }
   100% {
     background-color: $secondary;
   }
 }
+// @keyframes fade {
+//   0% {
+//     background-color: $secondary;
+//   }
+//   50% {
+//     background-color: $white;
+//   }
+//   100% {
+//     background-color: $secondary;
+//   }
+// }
 .bg-animated-primary {
   animation: fadePrimary 5s infinite;
   animation-direction: forward;
@@ -74,13 +90,13 @@ $blur-intensity: 3px;
 
 @keyframes fadePrimary {
   0% {
-    background-color: $white;
+    background-color: $danger;
   }
   50% {
     background-color: $primary;
   }
   100% {
-    background-color: $white;
+    background-color: $danger;
   }
 }
 .animated-primary-inverse {

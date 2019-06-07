@@ -1,8 +1,9 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route,
+  Route
 } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 import { 
   About,
   Contact,
@@ -16,11 +17,11 @@ import * as ROUTES from '../../constants/routes';
 
 function App(props) {
   return (
-    <div>
+    <div className="bg-cloud vh-100">
       <Router>
         <div>
           <header>
-          <Navbar bg="" expand="sm">
+          <Navbar expand="sm">
             <LinkContainer to={ROUTES.LANDING}><Navbar.Brand className="mb-0 h1">Daniel Vasquez</Navbar.Brand></LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
