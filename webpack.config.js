@@ -12,6 +12,7 @@ module.exports = {
   devServer: {
     contentBase: './dist', 
     historyApiFallback: true,
+    host: '0.0.0.0' // for running on other devices on the same network
   }, 
   plugins: [
     new HtmlWebpackPlugin({
