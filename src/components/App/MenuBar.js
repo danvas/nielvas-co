@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import Dropdown from 'react-bootstrap/Dropdown';
-import FormControl from 'react-bootstrap/FormControl';
 import * as ROUTES from '../../constants/routes';
 import { useWindowWidth } from '../../hooks';
-
+import colors from '../../style/custom.scss';
+import cloudImg from '../../images/cloud.jpg';
 
 class CustomToggle extends React.Component {
   constructor(props, context) {
@@ -121,13 +119,26 @@ function ExpandedMenu(props) {
   );
 }
 
+function updateBackground(location) {
+  const backgroundImgMap = {
+    [ROUTES.LANDING]: `url('${cloudImg}')`,
+    [ROUTES.ABOUT]: colors.skyGradient,
+  };
+  if (backgroundImgMap[location]) {
+    document.body.style.backgroundImage = backgroundImgMap[location];
+  } else {
+    document.body.style.backgroundImage = colors.skyGradient;
+  }
+}
+
 function MenuBar(props) {
   // const windowWidth = useWindowWidth();
   // const expandMenu = windowWidth > 600;
   const expandMenu = true; // Always expanded (for now).
+  updateBackground(props.location.pathname);
 
   return (
-    <div className="">
+    <div>
       {expandMenu? 
         <ExpandedMenu activePath={props.location.pathname}/>
         :

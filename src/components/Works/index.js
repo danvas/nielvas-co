@@ -3,7 +3,42 @@ import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 
 
-function Works(props) {
+function WorkCard(props) {
+  const {
+    title,
+    previewImg,
+    description
+  } = props;
+  return (
+    <div className="card bg-dark text-white">
+      <div className="card-img-overlay">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}</p>
+        <p className="card-text">Last updated 3 mins ago</p>
+      </div>
+      <div className=""><img className="card-img" src={previewImg} alt={title}/></div>
+    </div>
+  );
+}
+
+function WorksPage(props) {
+  return (
+    <div className="container-fluid p-4">
+      <div className="row">
+        <div className="col-12 col-md-8"><WorkCard title="Deep Dive" previewImg="http://heylight.com/wp-content/uploads/2010/10/helmet15a.jpeg.scaled1000-284x211.jpg" description="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer." /></div>
+        <div className="col-6 col-md-4"><WorkCard title="Telus Hippo" previewImg="http://heylight.com/wp-content/uploads/2013/05/hippoV_thumb-284x211.png" description="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer." /></div>
+      </div>
+
+      <div className="row">
+        <div className="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div className="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div className="col-6 col-md-4">.col-6 .col-md-4</div>
+      </div>
+    </div>
+  );
+}
+
+function _Works(props) {
   return (
     <div className="bg-light p-5">
       <nav id="navbar-example3" className="navbar navbar-light bg-light">
@@ -44,4 +79,4 @@ function Works(props) {
   );
 }
 
-export default Works;
+export default WorksPage;

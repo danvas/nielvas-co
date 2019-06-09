@@ -18,21 +18,21 @@ function InfoFooter(props) {
         <div className="col">
           {/* <h5 className="text-uppercase">Daniel Vasquez</h5> */}
           <p>
-            <a target="_blank" href="mailto:d@nielvas.co?&amp;subject=Hello%20👋">✉️ d@nielvas.co</a>
+            <a className="menu-link" target="_blank" href="mailto:d@nielvas.co?&amp;subject=Hello%20👋">d@nielvas.co</a>
             <br/>
             {/* <a href="tel:604-616-6445">☎ 604-616-6445</a>
             <br/> */}
-            📍 Vancouver, Canada
+            Vancouver, Canada
           </p>
         </div>
 
         {/* <div className="col-md-3 mb-md-0 mb-3 bg-danger"> */}
         <div className="col">
           <div className="d-flex justify-content-around">
-            <div className="p-2"><Octicon /></div>
-            <div className="p-2">Keybase</div>
-            <div className="p-2">LinkedIn</div>
-            <div className="p-2">IMDb</div>
+            <a className="menu-link" target="_blank" href="https://github.com/danvas">Github</a>
+            <a className="menu-link" target="_blank" href="https://keybase.io/danvas">Keybase</a>
+            <a className="menu-link" target="_blank" href="https://www.linkedin.com/in/danvas">LinkedIn</a>
+            <a className="menu-link" target="_blank" href="https://www.imdb.com/name/nm9678054/">IMDb</a>
           </div>
         </div>
         </div>

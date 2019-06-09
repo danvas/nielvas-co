@@ -11,10 +11,12 @@ function Home(props) {
 function LandingPage(props) {
   return (
     <div className="container d-flex flex-column">
-      <div className="col-xs-12" style={{height:"6rem"}}></div>
-      <div className="display-4 px-2"><span className="bg-black text-white">Software toolmaker</span> for Creatives, Artists, and Innovators.</div>
+      <div className="col-xs-12" style={{height:"3.5rem"}}></div>
+      <div className="display-4 px-2">
+        <span className="headline_main_role">Software toolmaker</span> for Creatives, Artists, and Businesses.
+      </div>
       <div className="align-middle mx-auto my-5">
-        <LinkContainer to={ROUTES.WORKS}><Button className="rounded-pill mx-auto" size="lg" variant="outline-primary">See More</Button></LinkContainer>
+        <LinkContainer to={ROUTES.WORKS}><Button className="rounded-pill mx-auto" size="lg" variant="outline-light">See More</Button></LinkContainer>
       </div>
       <div className="col-xs-12" style={{height:"6rem"}}></div>
     </div>
