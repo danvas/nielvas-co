@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
+    "deploy": "aws s3 sync dist/ s3://nielvas.com/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
