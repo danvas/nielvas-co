@@ -1,37 +1,45 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
     steps:
+
+      # install git
+      - run: apk update && apk add git
+
+      # checkout the repository
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+      # install git submodules for managing third-party dependencies
+      - run: git submodule sync && git submodule update --init
 
-      - run: yarn install
+      - run:
+          name: install AWS CLI (first install pip, the Python package manager)
+          command: |
+            apk add --update python python-dev py-pip build-base
+            pip install awscli
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      # build with Hugo
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+ 
+      - run:
+          name: test our generated HTML files
+          command: |
+            htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
+            --empty-alt-ignore --disable-external
 
-      # run tests!
-      - run: yarn test
+      # `deploy` step: identical to a `run` step, but uses only one container:
+      # /docs/2.0/configuration-reference/#deploy 
+      - deploy:
+          name: deploy to AWS
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+              aws s3 sync $HUGO_BUILD_DIR \
+              s3://nielvas.com.s3-website.ca-central-1.amazonaws.com --delete
+            else
+              echo "Not master branch, dry run only"
+            fi
