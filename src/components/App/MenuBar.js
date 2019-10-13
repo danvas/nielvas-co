@@ -78,11 +78,11 @@ function DropMenu(props) {
             <Link className={toClassName(ROUTES.LANDING)} to={ROUTES.LANDING}>Home</Link>
           </div>
         </Dropdown.Item>
-        <Dropdown.Item as="span" eventKey="2">
+        {/* <Dropdown.Item as="span" eventKey="2">
           <div className="text-center">
             <Link className={toClassName(ROUTES.WORKS)} to={ROUTES.WORKS}>Work</Link>
           </div>
-        </Dropdown.Item>
+        </Dropdown.Item> */}
         <Dropdown.Item as="span" eventKey="3">
           <div className="text-center">
             <Link className={toClassName(ROUTES.ABOUT)} to={ROUTES.ABOUT}>About</Link>
@@ -106,9 +106,9 @@ function ExpandedMenu(props) {
           Daniel Vasquez
         </Link>
       </div>
-      <div className="align-self-center text-center">
+      {/* <div className="align-self-center text-center">
         <Link className={toClassName(ROUTES.WORKS)} to={ROUTES.WORKS}>Work</Link>
-      </div>
+      </div> */}
       {/* <div className="align-self-center text-center">
         <Link className={toClassName(ROUTES.IDEAS)} to={ROUTES.IDEAS}>Ideas</Link>
       </div> */}

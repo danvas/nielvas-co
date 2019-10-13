@@ -3,29 +3,13 @@ import React from "react";
 function About(props) {
   return (
     <div className="p-5">
-      <h1>About</h1>
-      <b>I'm a Vancouver-based Software Developer</b>
-      <p>
-        With a formal grounding in biochemistry and computer science and an aptitude for design, I have gained a unique perspective in my work.
-        I mainly work within the boundaries of filmmaking and software development, and I have collaborated with global recognised brands such as United Nations, Nissan, and Telus.
-      </p>
-      <p>
-        Software developer looking to join a startup that is solving problems and pushing boundaries in the visual effects pipeline, extended reality, or biotech space.
-        <br/>
-        Creator and designer of <a target="_blank" href="https://lyddy.stream">Lyddy</a> — a sound-sharing social networking web application which allows users to post third-party audio sources to their stream, follow other user streams, and organize posts by hashtags.
-      </p>
-
-      <h3>Areas of Practice</h3>
-      <div className="card p-4 m-5">
-      <h5>Television & Film</h5>
-      <p>By automating processes in 3D modeling, animation, rendering, dynamic simulations, and publishing instead of executing and managing them manually, I can help you achieve increased operational efficiency, agility and visibility.</p>
-      </div>
-      <h5>Digital Media & Technology</h5>
-      <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
-      <h5>Computational Biology</h5>
-      <p>Amet tempor mollit aliquip pariatur excepteur commodo do ea cillum commodo Lorem et occaecat elit qui et. Aliquip labore ex ex esse voluptate occaecat Lorem ullamco deserunt. Aliqua cillum excepteur irure consequat id quis ea. Sit proident ullamco aute magna pariatur nostrud labore. Reprehenderit aliqua commodo eiusmod aliquip est do duis amet proident magna consectetur consequat eu commodo fugiat non quis. Enim aliquip exercitation ullamco adipisicing voluptate excepteur minim exercitation minim minim commodo adipisicing exercitation officia nisi adipisicing. Anim id duis qui consequat labore adipisicing sint dolor elit cillum anim et fugiat.</p>
+      <br></br>
+      <h1>I design & develop software tools to automate workflows in digital content creation and integrating them into web applications.</h1>
+      <br></br>
+      <p>In the past 5 years, I created software tools for the visual effects pipeline in feature films, such as <a target="_blank" href="https://www.imdb.com/title/tt1825683/?ref_=nm_flmg_vsl_5">Black Panther</a> and Aquaman.</p>
+      <p>As a web developer I created <a target="_blank" href="https://lyddy.stream/nielvas">Lyddy</a> — a sound-sharing social networking web application which allows users to post third-party audio sources to their stream, follow other user streams, and organize posts by hashtags.</p>
+      <p>Currently I'm a Software Engineer at <a target="_blank" href="https://www.fnx.tech">FNX Technologies</a>, helping to integrate 3D visualization for the product lifecycle in the Fashion and Apparel supply chain.</p>
     </div>
-    
   );
 }
 

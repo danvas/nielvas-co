@@ -16,7 +16,7 @@ function LandingPage(props) {
         <span className="headline_main_role">Software toolmaker</span> for Creatives, Artists, and Businesses.
       </div>
       <div className="align-middle mx-auto my-5">
-        <LinkContainer to={ROUTES.WORKS}><Button className="rounded-pill mx-auto" size="lg" variant="outline-light">See More</Button></LinkContainer>
+        <LinkContainer to={ROUTES.ABOUT}><Button className="rounded-pill mx-auto" size="lg" variant="outline-light">Learn More</Button></LinkContainer>
       </div>
       <div className="col-xs-12" style={{height:"6rem"}}></div>
     </div>
