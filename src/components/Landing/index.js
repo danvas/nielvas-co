@@ -13,7 +13,7 @@ function LandingPage(props) {
     <div className="container d-flex flex-column">
       <div className="col-xs-12" style={{height:"3.5rem"}}></div>
       <div className="display-4 px-2">
-        <span className="headline_main_role">Software toolmaker</span> for Creatives, Artists, and Businesses.
+        <span className="headline_main_role">Engineering software</span> for Creatives, Artists, and Businesses.
       </div>
       <div className="align-middle mx-auto my-5">
         <LinkContainer to={ROUTES.ABOUT}><Button className="rounded-pill mx-auto" size="lg" variant="outline-light">Learn More</Button></LinkContainer>

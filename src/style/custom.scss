@@ -2,13 +2,10 @@
 // @import url(https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata|Didact+Gothic|Montserrat|Libre+Franklin);
 
 
-// $theme-colors: (
-//   "primary": #c3ebd8,
-//   "secondary": #c3ebd8,
-//   "danger": #ce4e4e,
-//   "white": #f5f4f0,
-//   "light": #f5f5e7,
-// );
+$theme-colors: (
+  "primary": #b4e4e7,
+  "danger": #ce4e4e,
+);
 
 // $font-family-sans-serif:   "Didact Gothic",;
 // $font-family-sans-serif: "Inconsolata",;
@@ -65,7 +62,7 @@ body {
 
 
 // Landing page
-$fadeDuration: 4s;
+$fadeDuration: 3s;
 .fade-into div {
   -webkit-animation: fadein $fadeDuration; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein $fadeDuration; /* Firefox < 16 */
