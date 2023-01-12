@@ -1,0 +1,90 @@
+$dark: #343a40;
+$primary: #9fe2e6;
+$fadeDuration: 0.3s;
+$nv-dark-blue: rgb(110, 134, 167);
+$nv-light-blue: rgb(182, 206, 227);
+$nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue);
+
+@import "bootstrap";
+
+@media print {
+  .resume-print {
+    font-size: 75%;
+  }
+
+  .pagebreak {
+    page-break-after: always;
+  }
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.nv-outlined-link {
+  @extend .nav-link;
+  @extend .px-1;
+  @extend .py-0;
+  @extend .text-nowrap;
+  @extend .fw-light;
+}
+
+.nv-outlined-link:hover {
+  outline: 1px solid $primary;
+  color: $primary;
+  animation: fadeIn $fadeDuration;
+  -webkit-animation: fadeIn $fadeDuration;
+  -moz-animation: fadeIn $fadeDuration;
+  -o-animation: fadeIn $fadeDuration;
+  -ms-animation: fadeIn $fadeDuration;
+}
+
+
+.nv-nav-link {
+  color: $dark;
+  @extend .nv-outlined-link;
+}
+
+.nv-nav-link:hover {
+  outline: 1px solid $light;
+  color: $light;
+  animation: fadeIn $fadeDuration;
+  -webkit-animation: fadeIn $fadeDuration;
+  -moz-animation: fadeIn $fadeDuration;
+  -o-animation: fadeIn $fadeDuration;
+  -ms-animation: fadeIn $fadeDuration;
+}
+
+.nv-nav-link.active {
+  outline: 1px solid $light;
+  color: $light;
+  animation: fadeIn $fadeDuration;
+  -webkit-animation: fadeIn $fadeDuration;
+  -moz-animation: fadeIn $fadeDuration;
+  -o-animation: fadeIn $fadeDuration;
+  -ms-animation: fadeIn $fadeDuration;
+}
+
+#root-container {
+  height: 100vh;
+}
+
+body {
+  background-color: $nv-light-blue;
+  background-image: $nv-sky-gradient;
+  background-attachment: fixed;
+  background-position: center;
+  background-origin: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
