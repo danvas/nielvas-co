@@ -7,7 +7,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "👨‍💻 FOO is ${{ $FOO }} event."
+      - run: echo "👨‍💻 FOO is $FOO ."
       - run: echo "👨‍💻 AWS_S3_BUCKET is ${{ secrets.AWS_S3_BUCKET }} event."
       - run: echo "From local dir ${{ vars.SOURCE_DIR }}!"
       - run: echo "To s3 bucket ${{ vars.DEST_DIR }}!"
