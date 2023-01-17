@@ -6,14 +6,41 @@ on:
       - master
 
 jobs:
+  build:
+    name: Build static webpage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check versions
+        run: |
+          echo "Commit $(git show --oneline -s)"
+          echo "node version $(node --version)"
+          echo "npm version $(npm --version)"
+          echo "yarn version $(yarn --version)"
+
+      - name: Run build
+        run: |
+          yarn install
+          yarn build
+          ls -al ./out
+
+      - name: Build output artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: static-build
+          path: ./out
+
   sync:
+    name: S3 sync
+    needs: build
     runs-on: ubuntu-latest
     environment: staging
     steps:
-      - uses: actions/checkout@master
-      - run: yarn install
-      - run: yarn build
-      - run: ls -al ./out
+      - uses: actions/download-artifact@v3
+        with:
+          name: static-build
+          path: ./out
+
       - uses: jakejarvis/s3-sync-action@v0.5.1
         with:
           args: --acl public-read --follow-symlinks --delete
@@ -26,14 +53,16 @@ jobs:
           DEST_DIR: ${{ vars.DEST_DIR }}
 
   deploy:
+    name: Cloudfront invalidation
+    needs: sync
     runs-on: ubuntu-latest
     environment: staging
     steps:
-      - name: Invalidate CloudFront
+      - name: Invalidate CloudFront distro
         uses: chetan/invalidate-cloudfront-action@v2
         env:
           DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
           PATHS: "/*"
-          AWS_REGION: ${{ vars.AWS_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ vars.AWS_REGION }}
