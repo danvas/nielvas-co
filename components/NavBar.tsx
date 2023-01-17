@@ -27,7 +27,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="nav p-2 mx-4 align-items-center justify-content-between d-print-none">
+    <nav className="nav p-2 align-items-center justify-content-between d-print-none">
       <Link
         onClick={() => setActiveIdx(NavIdx.HOME)}
         className={`nv-nav-link fs-3 ${active(NavIdx.HOME)}`}
@@ -38,14 +38,14 @@ const Navbar = () => {
       <div className="d-flex align-items-center">
         <Link
           onClick={() => setActiveIdx(NavIdx.RESUME)}
-          className={`nv-nav-link ms-3  fs-5 ${active(NavIdx.RESUME)}`}
+          className={`nv-nav-link ms-3 fs-5 ${active(NavIdx.RESUME)}`}
           href="/resume"
         >
           Resume
         </Link>
         <Link
           onClick={() => setActiveIdx(NavIdx.ABOUT)}
-          className={`nv-nav-link ms-3  fs-5 ${active(NavIdx.ABOUT)}`}
+          className={`nv-nav-link ms-3 fs-5 ${active(NavIdx.ABOUT)}`}
           href="/about"
         >
           About

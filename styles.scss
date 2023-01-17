@@ -10,9 +10,16 @@ $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue
 @media print {
   .resume-print {
     font-size: 75%;
+    width: 80%;
   }
 
-  .pagebreak {
+  .pagebreak-after:first-child {
+    display: block;
+    page-break-after: avoid;
+  }
+
+  .pagebreak-after {
+    display: block;
     page-break-after: always;
   }
 }
@@ -39,30 +46,34 @@ $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue
   @extend .fw-light;
 }
 
-.nv-outlined-link:hover {
-  outline: 1px solid $primary;
-  color: $primary;
-  animation: fadeIn $fadeDuration;
-  -webkit-animation: fadeIn $fadeDuration;
-  -moz-animation: fadeIn $fadeDuration;
-  -o-animation: fadeIn $fadeDuration;
-  -ms-animation: fadeIn $fadeDuration;
-}
-
 
 .nv-nav-link {
   color: $dark;
   @extend .nv-outlined-link;
 }
 
-.nv-nav-link:hover {
-  outline: 1px solid $light;
-  color: $light;
-  animation: fadeIn $fadeDuration;
-  -webkit-animation: fadeIn $fadeDuration;
-  -moz-animation: fadeIn $fadeDuration;
-  -o-animation: fadeIn $fadeDuration;
-  -ms-animation: fadeIn $fadeDuration;
+// Only apply hover style in browsers that support hover
+// See https://css-tricks.com/annoying-mobile-double-tap-link-issue
+@media (hover) {
+  .nv-outlined-link:hover {
+    outline: 1px solid $primary;
+    color: $primary;
+    animation: fadeIn $fadeDuration;
+    -webkit-animation: fadeIn $fadeDuration;
+    -moz-animation: fadeIn $fadeDuration;
+    -o-animation: fadeIn $fadeDuration;
+    -ms-animation: fadeIn $fadeDuration;
+  }
+
+  .nv-nav-link:hover {
+    outline: 1px solid $light;
+    color: $light;
+    animation: fadeIn $fadeDuration;
+    -webkit-animation: fadeIn $fadeDuration;
+    -moz-animation: fadeIn $fadeDuration;
+    -o-animation: fadeIn $fadeDuration;
+    -ms-animation: fadeIn $fadeDuration;
+  }
 }
 
 .nv-nav-link.active {
@@ -87,4 +98,6 @@ body {
   background-origin: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-print-color-adjust: economy;
+  print-color-adjust: economy;
 }

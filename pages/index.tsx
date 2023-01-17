@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 function IndexPage() {
   return (
@@ -14,7 +15,12 @@ function IndexPage() {
           <span className="text-light">Automating 3D workflows</span> for Creatives, Artists, and Businesses.
         </div>
         <div className="p-5" >
-          <a className="btn btn-outline-light btn-lg rounded-pill " href="/about" role="button">Learn More</a>
+          <Link
+            className="btn btn-outline-light btn-lg rounded-pill"
+            href="/about"
+          >
+            Learn More
+          </Link>
         </div>
 
       </div>

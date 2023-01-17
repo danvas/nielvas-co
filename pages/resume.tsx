@@ -65,9 +65,9 @@ function Description({ lines }) {
 
 function ExperienceRow(experience: ExperienceProps) {
   const descriptionLines = experience.description.split('\n')
-  const startYear = new Date(experience.startDate).getFullYear()
-  const endYear = isNaN(Date.parse(experience.endDate))
-    ? "Present" : new Date(experience.endDate).getFullYear()
+  const [, startYear] = experience.startDate.split(" ")
+  const [, endYear] = experience.endDate.split(" ")
+
   return (
     <div className="row py-3 align-items-baseline">
       <div className="col-2 text-muted">
@@ -108,7 +108,7 @@ function Resume() {
   }
 
   return (
-    <div className="container resume-print w-75">
+    <div className="container px-sm-5 resume-print">
       <section className="py-5 d-print-block d-none">
         <div className="d-flex justify-content-between align-items-center">
           <div className="display-3 text-uppercase text-nowrap fw-lighter">Daniel Vasquez</div>
@@ -143,7 +143,7 @@ function Resume() {
         </div>
         {experiences.map((experience, idx) => <ExperienceRow key={idx} {...experience} />)}
       </section>
-      <div className="pagebreak"></div>
+      <div className="pagebreak-after"></div>
       <section className="py-3" id="education-section">
         <div className="row">
           <div className="col">
