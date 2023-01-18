@@ -184,7 +184,6 @@ function Resume() {
       </section>
       <div className="py-5 d-flex justify-content-between align-items-center">
         <div className="small text-black-50 text-end d-print-none">Updated: {dateModified}</div>
-
       </div>
     </div>
   )
