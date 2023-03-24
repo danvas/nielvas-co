@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-function IndexPage() {
+function LandingPage() {
   return (
     <div className="h-100">
       <Head>
@@ -28,4 +28,4 @@ function IndexPage() {
   );
 }
 
-export default IndexPage
+export default LandingPage
