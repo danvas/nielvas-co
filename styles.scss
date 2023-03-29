@@ -1,6 +1,6 @@
 $dark: #343a40;
-$primary: #acdaeb;
-$fadeDuration: 0.3s;
+$primary: #c50076;
+$fadeDuration: 0.5s;
 $nv-dark-blue: rgb(110, 134, 167);
 $nv-light-blue: rgb(182, 206, 227);
 $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue);
@@ -31,6 +31,11 @@ $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue
 @media (min-width: 576px) {
   .nv-responsive-label {
     display: inline;
+  }
+
+  .nv-responsive-icon {
+    width: 1.5em;
+    height: 1.5em;
   }
 }
 
