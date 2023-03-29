@@ -24,6 +24,16 @@ $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue
   }
 }
 
+.nv-responsive-label {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .nv-responsive-label {
+    display: inline;
+  }
+}
+
 .pointer-cursor {
   cursor: pointer;
 }

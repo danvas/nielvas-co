@@ -31,9 +31,9 @@ function Footer() {
     <div className="d-print-none p-4">
       <div className="d-flex align-items-center">
 
-        <a className="nv-outlined-link fw-light me-4" target="_blank" href="https://www.linkedin.com/in/danvas"><LinkedInIcon /><span> LinkedIn</span></a>
-        <a className="nv-outlined-link fw-light me-4" target="_blank" href="https://github.com/danvas"><GitHubIcon /><span> Github</span></a>
-        <a className="nv-outlined-link fw-light" target="_blank" href="https://www.imdb.com/name/nm9678054"><IMDbIcon /><span> IMDb</span></a>
+        <a className="nv-outlined-link fw-light me-4" target="_blank" href="https://www.linkedin.com/in/danvas"><LinkedInIcon /><span className="nv-responsive-label"> LinkedIn</span></a>
+        <a className="nv-outlined-link fw-light me-4" target="_blank" href="https://github.com/danvas"><GitHubIcon /><span className="nv-responsive-label"> Github</span></a>
+        <a className="nv-outlined-link fw-light" target="_blank" href="https://www.imdb.com/name/nm9678054"><IMDbIcon /><span className="nv-responsive-label"> IMDb</span></a>
         <div className="ms-auto text-end">
           <a className="nv-outlined-link fw-light w-100" target="_blank" href="mailto:d@nielvas.co">d@nielvas.co</a>
           <div className="small text-muted pe-1">Vancouver, Canada</div>
