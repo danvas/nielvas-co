@@ -18,7 +18,7 @@ function About() {
           a sound-sharing social networking web application which allows users to post third-party audio sources
           to their stream, follow other user streams, and organize posts by hashtags.
         </p>
-        <p>I currently live and work in Vancouver, Canada, the unceded territories of the <a className="text-decoration-none" target="_blank" href="https://www.musqueam.bc.ca">xʷməθkʷəy̓əm</a>, <a className="text-decoration-none" target="_blank" href="https://www.squamish.net">Sḵwx̱wú7mesh</a> and <a className="text-decoration-none" target="_blank" href="https://twnation.ca">səl̓ílwətaʔɬ</a> Nations.</p>
+        <p>I currently live and work in the unceded territories of the <a className="text-decoration-none" target="_blank" href="https://www.musqueam.bc.ca">xʷməθkʷəy̓əm</a>, <a className="text-decoration-none" target="_blank" href="https://www.squamish.net">Sḵwx̱wú7mesh</a> and <a className="text-decoration-none" target="_blank" href="https://twnation.ca">səl̓ílwətaʔɬ</a> Nations.</p>
         {/* <p>For more information, take a look at my <Link className="text-decoration-none" href="/resume">resume</Link>.</p> */}
       </div>
       {/* <img src="https://media.licdn.com/dms/image/C4E03AQGPdeN348ESJw/profile-displayphoto-shrink_400_400/0/1516267692651?e=1678320000&v=beta&t=wNvmmhlpt1STUaAy295yGyQZIginpgY9FHsZ6iT5l_c" /> */}
