@@ -42,11 +42,11 @@ function Footer() {
           <LinkedInIcon />
           <span className="nv-responsive-label"> LinkedIn</span>
         </a>
-        <a className="nv-outlined-link pt-1 me-3" href="https://www.linkedin.com/in/danvas" target="_blank">
+        <a className="nv-outlined-link pt-1 me-3" href="https://github.com/danvas" target="_blank">
           <GitHubIcon />
           <span className="nv-responsive-label"> GitHub</span>
         </a>
-        <a className="nv-outlined-link pt-1" href="https://www.linkedin.com/in/danvas" target="_blank">
+        <a className="nv-outlined-link pt-1" href="https://www.imdb.com/name/nm9678054/" target="_blank">
           <IMDbIcon />
           <span className="nv-responsive-label"> IMDb</span>
         </a>
