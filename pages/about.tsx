@@ -1,10 +1,14 @@
 import React from "react"
+import Link from 'next/link'
 
 function About() {
   return (
-    <div className="container p-5">
-      <div className="fs-1 fw-light pb-5">
+    <div className="container-sm p-5">
+      <div className="fs-2 fw-lighter pb-5">
         I build workflow tools and pipelines for 3D artists and designers in visual effects, animation, and fashion & apparel.
+      </div>
+      <div className="row">
+        <hr className="pb-4 w-75 mx-auto" />
       </div>
       <div>
         <p>

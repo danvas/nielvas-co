@@ -67,6 +67,17 @@ $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue
   @extend .nv-outlined-link;
 }
 
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.nv-blur-bg {
+  backdrop-filter: blur(4px);
+}
+
 // Only apply hover style in browsers that support hover
 // See https://css-tricks.com/annoying-mobile-double-tap-link-issue
 @media (hover) {

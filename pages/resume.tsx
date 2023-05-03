@@ -100,7 +100,7 @@ function Resume() {
   const educations = cv.education.filter(e => !e.degree.includes("MSc"))
 
   return (
-    <div className="container px-sm-5 resume-print">
+    <div className="container px-4 resume-print">
       <section className="py-5 d-print-block d-none">
         <div className="d-flex justify-content-between align-items-center">
           <div className="display-3 text-uppercase text-nowrap fw-lighter">Daniel Vasquez</div>
