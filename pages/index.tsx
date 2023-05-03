@@ -6,7 +6,7 @@ function LandingPage() {
     <div className="h-100">
       <Head>
         <title>Daniel Vasquez // 3D Software Developer</title>
-        <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/hundred-points-symbol_1f4af.png" />
+        <link rel="icon" href="https://symbl-world.akamaized.net/i/webp/78/4c77a8fb21eeb70940ce079977345c.webp" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </Head>
 
