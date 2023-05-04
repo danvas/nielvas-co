@@ -77,14 +77,15 @@ const Navbar = () => {
 
         <div className={`collapse ${toggle && "show"} navbar-collapse justify-content-end`}>
           <div className="d-sm-flex gap-3 mt-1 text-end ">
-            {/* <Link
+            <Link
               onClick={() => setActiveIdx(NavIdx.WORK)}
               className={`nv-nav-link fs-5 ${active(NavIdx.WORK)}`}
               href="/work"
             >
               Work
-            </Link> */}
+            </Link>
             <Link
+              hidden={true}
               onClick={() => setActiveIdx(NavIdx.RESUME)}
               className={`nv-nav-link fs-5 ${active(NavIdx.RESUME)}`}
               href="/resume"
