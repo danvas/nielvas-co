@@ -119,18 +119,9 @@ $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue
 }
 
 .nv-project-card {
-  // outline: 1px solid #ffd6ef5c;
-  outline: 1px dashed #fffeff5c;
   padding: 1rem;
-}
-
-.nv-project-card:hover {
-  outline: 1px solid $nv-light-blue;
-  animation: fadeIn $fadeDuration;
-  -webkit-animation: fadeIn $fadeDuration;
-  -moz-animation: fadeIn $fadeDuration;
-  -o-animation: fadeIn $fadeDuration;
-  -ms-animation: fadeIn $fadeDuration;
+  min-width: 200px;
+  max-width: 410px;
 }
 
 .nv-cloud-bg {

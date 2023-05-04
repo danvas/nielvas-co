@@ -29,15 +29,15 @@ function ProjectCard(project: ProjectProps) {
   const descriptionLines = description.split("\n")
 
   return (
-    <div className="nv-project-card text-dark" style={{ minWidth: "200px", maxWidth: "440px" }}>
+    <div className="nv-project-card text-dark border border-light">
       <div className="d-flex fs-4 align-items-center justify-content-between">
-        <div className="me-2">{title}</div>
-        <div className="fst-italic text-body-tertiary" style={{ fontSize: "1rem" }}>
+        <div className="text-light me-2">{title}</div>
+        <div className="text-body-tertiary" style={{ fontSize: "1rem" }}>
           {year}
         </div>
       </div>
       <div className="pb-2 px-1">
-        <div className="fw-light text-muted text-decoration-none">{subtitle}</div>
+        <div className="fw-light opacity-75 text-muted text-decoration-none">{subtitle}</div>
       </div>
       <div className="px-1"><Description lines={descriptionLines} /></div>
 
@@ -47,9 +47,9 @@ function ProjectCard(project: ProjectProps) {
       <div className="d-flex pt-4 justify-content-between">
         {links.map((link) => {
           return (
-            <a key={link.url} className="nv-outlined-link pt-1" href={link.url} target="_blank" >
+            <a key={link.url} className="pt-1" href={link.url} target="_blank" >
               {link.icon}
-              <span className="nv-responsive-label"> <u>{link.title}</u></span>
+              <span className=""> <u>{link.title}</u></span>
             </a>
 
           )
@@ -61,11 +61,11 @@ function ProjectCard(project: ProjectProps) {
 
 function Work() {
   return (
-    <div className="container p-4">
+    <div className="container pt-5">
       <div className="d-flex flex-wrap gap-4">
-        <div className="fw-light" style={{ minWidth: "200px", maxWidth: "440px" }}>
+        <div className="fw-light fs-5 nv-project-card">
           <p>
-            I'm always working on a client or personal project, but so far the work showcased here are personal projects.
+            I'm always working on a client or personal project, but the works currently showcased here are personal projects.
             This page will frequently be updated. Check back soon for more or see my <a className="text-decoration-none" target="_blank" href="https://github.com/danvas">GitHub</a> repositories in the meantime.
           </p>
           <p>
@@ -76,7 +76,9 @@ function Work() {
           year="2023"
           title="Spotyt"
           subtitle="Spotify playlist downloader"
-          description={`API to allow Spotify users to find and download music from their or other users' public playlists.`}
+          description={
+            `API and web app to allow Spotify users to find and \
+            download music from their or other users' public playlists.`}
           links={[
             {
               title: "Demo",
