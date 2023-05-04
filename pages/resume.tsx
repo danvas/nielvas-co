@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
+import Description from "../components/Description"
 import cv from '../public/cv.json'
 
 interface ExperienceProps {
@@ -28,38 +29,6 @@ function DateRangePrintable({ start, end }: { start: any, end?: any }) {
         {dateRange}
       </span>
     </>
-  )
-}
-
-function Description({ lines }) {
-  const [expanded, setExpanded] = useState(false)
-  const [leadingLine, ...expandedLines] = lines
-  return (
-    <div>
-      <p>{leadingLine}
-        {!expanded &&
-
-          <span
-            className="fw-light text-nowrap text-black-50 fw-bold d-print-none pointer-cursor"
-            hidden={lines.length === 1}
-            onClick={() => setExpanded(true)}
-          >
-            <small> ... See more</small>
-          </span>
-        }
-      </p>
-      <div className={`lh-sm d-print-block ${expanded ? "" : "d-none"}`}>
-        {expandedLines.map((line, idx) => <p key={idx}>{line}</p>)}
-      </div>
-      {expanded && <span
-        className="fw-light text-nowrap text-black-50 fw-bold d-print-none"
-        style={{ cursor: "pointer" }}
-        hidden={lines.length === 1}
-        onClick={() => setExpanded(false)}
-      >
-        <small> ... See less</small>
-      </span>}
-    </div>
   )
 }
 
@@ -113,7 +82,7 @@ function Resume() {
           </div>
         </div>
       </section>
-      <section className="py-3 d-print-block d-none" id="profile-section">
+      <section className="py-3 d-print-block" id="profile-section">
         <div className="row">
           <div className="col">
             <div className="fs-5 fw-light text-uppercase">Profile</div>

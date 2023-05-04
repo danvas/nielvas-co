@@ -1,8 +1,10 @@
 $dark: #343a40;
-$primary: #c50076;
+$light: #fff8fc;
+$primary: #cd007b;
+$secondary: #ffd6ef;
 $fadeDuration: 0.5s;
-$nv-dark-blue: rgb(110, 134, 167);
-$nv-light-blue: rgb(182, 206, 227);
+$nv-dark-blue: #6e86a7;
+$nv-light-blue: #b6cee3;
 $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue);
 
 @import "bootstrap";
@@ -116,8 +118,24 @@ $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue
   height: 100vh;
 }
 
+.nv-project-card {
+  // outline: 1px solid #ffd6ef5c;
+  outline: 1px dashed #fffeff5c;
+  padding: 1rem;
+}
+
+.nv-project-card:hover {
+  outline: 1px solid $nv-light-blue;
+  animation: fadeIn $fadeDuration;
+  -webkit-animation: fadeIn $fadeDuration;
+  -moz-animation: fadeIn $fadeDuration;
+  -o-animation: fadeIn $fadeDuration;
+  -ms-animation: fadeIn $fadeDuration;
+}
+
 .nv-cloud-bg {
-  background: url("/bg-cloud.jpg") no-repeat center center fixed;
+  background: center no-repeat url("/bg-cloud.jpg");
+  // background: center no-repeat radial-gradient(#b6cee3, #2a09ff00), 55% url("/bg-cloud.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
