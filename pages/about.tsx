@@ -25,7 +25,7 @@ function About() {
         </p>
         <p>
           Other things I love include visual effects, filmmaking, sailing, hiking, and the ocean. I also had fun teaching science & math at a <a className="text-decoration-none" href="https://www.eibparis.com/en" target="_blank">high school</a> in Paris, France.
-          Take a look at <Link className="text-decoration-none" href="/resume">my resume </Link> for more info.
+          Take a look at <Link className="text-decoration-none" href="/resume">my resume </Link> for more things I've done.
         </p>
         <p>I live and work in Vancouver, Canada &#8212; the unceded territories of the <a className="text-decoration-none" target="_blank" href="https://www.musqueam.bc.ca">xʷməθkʷəy̓əm</a>, <a className="text-decoration-none" target="_blank" href="https://www.squamish.net">Sḵwx̱wú7mesh</a> and <a className="text-decoration-none" target="_blank" href="https://twnation.ca">səl̓ílwətaʔɬ</a> Nations.</p>
         <p>
