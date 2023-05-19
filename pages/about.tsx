@@ -7,25 +7,22 @@ function About() {
       <div className="fs-3 fw-normal pb-4">
         I design and build workflow tools and pipelines for 3D artists and designers in visual effects, animation, and fashion & apparel.
       </div>
-      <div className="row pb-2">
+      <div className="row pb-4">
         <hr className="w-25 mx-auto" />
       </div>
       <div className="fw-light fs-5">
         <p>
-          I'm a software developer specializing in 3D workflows, building tools and plugins for digital content creation.
+          I'm a software developer specialized in building tools and plugins for 3D digital content creation.
         </p>
         <p>
-          In the past 3+ years at the startup <em>FNX Technologies</em>, I helped build a cloud-based 3D render pipeline for the product lifecycle in the fashion & apparel supply chain. We eventually got acquired by <a className="text-decoration-none" target="_blank" href="https://unifi3d.co/">UNIFI3D</a> (<em>Li & Fung, Ltd</em>) where I continued to work.
-        </p>
-        <p>
-          For 5 years I created workflow tools for artists in the visual effects pipeline in feature films such as <a className="text-decoration-none" target="_blank" href="https://www.imdb.com/name/nm9678054/">Black Panther</a> and <a className="text-decoration-none" target="_blank" href="https://www.imdb.com/name/nm9678054/">Aquaman</a>.
+          In the past 3+ years at the startup <em>FNX Technologies</em>, I helped build a cloud-based 3D render pipeline for the product lifecycle in the fashion & apparel supply chain. We eventually got acquired by <a className="text-decoration-none" target="_blank" href="https://unifi3d.co/">UNIFI3D</a> (<em>Li & Fung, Ltd</em>) where I continued to work. I've also developed tools for artists and technical directors in the visual effects pipeline in feature films such as <em>Black Panther</em> and <em>Guardians of the Galaxy</em>. Check out the <a className="text-decoration-none" target="_blank" href="https://www.imdb.com/name/nm9678054/">films I've work on</a>.
         </p>
         <p>
           My deep appreciation for music led me to create <em>Lyddy</em> — a sound-sharing social networking web app aimed at uniting people through sound, allowing them to explore genres by means of hashtags. Have a listen at <a className="text-decoration-none" target="_blank" href="https://lyddy.stream/nielvas">my stream</a>.
         </p>
         <p>
-          Other things I love include visual effects, filmmaking, sailing, hiking, and the ocean. I also had fun teaching science & math at a <a className="text-decoration-none" href="https://www.eibparis.com/en" target="_blank">high school</a> in Paris, France.
-          Take a look at <Link className="text-decoration-none" href="/resume">my resume </Link> for more things I've done.
+          Other things I love include visual effects, <a className="text-decoration-none" href="https://vimeo.com/danielvasquez" target="_blank">filmmaking</a>, sailing, hiking, and the ocean. I also had fun teaching science & math at a <a className="text-decoration-none" href="https://www.eibparis.com/en" target="_blank">high school</a> in Paris, France.
+          Take a look at <Link className="text-decoration-none" href="/resume">my resume </Link> for more things that I've done.
         </p>
         <p>I live and work in Vancouver, Canada &#8212; the unceded territories of the <a className="text-decoration-none" target="_blank" href="https://www.musqueam.bc.ca">xʷməθkʷəy̓əm</a>, <a className="text-decoration-none" target="_blank" href="https://www.squamish.net">Sḵwx̱wú7mesh</a> and <a className="text-decoration-none" target="_blank" href="https://twnation.ca">səl̓ílwətaʔɬ</a> Nations.</p>
         <p>

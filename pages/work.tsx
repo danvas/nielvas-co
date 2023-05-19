@@ -2,9 +2,7 @@ import React from "react"
 import Description from "../components/Description"
 import {
   CodeSlashIcon,
-  GitHubIcon,
   BoxArrowUpRightIcon,
-  Link45DegIcon
 } from "../components/Icons"
 import Link from "next/link"
 
@@ -107,6 +105,11 @@ function Work() {
             {
               title: "App",
               url: "https://lyddy.stream/nielvas",
+              icon: <BoxArrowUpRightIcon size="16" className="mb-1" />
+            },
+            {
+              title: "Demo",
+              url: "https://vimeo.com/341738887",
               icon: <BoxArrowUpRightIcon size="16" className="mb-1" />
             },
             {

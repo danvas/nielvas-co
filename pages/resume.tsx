@@ -1,6 +1,9 @@
 import React from "react"
 import Description from "../components/Description"
 import cv from '../public/cv.json'
+import { FileEarmarkArrowDownIcon } from "../components/Icons"
+
+
 
 interface ExperienceProps {
   title: string
@@ -68,16 +71,46 @@ function Resume() {
   const experiences = cv.experience.filter(e => e.company !== "nielvas.co").slice(0, MAX_IDX)
   const educations = cv.education.filter(e => !e.degree.includes("MSc"))
 
+  const onDownloadResume = () => {
+    const filename = "Daniel-Vasquez-Resume.pdf"
+    fetch(`/${filename}`)
+      .then(res => res.blob())
+      .then(blob => {
+        const linkEl = document.createElement("a")
+        linkEl.href = window.URL.createObjectURL(blob);
+        linkEl.download = filename;
+        linkEl.click();
+      });
+  }
+
   return (
-    <div className="container px-4 resume-print">
-      <section className="py-5 d-print-block d-none">
+    <div className="container px-2 resume-print">
+      <div className="d-flex justify-content-around align-items-center p-2 d-print-none">
+        <button
+          type="button"
+          onClick={onDownloadResume}
+          className="btn btn-outline-light btn-lg rounded-pill"
+        >
+          <span className="py-5 pe-2">
+            Download PDF
+          </span>
+          <FileEarmarkArrowDownIcon size="23" className="mb-1" />
+        </button>
+      </div>
+      <div className="row pt-4 d-print-none">
+        <hr className="w-50 mx-auto" />
+      </div>
+      <section className="py-2 d-print-block">
         <div className="d-flex justify-content-between align-items-center">
-          <div className="display-3 text-uppercase text-nowrap fw-lighter">Daniel Vasquez</div>
-          <div className="ps-2 fw-light fs-8 text-end">
+          <div>
+            <div className="display-4 text-nowrap fw-light">Daniel Vasquez</div>
+            <div className="fs-5 text-dark">Software Engineer</div>
+          </div>
+          <div className="ps-2 fw-light fs-8">
             <small>
               <div><a className="text-decoration-none text-muted" target="_blank" href="mailto:d@nielvas.co?&amp;subject=Hello%20👋">d@nielvas.co</a></div>
               <div><a className="text-decoration-none text-muted" target="_blank" href="https://nielvas.co">www.nielvas.co</a></div>
-              <div className="text-nowrap">Vancouver, Canada</div>
+              <div className="text-wrap">Vancouver, Canada</div>
             </small>
           </div>
         </div>

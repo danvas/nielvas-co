@@ -11,7 +11,7 @@
       "endDate": "Dec 2022",
       "duration": "1 year 4 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "\u2022 Led the research, development, and integration of 3D viewers, configurators, and 3D annotations in UNIFI3D's in-house customer portal and digital asset management software for fashion and apparel brands",
+      "description": "\u2022  Led the research and development of glTF based 3D viewers and annotations in UNIFI3D's digital asset management service for fashion and apparel brands.",
       "skills": [
         "glTF",
         "React.js",
@@ -27,7 +27,7 @@
       "endDate": "Sep 2021",
       "duration": "2 years 3 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "\u2022 Developed plugins for fashion design software and built a 3D pipeline for scalable render solutions in the product lifecycle of fashion and apparel brands\n\u2022 Shared best coding practices with junior developers, provide some technical guidance and mentorship, and steered code reviews\n\u2022 Evaluated automation software and proposed solutions in automated workflows\n\u2022 FNX Technologies was acquired by LFX Digital (Li & Fung) in 2021",
+      "description": "\u2022 Developed plugins for Browzwear VStitcher, CLO3D, and 3ds Max, and helped build a Blender Cycles based pipeline for scalable render solutions in the product lifecycle of fashion and apparel brands.\n\u2022 Shared best coding practices with junior developers, provided some technical guidance and mentorship, and steered code reviews.\n\u2022 Evaluated automation software and proposed solutions in automated workflows.\n\u2022 FNX Technologies was acquired by LFX Digital (Li & Fung) in 2021.",
       "skills": [
         "Python",
         "C++",
@@ -41,14 +41,14 @@
       ]
     },
     {
-      "title": "Software Developer (Freelance)",
+      "title": "Software Developer",
       "url": "",
       "company": "nielvas.co",
       "startDate": "Aug 2018",
       "endDate": "May 2019",
       "duration": "10 months",
       "location": "Vancouver",
-      "description": "\u2022 Contract-based work in software architecture and development for web applications and VFX pipelines\n\u2022 Designed and developed a sound-sharing social networking service called Lyddy, a serverless web application",
+      "description": "\u2022 Contract-based work in software architecture and development for web applications and VFX pipelines.\n\u2022 Designed and developed a sound-sharing social networking service called Lyddy, a serverless web application",
       "skills": []
     },
     {
@@ -59,7 +59,7 @@
       "endDate": "Jul 2018",
       "duration": "2 years 4 months",
       "location": "Vancouver",
-      "description": "\u2022 Developed artist workflow tools and plugins for the visual effects pipeline of major feature films such as Black Panther, Ant-Man, and Guardians of the Galaxy\n\u2022 Maintained a wide variety of existing scripts, front-end and back-end tools\n\u2022 Improved the efficiency of asset setup, caching, viewing, and shot-data handoff between artists across the entire pipeline\n\u2022 Designed and developed plugins for 3D sculpting software, helping artists to efficiently publish model assets",
+      "description": "\u2022 Provided software support for artists and TDs across the visual effects pipeline by debugging issues in the publishing process and in desktop workflows for major feature films such as Black Panther, Ant-Man, and Guardians of the Galaxy.\n\u2022 Designed and developed plugins for ZBrush to efficiently publish 3D sculpting assets.\n\u2022 Extended and maintained ShotGrid and PyQt based tools for asset setup, caching, viewing, and shot-data handoff between artists.",
       "skills": [
         "Python",
         "Nuke",
@@ -76,7 +76,7 @@
       "endDate": "Apr 2016",
       "duration": "6 years 4 months",
       "location": "Vancouver",
-      "description": "\u2022 Created 3D content and visual effects for animated or live-action films, and mobile apps\n\u2022 Wrote software tools and scripts to streamline animation process\n\u2022 Conceptualized and created visual media for science education, mechanism-of-action renderings, and marketing\n\u2022 Past clients have included United Nations, GenomeDx, Telus, and Nissan",
+      "description": "\u2022 Conceptualized and created visual media for science education, mechanism-of-action renderings, and marketing for clients such as United Nations, GenomeDx, Telus, and Nissan.\n\u2022 Created 3D content and visual effects for animated or live-action films, and mobile apps.\n\u2022 Wrote software tools and scripts to streamline animation process.",
       "skills": [
         "Maya",
         "Photoshop",
@@ -92,7 +92,7 @@
       "endDate": "Aug 2015",
       "duration": "1 year 4 months",
       "location": "Vancouver",
-      "description": "\u2022 Developed desktop automation tools for the visual effects of major feature films such as Fantastic Four and The Hunger Games\n\u2022 Provided software support for Artists and Technical Directors across multiple departments\n\u2022 Collaborated with developers in various MPC sites across the multiple continents\n\u2022 Worked with artists to understand production needs and researching new techniques to meet those needs\n\u2022 Wrote technical and end user documentation\nPublication: Roundshot Pipeline at MPC for \"Godzilla\", SIGGRAPH 2015 Talks",
+      "description": "\u2022 Developed desktop automation tools for the visual effects of major feature films such as Fantastic Four and The Hunger Games.\n\u2022 Developed Nuke plugins and tools for the visual effects of major feature films.\n\u2022 Collaborated asynchronously with developers in various studios across multiple continents.\n\u2022 Worked with artists to understand production needs and researching new techniques to meet those needs.\n\u2022 Wrote technical and end user documentation.\n\u2022 Co-authored \"Roundshot Pipeline at MPC for Godzilla\", published in SIGGRAPH 2015 Talks.",
       "skills": [
         "Python",
         "Nuke",
@@ -110,7 +110,7 @@
       "endDate": "Dec 2013",
       "duration": "4 months",
       "location": "Victoria",
-      "description": "\u2022 Followed UX designs in HTML, CSS and JavaScript for internal web application\n\u2022 Wrote production quality, client-side code in Eclipse IDE and debugged using Chrome DevTools\n\u2022 Built Ajax enabled custom widgets using Dojo Toolkit framework\n\u2022 Learned the requisite web technologies while adhereing to tight deadlines in the Agile process",
+      "description": "\u2022 Followed UX designs in HTML, CSS and JavaScript for internal web application.\n\u2022 Wrote production quality, client-side code in Eclipse IDE and debugged using Chrome DevTools.\n\u2022 Built Ajax enabled custom widgets using Dojo Toolkit framework.\n\u2022 Learned the requisite web technologies while adhereing to tight deadlines in the Agile process",
       "skills": []
     },
     {
@@ -121,7 +121,7 @@
       "endDate": "May 2010",
       "duration": "1 year 5 months",
       "location": "Vancouver",
-      "description": "\u2022 Conceptualized and created commercial and educational videos\n\u2022 Wrote scripts for the screen and developed storyboards\n\u2022 Build and render 3D animation content\n\u2022 Directed and lit live action content\n\u2022 Edited, composited, and compressed videos\n\u2022 Programmed in MEL and simulated natural materials using nCLoth",
+      "description": "\u2022 Conceptualized and created commercial and educational videos.\n\u2022 Wrote scripts for the screen and developed storyboards.\n\u2022 Build and render 3D animation content.\n\u2022 Directed and lit live action content.\n\u2022 Edited, composited, and compressed videos.\n\u2022 Programmed in MEL and simulated natural materials using nCLoth",
       "skills": []
     },
     {
@@ -132,7 +132,7 @@
       "endDate": "Apr 2010",
       "duration": "2 months",
       "location": "Vancouver",
-      "description": "Client: Telus\n\u2022 Created low-polygon model\n\u2022 Textured and animated photorealistic Telus hippopotamus\n\u2022 Optimized exports to Collada format for augmented reality application",
+      "description": "Client: Telus.\n\u2022 Created low-polygon model.\n\u2022 Textured and animated photorealistic Telus hippopotamus.\n\u2022 Optimized exports to Collada format for augmented reality application",
       "skills": []
     },
     {
@@ -143,7 +143,7 @@
       "endDate": "Aug 2008",
       "duration": "1 year",
       "location": "Paris, France",
-      "description": "\u2022 Instructed seven courses in Grades 7, 8, 9, and 12 in the French curriculum\n\u2022 Taught and guided students in the subjects of math, physics, biology, and chemistry\n\u2022 Prepared workshops and activities to supplement theory\n\u2022 Assessed student progress while maintaining accurate records and reports",
+      "description": "\u2022 Instructed seven courses in Grades 7, 8, 9, and 12 in the French curriculum.\n\u2022 Taught and guided students in the subjects of math, physics, biology, and chemistry.\n\u2022 Prepared workshops and activities to supplement theory.\n\u2022 Assessed student progress while maintaining accurate records and reports",
       "skills": []
     },
     {
@@ -154,7 +154,7 @@
       "endDate": "Feb 2008",
       "duration": "7 months",
       "location": "Paris, France",
-      "description": "Client: Nissan\n\u2022 Textured, lit, and composited photorealistic car\n\u2022 Modelled and UV-mapped old lady character in a short film (Collaboration: PSST!)",
+      "description": "Client: Nissan.\n\u2022 Textured, lit, and composited photorealistic car.\n\u2022 Modelled and UV-mapped old lady character in a short film (Collaboration: PSST!)",
       "skills": []
     },
     {
@@ -165,7 +165,7 @@
       "endDate": "Sep 2006",
       "duration": "4 months",
       "location": "Santiago de Chile",
-      "description": "\u2022 Effectively assisted patients and supported staff with practical assistance\n\u2022 Observed and participated in several surgical procedures, and adeptly sutured patients with minimal assistance\n\u2022 Shadowed physicians and medical students in the emergency and operating room",
+      "description": "\u2022 Effectively assisted patients and supported staff with practical assistance.\n\u2022 Observed and participated in several surgical procedures, and adeptly sutured patients with minimal assistance.\n\u2022 Shadowed physicians and medical students in the emergency and operating room",
       "skills": []
     },
     {
@@ -176,7 +176,7 @@
       "endDate": "Dec 2005",
       "duration": "9 months",
       "location": "Toronto",
-      "description": "\u2022 Conducted research on biomolecular pathways regulating cell fate in embryonic stem cells\n\u2022 Operated specialized instrumentation and computer software for analyzing cells\n\u2022 Presented background information on stem cell signaling and research results during lab meetings",
+      "description": "\u2022 Conducted research on biomolecular pathways regulating cell fate in embryonic stem cells.\n\u2022 Operated specialized instrumentation and computer software for analyzing cells.\n\u2022 Presented background information on stem cell signaling and research results during lab meetings",
       "skills": [
         "Fluorescence Spectroscopy",
         "RNA Isolation"
@@ -190,7 +190,7 @@
       "endDate": "Dec 2004",
       "duration": "1 year",
       "location": "Hamilton",
-      "description": "\u2022 Conducted research on protein dynamics using green fluorescent protein technology\n\u2022 Used problem solving skills for optimizing experimental results\n\u2022 Applied fluorescence microscopy to generate 3D images and movies of protein in live cells\n\u2022 Managed and organized the output of thousands of files",
+      "description": "\u2022 Conducted research on protein dynamics using green fluorescent protein technology.\n\u2022 Used problem solving skills for optimizing experimental results.\n\u2022 Applied fluorescence microscopy to generate 3D images and movies of protein in live cells.\n\u2022 Managed and organized the output of thousands of files",
       "skills": []
     }
   ],
@@ -202,7 +202,7 @@
       "fieldOfStudy": "",
       "startDate": "2012",
       "endDate": "2016",
-      "details": "\u2022 Courses completed include Systematic Program Design, Software Engineering, Models of Computation, Hardware and Operating Systems, Algorithms and Data Structures, Relational Databases, and Artificial Intelligence\n\u2022 Programming in Java, C/C++, and Python"
+      "details": "\u2022 Courses completed include Systematic Program Design, Software Engineering, Models of Computation, Hardware and Operating Systems, Algorithms and Data Structures, Relational Databases, and Artificial Intelligence.\n\u2022 Programming in Java, C/C++, and Python"
     },
     {
       "school": "The University of British Columbia",
@@ -220,7 +220,7 @@
       "fieldOfStudy": "3D Animation",
       "startDate": "2006",
       "endDate": "2007",
-      "details": "\u2022 Extensive training in 3D modeling and animation, including rigging, shading, lighting, rendering, and dynamics\n\u2022 Foundations in acting, life drawing and storyboarding"
+      "details": "\u2022 Extensive training in 3D modeling and animation, including rigging, shading, lighting, rendering, and dynamics.\n\u2022 Foundations in acting, life drawing and storyboarding"
     },
     {
       "school": "McMaster University",
@@ -229,7 +229,7 @@
       "fieldOfStudy": "Honours Biochemistry",
       "startDate": "2001",
       "endDate": "2006",
-      "details": "\u2022 Theory and practice in a curriculum spanning biology, chemistry, physics, and genetic engineering\n\u2022 Elective courses in film studies and anthropology"
+      "details": "\u2022 Theory and practice in a curriculum spanning biology, chemistry, physics, and genetic engineering.\n\u2022 Elective courses in film studies and anthropology"
     }
   ],
   "projects": [
