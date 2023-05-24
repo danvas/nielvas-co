@@ -27,7 +27,7 @@
       "endDate": "Sep 2021",
       "duration": "2 years 3 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "\u2022 Developed plugins for Browzwear VStitcher, CLO3D, and 3ds Max, and helped build a Blender Cycles based pipeline for scalable render solutions in the product lifecycle of fashion and apparel brands.\n\u2022 Shared best coding practices with junior developers, provided some technical guidance and mentorship, and steered code reviews.\n\u2022 Evaluated automation software and proposed solutions in automated workflows.\n\u2022 FNX Technologies was acquired by LFX Digital (Li & Fung) in 2021.",
+      "description": "\u2022 Developed and integrated Blender Cycles based 3D pipeline for scalable cloud render solutions in the product lifecycle of fashion and apparel brands.\n\u2022 Implemented user facing tools and automated workflows in Browzwear VStitcher, CLO3D, and 3ds Max.\n\u2022 Shared best coding practices with junior developers, provided some technical guidance and mentorship, and steered code reviews.\n\u2022 Evaluated automation software and proposed solutions in automated workflows.\n\u2022 FNX Technologies was acquired by LFX Digital (Li & Fung) in 2021.",
       "skills": [
         "Python",
         "C++",
@@ -255,5 +255,5 @@
       ]
     }
   ],
-  "lastModified": "2023-05-18T17:48:29.486410Z"
+  "lastModified": "2023-05-24T17:48:29.486410Z"
 }
