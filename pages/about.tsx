@@ -5,17 +5,25 @@ function About() {
   return (
     <div className="container pt-5 px-4">
       <div className="fs-3 fw-normal pb-4">
-        I design and build workflow tools and pipelines for 3D artists and designers in visual effects, animation, and fashion & apparel.
+        Crafting workflow tools and productivity solutions that facilitate the creative process for artists and designers
+        working on immersive and visual storytelling content.
       </div>
       <div className="row pb-4">
         <hr className="w-25 mx-auto" />
       </div>
       <div className="fw-light fs-5">
         <p>
-          I'm a software developer specialized in building tools and plugins for 3D digital content creation.
+          I'm a software developer specialized in building tools and plugins for content creation, currenty seeking opportunities to contribute
+          to cutting-edge software solutions for organizations making an impact in immersive and interactive experiences, visual storytelling,
+          or tools for scientific discovery.
         </p>
         <p>
-          In the past 3+ years at the startup <em>FNX Technologies</em>, I helped build a cloud-based 3D render pipeline for the product lifecycle in the fashion & apparel supply chain. We eventually got acquired by <a className="text-decoration-none" target="_blank" href="https://unifi3d.co/">UNIFI3D</a> (<em>Li & Fung, Ltd</em>) where I continued to work. In the previous 4+ years, I developed tools for artists and technical directors in the visual effects production pipeline in feature films such as <em>Black Panther</em> and <em>Guardians of the Galaxy</em>. Check out the <a className="text-decoration-none" target="_blank" href="https://www.imdb.com/name/nm9678054/">films I've work on</a>.
+          In the past 3+ years at the startup <em>FNX Technologies</em>, I helped build a rendering-as-a-service product for leading fashion & apparel brands.
+          We eventually got acquired by <a className="text-decoration-none" target="_blank" href="https://unifi3d.co/">UNIFI3D</a> (<em>Li & Fung, Ltd</em>)
+          where I continued to build automated workflows and integrated 3D collaboration solutions in their proprietary digital asset management system.
+          In the previous 4+ years, I developed tools for artists and technical directors in the visual effects production pipeline in feature films
+          such as <em>Black Panther</em> and <em>Guardians of the Galaxy</em>.
+          Check out the <a className="text-decoration-none" target="_blank" href="https://www.imdb.com/name/nm9678054/">films I've work on</a>.
         </p>
         <p>
           My deep appreciation for music led me to create <em>Lyddy</em> — a sound-sharing social networking web app aimed at uniting people through sound, allowing them to explore genres by means of hashtags. Have a listen at <a className="text-decoration-none" target="_blank" href="https://lyddy.stream/nielvas">my stream</a>.
