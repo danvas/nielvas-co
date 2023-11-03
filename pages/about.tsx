@@ -5,17 +5,17 @@ function About() {
   return (
     <div className="container pt-5 px-4">
       <div className="fs-3 fw-normal pb-4">
-        Crafting workflow tools and productivity solutions that facilitate the creative process for artists and designers
-        working on immersive and visual storytelling content.
+        I'm a software developer building tools and applications for content creation, currenty seeking opportunities to contribute
+        to cutting-edge software solutions for organizations making an impact in immersive and interactive experiences, visual storytelling,
+        or tools for scientific discovery.
       </div>
       <div className="row pb-4">
         <hr className="w-25 mx-auto" />
       </div>
       <div className="fw-light fs-5">
         <p>
-          I'm a software developer specialized in building tools and plugins for content creation, currenty seeking opportunities to contribute
-          to cutting-edge software solutions for organizations making an impact in immersive and interactive experiences, visual storytelling,
-          or tools for scientific discovery.
+          I enjoy building workflow tools and applications that facilitate the creative process for artists and designers
+          working on immersive and visual storytelling content.
         </p>
         <p>
           In the past 3+ years at the startup <em>FNX Technologies</em>, I helped build a rendering-as-a-service product for leading fashion & apparel brands.
