@@ -4,7 +4,7 @@ function LandingPage() {
   return (
     <div className="ms-auto mt-5 me-auto w-75 p-4 d-flex flex-column align-items-center">
       <p className="display-5">
-        Hey, I'm Daniel. <br />I <span className="fw-light text-light">streamline software processes</span> for Artists, Designers, and Businesses creating immersive and visual storytelling content
+        Hey, I'm Daniel. <br />I develop <span className="fw-light text-light">software applications and automated workflows</span> for Artists, Designers, and Businesses creating immersive and visual storytelling content
       </p>
       <div className="p-5" >
         <Link
