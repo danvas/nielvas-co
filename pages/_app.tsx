@@ -25,7 +25,7 @@ function Root({ Component, pageProps }) {
       gtag('config', 'G-DFH13LLV4W');`}
       </Script>
       <Head>
-        <title>Daniel Vasquez // 3D Software Developer</title>
+        <title>Daniel Vasquez // Software Developer</title>
         <link rel="icon" href="https://symbl-world.akamaized.net/i/webp/78/4c77a8fb21eeb70940ce079977345c.webp" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </Head>
