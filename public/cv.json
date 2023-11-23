@@ -5,78 +5,72 @@
   "experience": [
     {
       "title": "Software Engineer",
-      "url": "https://www.linkedin.com/company/lfxdigital",
+      "url": "",
       "company": "LFX Digital",
-      "startDate": "Sep 2021",
-      "endDate": "Dec 2022",
-      "duration": "1 year 4 months",
+      "startDate": "July 2019",
+      "endDate": "December 2022",
+      "duration": "3 years 5 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "\u2022  Led the research and development of glTF based 3D viewers and annotations in UNIFI3D's digital asset management service for fashion and apparel brands.",
+      "description": "Led the development of web 3D viewing and annotation solutions to achieve complete digitalisation of the product lifecycle at leading apparel brands.\nReduced file export times from minutes to seconds by implementing automation plugins in Python/C++.\nCore developer of Electron.js application to efficiently upload large files and submit jobs for rendering 3D content.\nSupported backend engineering team in building a proprietary compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes in our compute framework and resolved bugs in complex graphs.\nSupported many customers in resolving technical issues.\nStarted tenure at the startup FNX Technologies, which was later acquired by LFX Digital.",
       "skills": [
+        "Python",
+        "C++",
         "glTF",
-        "React.js",
         "Browzwear VStitcher",
-        "Python"
+        "CLO 3D",
+        "Blender",
+        "3dsMax",
+        "React.js",
+        "JavaScript",
+        "Electron.js",
+        "MaxScript"
+      ]
+    },
+    {
+      "title": "Software Developer (Pipeline TD)",
+      "url": "",
+      "company": "ScanlineVFX",
+      "startDate": "April 2016",
+      "endDate": "July 2018",
+      "duration": "2 years 3 months",
+      "location": "Vancouver, British Columbia, Canada",
+      "description": "Designed and developed plugins for third-party 3D applications to efficiently export and publish large asset files.\nSupported hundreds of artists and technical directors across the visual effects pipeline by debugging issues in asset management and workflows.\nExtended and maintained internal APIs and cross platform desktop tools for the setup, caching, viewing, and tracking of thousands of digital assets.\nDesigned and wrote technical briefs.",
+      "skills": [
+        "Python",
+        "Nuke",
+        "PyQt",
+        "ShotGrid / RV",
+        "Maya"
       ]
     },
     {
       "title": "Software Engineer",
-      "url": "https://www.linkedin.com/company/fnxtech",
-      "company": "FNX Technologies",
-      "startDate": "Jul 2019",
-      "endDate": "Sep 2021",
-      "duration": "2 years 3 months",
-      "location": "Vancouver, British Columbia, Canada",
-      "description": "\u2022 Developed and integrated Blender Cycles based 3D pipeline for scalable cloud render solutions in the product lifecycle of fashion and apparel brands.\n\u2022 Implemented user facing tools and automated workflows in Browzwear VStitcher, CLO3D, and 3ds Max.\n\u2022 Shared best coding practices with junior developers, provided some technical guidance and mentorship, and steered code reviews.\n\u2022 Evaluated automation software and proposed solutions in automated workflows.\n\u2022 FNX Technologies was acquired by LFX Digital (Li & Fung) in 2021.",
-      "skills": [
-        "Python",
-        "C++",
-        "Browzwear VStitcher",
-        "Blender",
-        "CLO 3D",
-        "React.js",
-        "JavaScript",
-        "Electron.js",
-        "Maxscript"
-      ]
-    },
-    {
-      "title": "Software Developer",
-      "url": "",
-      "company": "nielvas.co",
-      "startDate": "Aug 2018",
-      "endDate": "May 2019",
-      "duration": "10 months",
+      "url": "https://www.linkedin.com/company/mpcvfx",
+      "company": "Moving Picture Company (MPC)",
+      "startDate": "May 2014",
+      "endDate": "August 2015",
+      "duration": "1 year 3 months",
       "location": "Vancouver",
-      "description": "\u2022 Contract-based work in software architecture and development for web applications and VFX pipelines.\n\u2022 Designed and developed a sound-sharing social networking service called Lyddy, a serverless web application",
-      "skills": []
-    },
-    {
-      "title": "Pipeline Technical Director",
-      "url": "https://www.linkedin.com/company/scanlinevfx",
-      "company": "ScanlineVFX",
-      "startDate": "Apr 2016",
-      "endDate": "Jul 2018",
-      "duration": "2 years 4 months",
-      "location": "Vancouver",
-      "description": "\u2022 Provided software support for artists and TDs across the visual effects pipeline by debugging issues in the publishing process and in desktop workflows for major feature films such as Black Panther, Ant-Man, and Guardians of the Galaxy.\n\u2022 Designed and developed plugins for ZBrush to efficiently publish 3D sculpting assets.\n\u2022 Extended and maintained ShotGrid and PyQt based tools for asset setup, caching, viewing, and shot-data handoff between artists.",
+      "description": "Designed and implemented a Python API to automate high-throughput processing of images for panoramic stitching, resulting in a co-authored publication at SIGGRAPH 2015.\nCollaborated asynchronously with developers in various studios across multiple time zones.\nProvided technical support to hundreds of internal users.\nOversaw Linux environments, coordinating with department supervisors to deploy updates across all departments in accordance with scheduled releases.",
       "skills": [
         "Python",
         "Nuke",
+        "Linux",
+        "Shell scripting",
         "PyQt",
         "ShotGrid",
         "Maya"
       ]
     },
     {
-      "title": "Technical Artist & Software Engineer",
+      "title": "Technical Artist",
       "url": "",
       "company": "Hey Light (freelance)",
       "startDate": "Jan 2010",
       "endDate": "Apr 2016",
       "duration": "6 years 4 months",
       "location": "Vancouver",
-      "description": "\u2022 Conceptualized and created visual media for science education, mechanism-of-action renderings, and marketing for clients such as United Nations, GenomeDx, Telus, and Nissan.\n\u2022 Created 3D content and visual effects for animated or live-action films, and mobile apps.\n\u2022 Wrote software tools and scripts to streamline animation process.",
+      "description": "Conceptualized and created visual media for science education, mechanism-of-action renderings, and marketing for clients such as United Nations, GenomeDx, Telus, and Nissan.\nCreated 3D content and visual effects for animated or live-action films, and mobile apps.\nWrote software tools and scripts to streamline animation process.",
       "skills": [
         "Maya",
         "Photoshop",
@@ -85,32 +79,14 @@
       ]
     },
     {
-      "title": "Software Engineer",
-      "url": "https://www.linkedin.com/company/mpcvfx",
-      "company": "MPC",
-      "startDate": "May 2014",
-      "endDate": "Aug 2015",
-      "duration": "1 year 4 months",
-      "location": "Vancouver",
-      "description": "\u2022 Developed desktop automation tools for the visual effects of major feature films such as Fantastic Four and The Hunger Games.\n\u2022 Developed Nuke plugins and tools for the visual effects of major feature films.\n\u2022 Collaborated asynchronously with developers in various studios across multiple continents.\n\u2022 Worked with artists to understand production needs and researching new techniques to meet those needs.\n\u2022 Wrote technical and end user documentation.\n\u2022 Co-authored \"Roundshot Pipeline at MPC for Godzilla\", published in SIGGRAPH 2015 Talks.",
-      "skills": [
-        "Python",
-        "Nuke",
-        "Shell Scripting",
-        "PyQt",
-        "ShotGrid",
-        "Maya"
-      ]
-    },
-    {
-      "title": "Software Developer (Internship)",
+      "title": "Software Developer (internship)",
       "url": "https://www.linkedin.com/company/ibm",
       "company": "IBM",
       "startDate": "Sep 2013",
       "endDate": "Dec 2013",
       "duration": "4 months",
       "location": "Victoria",
-      "description": "\u2022 Followed UX designs in HTML, CSS and JavaScript for internal web application.\n\u2022 Wrote production quality, client-side code in Eclipse IDE and debugged using Chrome DevTools.\n\u2022 Built Ajax enabled custom widgets using Dojo Toolkit framework.\n\u2022 Learned the requisite web technologies while adhereing to tight deadlines in the Agile process",
+      "description": "Followed UX designs in HTML, CSS and JavaScript for internal web application.\nWrote production quality, client-side code in Eclipse IDE and debugged using Chrome DevTools.\nBuilt Ajax enabled custom widgets using Dojo Toolkit framework.\nLearned the requisite web technologies while adhereing to tight deadlines in the Agile process",
       "skills": []
     },
     {
@@ -121,7 +97,7 @@
       "endDate": "May 2010",
       "duration": "1 year 5 months",
       "location": "Vancouver",
-      "description": "\u2022 Conceptualized and created commercial and educational videos.\n\u2022 Wrote scripts for the screen and developed storyboards.\n\u2022 Build and render 3D animation content.\n\u2022 Directed and lit live action content.\n\u2022 Edited, composited, and compressed videos.\n\u2022 Programmed in MEL and simulated natural materials using nCLoth",
+      "description": "Conceptualized and created commercial and educational videos.\nWrote scripts for the screen and developed storyboards.\nBuild and render 3D animation content.\nDirected and lit live action content.\nEdited, composited, and compressed videos.\nProgrammed in MEL and simulated natural materials using nCLoth",
       "skills": []
     },
     {
@@ -132,7 +108,7 @@
       "endDate": "Apr 2010",
       "duration": "2 months",
       "location": "Vancouver",
-      "description": "Client: Telus.\n\u2022 Created low-polygon model.\n\u2022 Textured and animated photorealistic Telus hippopotamus.\n\u2022 Optimized exports to Collada format for augmented reality application",
+      "description": "Client: Telus.\nCreated low-polygon model.\nTextured and animated photorealistic Telus hippopotamus.\nOptimized exports to Collada format for augmented reality application",
       "skills": []
     },
     {
@@ -143,7 +119,7 @@
       "endDate": "Aug 2008",
       "duration": "1 year",
       "location": "Paris, France",
-      "description": "\u2022 Instructed seven courses in Grades 7, 8, 9, and 12 in the French curriculum.\n\u2022 Taught and guided students in the subjects of math, physics, biology, and chemistry.\n\u2022 Prepared workshops and activities to supplement theory.\n\u2022 Assessed student progress while maintaining accurate records and reports",
+      "description": "Instructed seven courses in Grades 7, 8, 9, and 12 in the French curriculum.\nTaught and guided students in the subjects of math, physics, biology, and chemistry.\nPrepared workshops and activities to supplement theory.\nAssessed student progress while maintaining accurate records and reports",
       "skills": []
     },
     {
@@ -154,7 +130,7 @@
       "endDate": "Feb 2008",
       "duration": "7 months",
       "location": "Paris, France",
-      "description": "Client: Nissan.\n\u2022 Textured, lit, and composited photorealistic car.\n\u2022 Modelled and UV-mapped old lady character in a short film (Collaboration: PSST!)",
+      "description": "Client: Nissan.\nTextured, lit, and composited photorealistic car.\nModelled and UV-mapped old lady character in a short film (Collaboration: PSST!)",
       "skills": []
     },
     {
@@ -165,7 +141,7 @@
       "endDate": "Sep 2006",
       "duration": "4 months",
       "location": "Santiago de Chile",
-      "description": "\u2022 Effectively assisted patients and supported staff with practical assistance.\n\u2022 Observed and participated in several surgical procedures, and adeptly sutured patients with minimal assistance.\n\u2022 Shadowed physicians and medical students in the emergency and operating room",
+      "description": "Effectively assisted patients and supported staff with practical assistance.\nObserved and participated in several surgical procedures, and adeptly sutured patients with minimal assistance.\nShadowed physicians and medical students in the emergency and operating room",
       "skills": []
     },
     {
@@ -176,7 +152,7 @@
       "endDate": "Dec 2005",
       "duration": "9 months",
       "location": "Toronto",
-      "description": "\u2022 Conducted research on biomolecular pathways regulating cell fate in embryonic stem cells.\n\u2022 Operated specialized instrumentation and computer software for analyzing cells.\n\u2022 Presented background information on stem cell signaling and research results during lab meetings",
+      "description": "Conducted research on biomolecular pathways regulating cell fate in embryonic stem cells.\nOperated specialized instrumentation and computer software for analyzing cells.\nPresented background information on stem cell signaling and research results during lab meetings",
       "skills": [
         "Fluorescence Spectroscopy",
         "RNA Isolation"
@@ -190,37 +166,28 @@
       "endDate": "Dec 2004",
       "duration": "1 year",
       "location": "Hamilton",
-      "description": "\u2022 Conducted research on protein dynamics using green fluorescent protein technology.\n\u2022 Used problem solving skills for optimizing experimental results.\n\u2022 Applied fluorescence microscopy to generate 3D images and movies of protein in live cells.\n\u2022 Managed and organized the output of thousands of files",
+      "description": "Conducted research on protein dynamics using green fluorescent protein technology.\nUsed problem solving skills for optimizing experimental results.\nApplied fluorescence microscopy to generate 3D images and movies of protein in live cells.\nManaged and organized the output of thousands of files",
       "skills": []
     }
   ],
   "education": [
     {
-      "school": "The University of British Columbia",
+      "school": "University of British Columbia",
       "url": "https://www.linkedin.com/school/universityofbc/",
       "degree": "Bachelor of Computer Science",
       "fieldOfStudy": "",
       "startDate": "2012",
       "endDate": "2016",
-      "details": "\u2022 Courses completed include Systematic Program Design, Software Engineering, Models of Computation, Hardware and Operating Systems, Algorithms and Data Structures, Relational Databases, and Artificial Intelligence.\n\u2022 Programming in Java, C/C++, and Python"
-    },
-    {
-      "school": "The University of British Columbia",
-      "url": "https://www.linkedin.com/school/universityofbc/",
-      "degree": "MSc (Discontinued)",
-      "fieldOfStudy": "Molecular Biology",
-      "startDate": "2008",
-      "endDate": "2008",
-      "details": "\u2022 Graduate studies in the field of cell biology, with research focused on the molecular mechanisms of integrin-mediated cell adhesion"
+      "details": "Courses completed include Systematic Program Design, Software Engineering, Models of Computation, Hardware and Operating Systems, Algorithms and Data Structures, Relational Databases, and Artificial Intelligence.\nProgramming in Java, C/C++, and Python"
     },
     {
       "school": "Seneca Polytechnic",
-      "url": "https://www.linkedin.com/school/seneca-college/",
-      "degree": "Graduate Certification",
-      "fieldOfStudy": "3D Animation",
+      "url": "https://www.linkedin.com/school/universityofbc/",
+      "degree": "Graduate Certificate - 3D Animation",
+      "fieldOfStudy": "",
       "startDate": "2006",
       "endDate": "2007",
-      "details": "\u2022 Extensive training in 3D modeling and animation, including rigging, shading, lighting, rendering, and dynamics.\n\u2022 Foundations in acting, life drawing and storyboarding"
+      "details": "Extensive training in 3D modeling and animation, including rigging, shading, lighting, rendering, and dynamics.\nFoundations in acting, life drawing and storyboarding"
     },
     {
       "school": "McMaster University",
@@ -229,15 +196,29 @@
       "fieldOfStudy": "Honours Biochemistry",
       "startDate": "2001",
       "endDate": "2006",
-      "details": "\u2022 Theory and practice in a curriculum spanning biology, chemistry, physics, and genetic engineering.\n\u2022 Elective courses in film studies and anthropology"
+      "details": "Theory and practice in a curriculum spanning biology, chemistry, physics, and genetic engineering.\nElective courses in film studies and anthropology"
     }
   ],
   "projects": [
     {
-      "title": "Lyddy",
+      "title": " Spotyt",
       "startDate": "Jan 2019",
       "endDate": "Present",
-      "details": "Lyddy is a sound-sharing social networking service, launched May 2019, exclusively as a desktop web application (Chrome/Firefox). Lyddy allows users to post third-party audio sources, which can be organized with tags. A user's posts can be shared publicly or with pre-approved followers. Users can browse other users' posts by tags. Users can \"Like\" posts, and follow other users to add their content to the \"home stream\"."
+      "details": "Containerized web application to play and download Spotify playlists, achieved 10x speed improvement in batch downloads by implementing asynchronous I/O streaming from backend",
+      "date": "2023",
+      "url": ""
+    },
+    {
+      "title": " Self-learning",
+      "date": "2023",
+      "details": "WebGPU API in C++",
+      "url": ""
+    },
+    {
+      "title": " Lyddy",
+      "date": "2019",
+      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
+      "url": ""
     }
   ],
   "publications": [
@@ -255,5 +236,8 @@
       ]
     }
   ],
-  "lastModified": "2023-05-24T17:48:29.486410Z"
+  "lastModified": "2023-11-21T23:59:29.421Z",
+  "highlights": "Achievements include successfully launching a SaaS product at a startup, streamlining 3D workflows for leading apparel brands, such as Supreme, and subsequently being acquired by LFX Digital; integrating 3D collaboration and asset management solutions; and co-authoring a publication at SIGGRAPH on the development of a Python API at MPC. Actively seeking opportunities to push boundaries in visual storytelling and immersive experiences.",
+  "skills": "Full Stack development, 2D/3D pipeline tooling and workflow automation, Agile practices, UI design, CD/CI, Writing technical and end-user documentation, Mentorship and code reviewing, REST APIs",
+  "technologies": ""
 }
