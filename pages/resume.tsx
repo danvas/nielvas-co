@@ -17,6 +17,10 @@ interface ExperienceProps {
   skills: string[]
 }
 
+function getLines(content: string, separator: string = "\n", prefix: string = "• ") {
+  return content.split("\n").map(line => `${prefix}${line}`)
+}
+
 function DateRangePrintable({ start, end }: { start: any, end?: any }) {
   let dateRange = `${start}`
   if (end) {
@@ -36,7 +40,7 @@ function DateRangePrintable({ start, end }: { start: any, end?: any }) {
 }
 
 function ExperienceRow(experience: ExperienceProps) {
-  const descriptionLines = experience.description.split('\n')
+  const descriptionLines = getLines(experience.description)
   const [, startYear] = experience.startDate.split(" ")
   const [, endYear] = experience.endDate.split(" ")
 
@@ -124,7 +128,7 @@ function Resume() {
         <div className="row py-2">
           <div className="col-2"></div>
           <div className="col">
-            <div>{cv.profile}</div>
+            <div>{cv.highlights}</div>
           </div>
           <div></div>
         </div>
@@ -185,7 +189,7 @@ function Resume() {
           )}
       </section>
       <div className="py-5 d-flex justify-content-between align-items-center">
-        <div className="small text-black-50 text-end d-print-none">Updated: {dateModified}</div>
+        <div className="small text-black-50 text-end d-print-none">Last modified: {dateModified}</div>
       </div>
     </div>
   )
