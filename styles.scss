@@ -9,20 +9,20 @@ $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue
 
 @import "bootstrap";
 
+@media screen {
+  .resume-only-print {
+    display: none;
+  }
+}
+
 @media print {
   .resume-print {
     font-size: 75%;
     width: 80%;
   }
 
-  .pagebreak-after:first-child {
-    display: block;
+  .avoid-page-break {
     page-break-after: avoid;
-  }
-
-  .pagebreak-after {
-    display: block;
-    page-break-after: always;
   }
 }
 

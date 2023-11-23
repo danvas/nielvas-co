@@ -50,7 +50,7 @@ function ExperienceRow(experience: ExperienceProps) {
         <DateRangePrintable start={startYear} end={endYear} />
       </div>
       <div className="col">
-        <div className="fs-5">{experience.title}</div>
+        <div className="h4 avoid-page-break fs-5">{experience.title}</div>
         <div className="pb-1">
           <a
             className="fw-light fst-italic text-muted text-decoration-none"
@@ -104,7 +104,8 @@ function Resume() {
       <div className="row pt-4 d-print-none">
         <hr className="w-50 mx-auto" />
       </div>
-      <section className="py-2 d-print-block">
+
+      <section className="py-2 resume-only-print">
         <div className="d-flex justify-content-between align-items-center">
           <div>
             <div className="display-4 text-nowrap fw-light">Daniel Vasquez</div>
@@ -122,7 +123,7 @@ function Resume() {
       <section className="py-3 d-print-block" id="profile-section">
         <div className="row">
           <div className="col">
-            <div className="fs-5 fw-light text-uppercase">Profile</div>
+            <div className="fs-5 fw-light text-uppercase avoid-page-break">Highlights</div>
           </div>
         </div>
         <div className="row py-2">
@@ -136,16 +137,16 @@ function Resume() {
       <section className="py-3" id="experience-section">
         <div className="row">
           <div className="col">
-            <div className="fs-5 fw-light text-uppercase">Work Experience</div>
+            <div className="fs-5 fw-light text-uppercase avoid-page-break">Work Experience</div>
           </div>
         </div>
         {experiences.map((experience, idx) => <ExperienceRow key={idx} {...experience} />)}
       </section>
-      <div className="pagebreak-after"></div>
+
       <section className="py-3" id="education-section">
         <div className="row">
           <div className="col">
-            <div className="fs-5 fw-light text-uppercase">Education</div>
+            <div className="fs-5 fw-light text-uppercase avoid-page-break">Education</div>
           </div>
         </div>
         {educations.map((education, idx) => (
@@ -163,7 +164,7 @@ function Resume() {
       <section className="py-3" id="publications-section">
         <div className="row">
           <div className="col">
-            <div className="fs-5 fw-light text-uppercase">Publications</div>
+            <div className="fs-5 fw-light text-uppercase avoid-page-break">Publications</div>
           </div>
         </div>
         {cv.publications
