@@ -5,7 +5,7 @@
   "experience": [
     {
       "title": "Software Engineer",
-      "url": "",
+      "url": "https://lfxdigital.com/",
       "company": "LFX Digital",
       "startDate": "July 2019",
       "endDate": "December 2022",
@@ -28,7 +28,7 @@
     },
     {
       "title": "Software Developer (Pipeline TD)",
-      "url": "",
+      "url": "https://www.scanlinevfx.com/reels/",
       "company": "ScanlineVFX",
       "startDate": "April 2016",
       "endDate": "July 2018",
@@ -45,7 +45,7 @@
     },
     {
       "title": "Software Engineer",
-      "url": "",
+      "url": "https://www.mpcfilm.com/",
       "company": "MPC",
       "startDate": "May 2014",
       "endDate": "August 2015",
@@ -236,7 +236,7 @@
       ]
     }
   ],
-  "lastModified": "2023-11-28T08:16:35.752Z",
+  "lastModified": "2023-11-28T19:19:59.526Z",
   "highlights": "Contributed to the success of a SaaS product launch at a startup, making content creation workflows frictionless for leading apparel brands such as Supreme.  Implemented 3D collaboration and asset management solutions after startup was acquired by LFX Digital.  Led the development of a Python API at MPC and co-authored a SIGGRAPH publication as a result.  Actively seeking opportunities to grow with a company that pushes boundaries in visual storytelling and immersive experiences.",
   "skills": "Full Stack development, 2D/3D content creation tooling and workflow automation, Agile practices, UI design, CD/CI, Writing technical and end-user documentation, Mentorship and code reviewing, REST APIs",
   "technologies": ""
