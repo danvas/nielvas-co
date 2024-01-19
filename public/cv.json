@@ -11,7 +11,7 @@
       "endDate": "December 2022",
       "duration": "3 years 5 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Proactively led the development of web 3D viewing and annotating solutions in the digitalisation of the product life cycle at leading fashion & apparel brands.\nReduced file export times from minutes to seconds by implementing automation plugins in Python/C++.\nKey contributor on Electron.js application to efficiently upload large files and submit jobs for rendering 3D content.\nSupported backend engineering team in building a proprietary compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes in our compute framework and resolved bugs in complex graphs.\nSupported over 30 customers in resolving technical issues.\nStarted tenure at a startup which was acquired by LFX Digital.",
+      "description": "Proactively led the development of web 3D viewing and annotating solutions in the digitalisation of the product life cycle at leading fashion & apparel brands.\nReduced file export times from minutes to seconds by implementing automation plugins in Python/C++.\nKey contributor on desktop application to efficiently upload large files and submit jobs for rendering 3D content.\nSupported backend engineering team in building a proprietary compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes in our compute framework and resolved bugs in complex graphs.\nStarted tenure at a startup which was acquired by LFX Digital.",
       "skills": [
         "Python",
         "C++",
@@ -236,8 +236,8 @@
       ]
     }
   ],
-  "lastModified": "2024-01-19T22:26:28.036Z",
-  "highlights": "Successfully launched a SaaS product as a core contributor at a startup, streamlining 3D content creation workflows and accelerating digital transformation for leading apparel brands such as Supreme and Tommy Hilfiger.  Led the integration of a web frontend for annotating and collaborating on enterprise-scale 3D datasets following the acquisition of the startup by LFX Digital.  Designed and implemented a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.   Actively seeking a role within a team working on innovative solutions, leveraging a strong foundation in practical and tangible software development skills.",
-  "skills": "Full Stack and Frontend development, 2D/3D content creation tooling and workflow automation, Agile practices, UI design, Writing technical and end-user documentation, Mentoring and code reviewing, RESTful APIs",
+  "lastModified": "2024-01-19T22:33:25.565Z",
+  "highlights": "Successfully launched a SaaS product as a core contributor at a startup, streamlining 3D content creation workflows and accelerating digital transformation for leading apparel brands such as Supreme and Tommy Hilfiger.  Led the integration of a web frontend for annotating and collaborating on enterprise-scale 3D datasets following the acquisition of the startup by LFX Digital.  Designed and implemented a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.  Actively seeking opportunities to grow with a company that pushes the boundaries in visual storytelling and immersive experiences.",
+  "skills": "2D/3D content creation tooling and workflow automation, Full stack web development, Agile practices, UI design, Writing technical and end-user documentation, Mentoring and code reviewing, RESTful APIs",
   "technologies": ""
 }
