@@ -11,7 +11,7 @@
       "endDate": "December 2022",
       "duration": "3 years 5 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Led the development of web 3D viewing and annotating solutions in the digitalisation of the product life cycle at leading fashion & apparel brands.\nReduced file export times from minutes to seconds by implementing automation plugins in Python/C++.\nCore developer of Electron.js application to efficiently upload large files and submit jobs for rendering 3D content.\nSupported backend engineering team in building a proprietary compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes in our compute framework and resolved bugs in complex graphs.\nSupported many customers in resolving technical issues.\nStarted tenure at the startup FNX Technologies, which was later acquired by LFX Digital.",
+      "description": "Proactively led the development of web 3D viewing and annotating solutions in the digitalisation of the product life cycle at leading fashion & apparel brands.\nReduced file export times from minutes to seconds by implementing automation plugins in Python/C++.\nKey contributor on Electron.js application to efficiently upload large files and submit jobs for rendering 3D content.\nSupported backend engineering team in building a proprietary compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes in our compute framework and resolved bugs in complex graphs.\nSupported over 30 customers in resolving technical issues.\nStarted tenure at a startup which was acquired by LFX Digital.",
       "skills": [
         "Python",
         "C++",
@@ -34,7 +34,7 @@
       "endDate": "July 2018",
       "duration": "2 years 3 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Designed and developed plugins for third-party 3D applications to efficiently export and publish large asset files.\nSupported hundreds of artists and technical directors across the visual effects pipeline by debugging issues in asset management and workflows.\nExtended and maintained internal APIs and cross platform desktop tools for the setup, caching, viewing, and tracking of thousands of digital assets.\nDesigned and wrote technical briefs.",
+      "description": "Designed and developed plugins for third-party 3D applications to efficiently export and publish large asset files.\nSupported over 30 artists and technical directors across the visual effects pipeline by debugging issues in asset management and workflows.\nExtended and maintained internal APIs and cross platform desktop tools for the setup, caching, viewing, and tracking of thousands of digital assets.\nDesigned and wrote technical briefs.",
       "skills": [
         "Python",
         "Nuke",
@@ -51,7 +51,7 @@
       "endDate": "August 2015",
       "duration": "1 year 3 months",
       "location": "Vancouver",
-      "description": "Designed and implemented a Python API to automate high-throughput processing of images for panoramic stitching, resulting in a co-authored publication at SIGGRAPH 2015.\nCollaborated asynchronously with developers in various studios across multiple time zones.\nProvided technical support to hundreds of internal users.\nOversaw Linux environments, coordinating with department supervisors to deploy updates across all departments in accordance with scheduled releases.",
+      "description": "Designed and implemented a Python API to automate high-throughput processing of images for panoramic stitching, resulting in a co-authored publication at SIGGRAPH 2015.\nCollaborated asynchronously with developers in various studios across multiple time zones.\nProvided technical support to over 20 internal users.\nOversaw updates on ~80 configurations of Linux environments, coordinated with department supervisors to ensure timely and scheduled releases.",
       "skills": [
         "Python",
         "Nuke",
@@ -236,8 +236,8 @@
       ]
     }
   ],
-  "lastModified": "2023-11-28T19:19:59.526Z",
-  "highlights": "Contributed to the success of a SaaS product launch at a startup, making content creation workflows frictionless for leading apparel brands such as Supreme.  Implemented 3D collaboration and asset management solutions after startup was acquired by LFX Digital.  Led the development of a Python API at MPC and co-authored a SIGGRAPH publication as a result.  Actively seeking opportunities to grow with a company that pushes boundaries in visual storytelling and immersive experiences.",
-  "skills": "Full Stack development, 2D/3D content creation tooling and workflow automation, Agile practices, UI design, CD/CI, Writing technical and end-user documentation, Mentorship and code reviewing, REST APIs",
+  "lastModified": "2024-01-19T22:26:28.036Z",
+  "highlights": "Successfully launched a SaaS product as a core contributor at a startup, streamlining 3D content creation workflows and accelerating digital transformation for leading apparel brands such as Supreme and Tommy Hilfiger.  Led the integration of a web frontend for annotating and collaborating on enterprise-scale 3D datasets following the acquisition of the startup by LFX Digital.  Designed and implemented a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.   Actively seeking a role within a team working on innovative solutions, leveraging a strong foundation in practical and tangible software development skills.",
+  "skills": "Full Stack and Frontend development, 2D/3D content creation tooling and workflow automation, Agile practices, UI design, Writing technical and end-user documentation, Mentoring and code reviewing, RESTful APIs",
   "technologies": ""
 }
