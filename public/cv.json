@@ -202,23 +202,83 @@
   "projects": [
     {
       "title": " Spotyt",
-      "startDate": "Jan 2019",
-      "endDate": "Present",
-      "details": "Containerized web application to play and download Spotify playlists, achieved 10x speed improvement in batch downloads by implementing asynchronous I/O streaming from backend",
-      "date": "2023",
-      "url": ""
+      "subtitle": "Spotify playlist downloader",
+      "startDate": "Feb 2023",
+      "endDate": "2023",
+      "details": "Containerized web app to allow Spotify users to play and download music from their or other users' public Spotify playlists.\nAchieved 10x speed improvement in batch downloads by implementing asynchronous I/O streaming from backend",
+      "links": [
+        {
+          "type": "demo",
+          "url": "https://spotyt.nielvas.co"
+        },
+        {
+          "type": "code",
+          "url": "https://github.com/danvas/spotyt-dl"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Docker",
+        "Google Cloud",
+        "FastAPI",
+        "React",
+        "Spotify API"
+      ]
     },
     {
-      "title": " Self-learning",
-      "date": "2023",
-      "details": "WebGPU API in C++",
-      "url": ""
+      "title": "Lyddy.stream",
+      "subtitle": "Sound-sharing social networking web app",
+      "startDate": "Aug 2018",
+      "endDate": "2019",
+      "details": "Lyddy allows users to post audio sources to their \"home stream\", which can be organized with tags.\nA user's posts can be shared publicly or with pre-approved followers. Users can browse and listen to other users' content by tags. Users can \"Like\" posts, and follow other users to add their content to the \"home stream\". Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
+      "url": "",
+      "links": [
+        {
+          "type": "app",
+          "url": "https://lyddy.stream/nielvas"
+        },
+        {
+          "type": "demo",
+          "url": "https://vimeo.com/341738887"
+        },
+        {
+          "type": "code",
+          "url": "https://bitbucket.org/danvasq/lyddy-stream/src/master/"
+        }
+      ],
+      "skills": [
+        "Javascript",
+        "Firebase",
+        "React",
+        "Node.js"
+      ]
     },
     {
-      "title": " Lyddy",
-      "date": "2019",
-      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
-      "url": ""
+      "title": "3D Landing Page",
+      "subtitle": "Design engineering exercise using Three.js",
+      "startDate": "Dec 2023",
+      "endDate": "2024",
+      "details": "A landing page to showcase a 3D model of the lunar space suit worn by the Apollo 11 astronauts. \nThe page is embedded with a 3D model and has multiple sections. As the user scrolls between sections, the 3D model rotates to show a different part. I used Blender to export the camera movement in conjunction with the model.",
+      "url": "",
+      "links": [
+        {
+          "type": "demo",
+          "url": "https://armstrong-spacesuit.vercel.app"
+        },
+        {
+          "type": "code",
+          "url": "https://github.com/danvas/misc-exercises/tree/main/packages/armstrong-spacesuit"
+        }
+      ],
+      "skills": [
+        "TypeScript",
+        "Three.js",
+        "Blender",
+        "glTF",
+        "React.js",
+        "React Three",
+        "Next.js"
+      ]
     }
   ],
   "publications": [

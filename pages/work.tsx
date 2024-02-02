@@ -5,6 +5,7 @@ import {
   BoxArrowUpRightIcon,
 } from "../components/Icons"
 import Link from "next/link"
+import cv from "../public/cv.json"
 
 
 interface ProjectProps {
@@ -20,6 +21,34 @@ interface LinkProps {
   title: string
   url: string
   icon?: React.ReactNode
+}
+
+function parseProjectProps(projectData: any): ProjectProps {
+  const { title, subtitle, endDate, details: description, links: linksData, skills } = projectData
+  const LINK_TYPES_MAP = {
+    "demo": {
+      title: "Demo",
+      icon: <BoxArrowUpRightIcon size="16" className="mb-1" />
+    },
+    "code": {
+      title: "Source Code",
+      icon: <CodeSlashIcon size="18" className="mb-1" />
+    },
+    "app": {
+      title: "App",
+      icon: <BoxArrowUpRightIcon size="16" className="mb-1" />
+    }
+  }
+  const links = linksData.map(lnk => ({ ...LINK_TYPES_MAP[lnk.type], url: lnk.url }))
+
+  return {
+    title,
+    subtitle,
+    description,
+    skills,
+    links,
+    year: endDate,
+  }
 }
 
 function ProjectCard(project: ProjectProps) {
@@ -70,56 +99,11 @@ function Work() {
             In case you're looking for my CV, take a look at <Link className="text-decoration-none" href="/resume">my resume</Link>.
           </p>
         </div>
-        <ProjectCard
-          year="2023"
-          title="Spotyt"
-          subtitle="Spotify playlist downloader"
-          description={
-            `API and web app to allow Spotify users to find and \
-            download music from their or other users' public playlists.`}
-          links={[
-            {
-              title: "Demo",
-              url: "https://spotyt.nielvas.co",
-              icon: <BoxArrowUpRightIcon size="16" className="mb-1" />
-            },
-            {
-              title: "Source Code",
-              url: "https://github.com/danvas/spotyt-dl",
-              icon: <CodeSlashIcon size="18" className="mb-1" />
-            },
-          ]}
-          skills={["Python", "Docker", "Google Cloud", "FastAPI", "React", "Spotify API"]}
-        />
-        <ProjectCard
-          year="2019"
-          title="Lyddy.stream"
-          subtitle="Sound-sharing social networking web app"
-          description={(
-            `Lyddy allows users to post audio sources to their "home stream", \
-            which can be organized with tags. \n A user's posts can be shared publicly or \
-            with pre-approved followers. Users can browse and listen to other users' \
-            content by tags. Users can "Like" posts, and follow other users to add their content \
-            to the "home stream".`)}
-          links={[
-            {
-              title: "App",
-              url: "https://lyddy.stream/nielvas",
-              icon: <BoxArrowUpRightIcon size="16" className="mb-1" />
-            },
-            {
-              title: "Demo",
-              url: "https://vimeo.com/341738887",
-              icon: <BoxArrowUpRightIcon size="16" className="mb-1" />
-            },
-            {
-              title: "Source Code",
-              url: "https://bitbucket.org/danvasq/lyddy-stream/src/master/",
-              icon: <CodeSlashIcon size="18" className="mb-1" />
-            },
-          ]}
-          skills={["Javascript", "Firebase", "React", "Node.js"]}
-        />
+        {cv.projects
+          .sort((a, b) => parseInt(b.endDate) - parseInt(a.endDate))
+          .map(project =>
+            <ProjectCard {...parseProjectProps(project)} />
+          )}
       </div>
     </div>
   )
