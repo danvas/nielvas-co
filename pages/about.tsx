@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="container pt-5 px-4">
       <div className="fs-3 fw-normal pb-4">
-        I'm a software developer building tools and applications for content creation, currenty seeking opportunities to contribute
+        I'm a software developer building tools and applications for content creation, currently seeking opportunities to contribute
         to cutting-edge software solutions for organizations making an impact in immersive and interactive experiences, visual storytelling,
         or tools for scientific discovery.
       </div>

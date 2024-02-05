@@ -102,7 +102,7 @@ function Work() {
         {cv.projects
           .sort((a, b) => parseInt(b.endDate) - parseInt(a.endDate))
           .map(project =>
-            <ProjectCard {...parseProjectProps(project)} />
+            <ProjectCard key={project.title} {...parseProjectProps(project)} />
           )}
       </div>
     </div>
