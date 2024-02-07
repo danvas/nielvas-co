@@ -64,7 +64,7 @@ function ProjectCard(project: ProjectProps) {
         </div>
       </div>
       <div className="pb-2 px-1">
-        <div className="fw-light opacity-75 text-muted text-decoration-none">{subtitle}</div>
+        <div className="fw-light opacity-75 text-muted">{subtitle}</div>
       </div>
       <div className="px-1"><Description lines={descriptionLines} /></div>
 
@@ -74,7 +74,7 @@ function ProjectCard(project: ProjectProps) {
       <div className="d-flex pt-4 justify-content-between">
         {links.map((link) => {
           return (
-            <a key={link.url} className="pt-1" href={link.url} target="_blank" >
+            <a key={link.url} className="pt-1 text-primary" href={link.url} target="_blank" >
               {link.icon}
               <span className=""> <u>{link.title}</u></span>
             </a>
@@ -93,10 +93,10 @@ function Work() {
         <div className="fw-light fs-5 nv-project-card">
           <p>
             I'm always working on a client or personal project, but the works currently showcased here are personal projects.
-            This page will frequently be updated. Check back soon for more or see my <a className="text-decoration-none" target="_blank" href="https://github.com/danvas">GitHub</a> repositories in the meantime.
+            This page will frequently be updated. Check back soon for more or see my <a className="text-primary" target="_blank" href="https://github.com/danvas">GitHub</a> repositories in the meantime.
           </p>
           <p>
-            In case you're looking for my CV, take a look at <Link className="text-decoration-none" href="/resume">my resume</Link>.
+            In case you're looking for my CV, take a look at <Link className="text-primary" href="/resume">my resume</Link>.
           </p>
         </div>
         {cv.projects

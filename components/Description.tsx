@@ -13,7 +13,7 @@ function Description({ lines }) {
             hidden={lines.length === 1}
             onClick={() => setExpanded(true)}
           >
-            <small> ... See more</small>
+            <small className="text-secondary"> ... See more</small>
           </span>
         }
       </p>
@@ -26,7 +26,7 @@ function Description({ lines }) {
         hidden={lines.length === 1}
         onClick={() => setExpanded(false)}
       >
-        <small> ... See less</small>
+        <small className="text-secondary"> ... See less</small>
       </span>}
     </div>
   )
