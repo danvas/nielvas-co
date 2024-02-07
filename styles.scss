@@ -1,11 +1,14 @@
-$dark: #343a40;
-$light: #fff8fc;
-$primary: #cd007b;
-$secondary: #ffd6ef;
+$dark: #2f3439;
+$light: #f0f8fb;
+$primary: #d92570;
+$secondary: #ffe7f6;
 $fadeDuration: 0.5s;
-$nv-dark-blue: #6e86a7;
-$nv-light-blue: #b6cee3;
-$nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue);
+$nv-blue-100: #dcefff;
+$nv-blue-200: #9db9e0;
+$nv-blue-800: #2c3544;
+$nv-blue-900: #151a20;
+$nv-gradient-light: linear-gradient(to bottom right, $nv-blue-200, $nv-blue-100);
+$nv-gradient-dark: linear-gradient(to bottom right, $nv-blue-900, $nv-blue-800);
 
 @import "bootstrap";
 
@@ -124,18 +127,39 @@ $nv-sky-gradient: linear-gradient(to bottom right, $nv-dark-blue, $nv-light-blue
   max-width: 410px;
 }
 
-.nv-cloud-bg {
-  background: center no-repeat url("/bg-cloud.jpg");
-  // background: center no-repeat radial-gradient(#b6cee3, #2a09ff00), 55% url("/bg-cloud.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@include color-mode(light) {
+  --bs-body-bg: #{$nv-gradient-light};
+
+  // .nv-cloud-bg {
+  //   background: center no-repeat url("/bg-cloud.jpg");
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  //   background-attachment: fixed;
+  //   background-position: center;
+  //   background-origin: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  // }
+}
+
+@include color-mode(dark) {
+  --bs-body-bg: #{$nv-gradient-dark};
+
+  p {
+    color: $light
+  }
+
+  .nv-nav-link {
+    color: $light;
+    @extend .nv-outlined-link;
+  }
+
 }
 
 body {
-  background-image: $nv-sky-gradient;
-  background-color: $nv-light-blue;
+  background: var(--bs-body-bg);
+  transition: background 5s;
   background-attachment: fixed;
   background-position: center;
   background-origin: center;
