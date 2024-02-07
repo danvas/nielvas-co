@@ -24,6 +24,13 @@ function Root({ Component, pageProps }) {
     
       gtag('config', 'G-DFH13LLV4W');`}
       </Script>
+      <Script id="get-prefered-theme-script" strategy="beforeInteractive" >
+        {`
+      let storedTheme = localStorage.getItem('theme')
+      let systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      document.querySelector(':root').dataset.bsTheme = storedTheme ?? systemTheme
+      `}
+      </Script>
       <Head>
         <title>Daniel Vasquez // Software Developer</title>
         <link rel="icon" href="https://symbl-world.akamaized.net/i/webp/78/4c77a8fb21eeb70940ce079977345c.webp" />

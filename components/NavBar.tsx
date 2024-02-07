@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/router'
+import ThemeToggler from "./ThemeToggle"
 
 
 enum NavIdx {
@@ -74,9 +75,9 @@ const Navbar = () => {
             <ListIcon size="32" />
           </span>
         </button>
-
         <div className={`collapse ${toggle && "show"} navbar-collapse justify-content-end`}>
           <div className="d-sm-flex gap-3 mt-1 text-end ">
+            <ThemeToggler />
             <Link
               onClick={() => setActiveIdx(NavIdx.WORK)}
               className={`nv-nav-link fs-5 ${active(NavIdx.WORK)}`}
