@@ -109,7 +109,7 @@ function Resume() {
         <div className="d-flex justify-content-between align-items-center">
           <div>
             <div className="display-4 text-nowrap fw-light">Daniel Vasquez</div>
-            <div className="fs-5 text-dark">Software Engineer</div>
+            <div className="fs-5 text-dark">Software Developer</div>
           </div>
           <div className="ps-2 fw-light fs-8">
             <small>
@@ -123,7 +123,7 @@ function Resume() {
       <section className="py-3 d-print-block" id="profile-section">
         <div className="row">
           <div className="col">
-            <div className="fs-5 fw-light text-uppercase avoid-page-break">Highlights</div>
+            <div className="fs-5 text-primary fw-light text-uppercase avoid-page-break">Highlights</div>
           </div>
         </div>
         <div className="row py-2">
@@ -137,7 +137,7 @@ function Resume() {
       <section className="py-3" id="experience-section">
         <div className="row">
           <div className="col">
-            <div className="fs-5 fw-light text-uppercase avoid-page-break">Work Experience</div>
+            <div className="fs-5 text-primary fw-light text-uppercase avoid-page-break">Work Experience</div>
           </div>
         </div>
         {experiences.map((experience, idx) => <ExperienceRow key={idx} {...experience} />)}
@@ -146,7 +146,7 @@ function Resume() {
       <section className="py-3" id="education-section">
         <div className="row">
           <div className="col">
-            <div className="fs-5 fw-light text-uppercase avoid-page-break">Education</div>
+            <div className="fs-5 fw-light text-primary text-uppercase avoid-page-break">Education</div>
           </div>
         </div>
         {educations.map((education, idx) => (
@@ -155,7 +155,7 @@ function Resume() {
               <DateRangePrintable start={education.startDate} end={education.endDate} />
             </div>
             <div className="col">
-              <a className="fs-5 text-decoration-none text-dark" target="_blank" href={education.url}>{education.school}</a>
+              <a className="h4 fs-5 text-decoration-none" target="_blank" href={education.url}>{education.school}</a>
               <p className="fw-light">{education.degree}{education.fieldOfStudy ? " - " : null}{education.fieldOfStudy}</p>
             </div>
           </div>)
@@ -164,7 +164,7 @@ function Resume() {
       <section className="py-3" id="publications-section">
         <div className="row">
           <div className="col">
-            <div className="fs-5 fw-light text-uppercase avoid-page-break">Publications</div>
+            <div className="fs-5 text-primary fw-light text-uppercase avoid-page-break">Publications</div>
           </div>
         </div>
         {cv.publications
@@ -175,7 +175,7 @@ function Resume() {
               </div>
               <div className="col">
                 <div className="pb-1">
-                  <a className="fs-5 text-decoration-none text-dark"
+                  <a className="fs-5 h4 text-decoration-none"
                     target="_blank"
                     href={publication.url}
                   >
@@ -190,7 +190,7 @@ function Resume() {
           )}
       </section>
       <div className="py-5 d-flex justify-content-between align-items-center">
-        <div className="small text-black-50 text-end d-print-none">Last modified: {dateModified}</div>
+        <div className="small text-secondary text-end d-print-none">Last modified: {dateModified}</div>
       </div>
     </div>
   )
