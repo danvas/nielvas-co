@@ -5,19 +5,17 @@ function About() {
   return (
     <div className="container gradient pt-5 px-4">
       <div className="fs-3 fw-normal pb-4">
-        I'm a software developer building tools and applications for content creation, currently seeking opportunities to work on forward-thinking solutions at organizations that are making an impact in immersive and interactive experiences, visual storytelling,
-        or tools for scientific discovery.
+        I enjoy building automated workflows and applications that facilitate the creative process at organizations that are making an impact in immersive and interactive experiences, visual storytelling, or tools for scientific discovery.
       </div>
       <div className="row pb-4">
         <hr className="w-25 mx-auto" />
       </div>
       <div className="fw-light fs-5">
         <p>
-          I enjoy building workflow tools and applications that facilitate the creative process for artists and designers
-          working on immersive and visual storytelling content.
+          I'm currently working as a Technical Artist at Electronic Arts.
         </p>
         <p>
-          In the past 3+ years at the startup <em>FNX Technologies</em>, I helped build a rendering-as-a-service product for leading fashion & apparel brands.
+          In the past 4+ years at the startup <em>FNX Technologies</em>, I helped build a rendering-as-a-service product for leading fashion & apparel brands.
           We eventually got acquired by <a className="text-primary" target="_blank" href="https://unifi3d.co/">UNIFI3D</a> (<em>Li & Fung, Ltd</em>)
           where I continued to build automated workflows and integrated 3D collaboration solutions in their proprietary digital asset management system.
           In the previous 4+ years, I developed tools for artists and technical directors in the visual effects production pipeline in feature films

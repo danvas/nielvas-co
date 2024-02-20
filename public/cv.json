@@ -4,6 +4,24 @@
   "profileImage": "https://media.licdn.com/dms/image/C4E03AQGPdeN348ESJw/profile-displayphoto-shrink_800_800/0/1516267692651?e=1678924800&v=beta&t=fcE5_OcGbX_-PV_B5hwY6Wte7pCM4bG2LuKRaNUGFBA",
   "experience": [
     {
+      "title": "Technical Artist",
+      "url": "https://ea.com/",
+      "company": "Electronic Arts",
+      "startDate": "March 2024",
+      "endDate": "Present",
+      "duration": "0 years 0 months",
+      "location": "Vancouver, British Columbia, Canada",
+      "description": "Development of content production tools, pipelines, asset optimization/integration, and workflows on AAA games.\nOwnership of UFC Live Services, including production support, maintenance of tools and coordination between partner domains using strong and timely communication.",
+      "skills": [
+        "Python",
+        "C#",
+        "Maya",
+        "Houdini",
+        "Photoshop",
+        "Perforce"
+      ]
+    },
+    {
       "title": "Software Engineer",
       "url": "https://lfxdigital.com/",
       "company": "LFX Digital",
@@ -296,8 +314,8 @@
       ]
     }
   ],
-  "lastModified": "2024-01-19T22:33:25.565Z",
-  "highlights": "Successfully launched a SaaS product as a core contributor at a startup, streamlining 3D content creation workflows and accelerating digital transformation for leading apparel brands such as Supreme and Tommy Hilfiger.  Led the integration of a web frontend for annotating and collaborating on enterprise-scale 3D datasets following the acquisition of the startup by LFX Digital.  Designed and implemented a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.  Actively seeking opportunities to grow with a company that pushes the boundaries in visual storytelling and immersive experiences.",
+  "lastModified": "2024-02-20T12:33:25.565Z",
+  "highlights": "Seven years of hands-on experience developing desktop tools, web applications, and backend solutions designed to streamline digital content creation within complex pipelines and workflows.  Successfully launched a 3D rendering and asset delivery SaaS at a startup, accelerating digital transformation for leading apparel brands, and subsequently acquired by LFX Digital.  Designed and implemented a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.",
   "skills": "2D/3D content creation tooling and workflow automation, Full stack web development, Agile practices, UI design, Writing technical and end-user documentation, Mentoring and code reviewing, RESTful APIs",
   "technologies": ""
 }
