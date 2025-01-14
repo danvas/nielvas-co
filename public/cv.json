@@ -4,14 +4,14 @@
   "profileImage": "https://media.licdn.com/dms/image/C4E03AQGPdeN348ESJw/profile-displayphoto-shrink_800_800/0/1516267692651?e=1678924800&v=beta&t=fcE5_OcGbX_-PV_B5hwY6Wte7pCM4bG2LuKRaNUGFBA",
   "experience": [
     {
-      "title": "Technical Artist",
+      "title": "Technical Artist II",
       "url": "https://ea.com/",
       "company": "Electronic Arts",
-      "startDate": "March 2024",
-      "endDate": "Present",
+      "startDate": null,
+      "endDate": null,
       "duration": "0 years 0 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Development of content production tools, pipelines, asset optimization/integration, and workflows on AAA games.\nOwnership of UFC Live Services, including production support, maintenance of tools and coordination between partner domains using strong and timely communication.",
+      "description": "Development of content production tools, pipelines, asset optimization/integration, and workflows on AAA games.\nOwnership of UFC Live Service’s content workflow, including production support, maintenance of tools and coordination between partner domains using strong and timely communication.\nDeveloped and implemented tools within the Frostbite engine to accelerate character review cycles.",
       "skills": [
         "Python",
         "C#",
@@ -26,10 +26,10 @@
       "url": "https://lfxdigital.com/",
       "company": "LFX Digital",
       "startDate": "July 2019",
-      "endDate": "December 2022",
-      "duration": "3 years 5 months",
+      "endDate": "December 2023",
+      "duration": "4 years 5 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Proactively led the development of web 3D viewing and annotating solutions in the digitalisation of the product life cycle at leading fashion & apparel brands.\nReduced file export times from minutes to seconds by implementing automation plugins in Python/C++.\nKey contributor on desktop application to efficiently upload large files and submit jobs for rendering 3D content.\nSupported backend engineering team in building a proprietary compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes in our compute framework and resolved bugs in complex graphs.\nStarted tenure at a startup which was acquired by LFX Digital.",
+      "description": "Proactively led the development of web 3D viewing and annotating solutions in the digitalisation of the product life cycle at leading fashion & apparel brands.\nSupported backend engineering team in building a compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes and unit tests, and resolved bugs in our compute framework.\nStarted tenure at a startup which was acquired by LFX Digital.",
       "skills": [
         "Python",
         "C++",
@@ -47,12 +47,12 @@
     {
       "title": "Software Developer (Pipeline TD)",
       "url": "https://www.scanlinevfx.com/reels/",
-      "company": "ScanlineVFX",
+      "company": "Scanline VFX",
       "startDate": "April 2016",
       "endDate": "July 2018",
       "duration": "2 years 3 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Designed and developed plugins for third-party 3D applications to efficiently export and publish large asset files.\nSupported over 30 artists and technical directors across the visual effects pipeline by debugging issues in asset management and workflows.\nExtended and maintained internal APIs and cross platform desktop tools for the setup, caching, viewing, and tracking of thousands of digital assets.\nDesigned and wrote technical briefs.",
+      "description": "Designed and developed plugins for third-party 3D applications to efficiently export and publish large asset files.\nSupported over 30 artists across the visual effects pipeline by debugging issues in asset management and workflows.\nExtended and maintained APIs and cross platform desktop tools for the setup, caching, viewing, and tracking of thousands of digital assets.\nDesigned and wrote technical briefs.",
       "skills": [
         "Python",
         "Nuke",
@@ -63,13 +63,13 @@
     },
     {
       "title": "Software Engineer",
-      "url": "https://www.mpcfilm.com/",
+      "url": "https://www.mpcvfx.com/",
       "company": "MPC",
       "startDate": "May 2014",
       "endDate": "August 2015",
       "duration": "1 year 3 months",
       "location": "Vancouver",
-      "description": "Designed and implemented a Python API to automate high-throughput processing of images for panoramic stitching, resulting in a co-authored publication at SIGGRAPH 2015.\nCollaborated asynchronously with developers in various studios across multiple time zones.\nProvided technical support to over 20 internal users.\nOversaw updates on ~80 configurations of Linux environments, coordinated with department supervisors to ensure timely and scheduled releases.",
+      "description": "Designed and implemented a Python API to automate high-throughput processing of images for panoramic stitching, resulting in a co-authored publication at SIGGRAPH 2015.\nProvided technical support to over 20 internal users.\nOversaw updates on environments, ensuring timely and scheduled releases.",
       "skills": [
         "Python",
         "Nuke",
@@ -223,7 +223,7 @@
       "subtitle": "Spotify playlist downloader",
       "startDate": "Feb 2023",
       "endDate": "2023",
-      "details": "Containerized web app to allow Spotify users to play and download music from their or other users' public Spotify playlists.\nAchieved 10x speed improvement in batch downloads by implementing asynchronous I/O streaming from backend",
+      "details": "Containerized web app to play and download Spotify playlists, optimized batch download speeds 10x by implementing asynchronous I/O streaming from FastAPI backend",
       "links": [
         {
           "type": "demo",
@@ -241,14 +241,16 @@
         "FastAPI",
         "React",
         "Spotify API"
-      ]
+      ],
+      "date": "2023",
+      "url": ""
     },
     {
-      "title": "Lyddy.stream",
+      "title": " Lyddy",
       "subtitle": "Sound-sharing social networking web app",
       "startDate": "Aug 2018",
       "endDate": "2019",
-      "details": "Lyddy allows users to post audio sources to their \"home stream\", which can be organized with tags.\nA user's posts can be shared publicly or with pre-approved followers. Users can browse and listen to other users' content by tags. Users can \"Like\" posts, and follow other users to add their content to the \"home stream\". Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
+      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
       "url": "",
       "links": [
         {
@@ -269,7 +271,8 @@
         "Firebase",
         "React",
         "Node.js"
-      ]
+      ],
+      "date": "2019"
     },
     {
       "title": "3D Landing Page",
@@ -314,8 +317,8 @@
       ]
     }
   ],
-  "lastModified": "2024-02-20T12:33:25.565Z",
-  "highlights": "Seven years of hands-on experience developing desktop tools, web applications, and backend solutions designed to streamline digital content creation within complex pipelines and workflows.  Successfully launched a 3D rendering and asset delivery SaaS at a startup, accelerating digital transformation for leading apparel brands, and subsequently acquired by LFX Digital.  Designed and implemented a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.",
-  "skills": "2D/3D content creation tooling and workflow automation, Full stack web development, Agile practices, UI design, Writing technical and end-user documentation, Mentoring and code reviewing, RESTful APIs",
+  "lastModified": "2025-01-14T01:02:34.342Z",
+  "highlights": "Eight years of hands-on experience developing desktop tools, web applications, and backend solutions designed to streamline digital content creation within complex pipelines and workflows.  Successfully launched a 3D rendering and asset delivery SaaS at a startup, accelerating digital transformation for leading apparel brands, and subsequently acquired by LFX Digital.  Designed and implemented a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.",
+  "skills": "Full stack development, 2D/3D content creation tooling and workflow automation, GUI design, Agile practices, CD/CI, Unit testing, Writing technical and end-user documentation, Mentoring and code reviewing, Integrating REST APIs",
   "technologies": ""
 }
