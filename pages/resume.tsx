@@ -18,6 +18,9 @@ interface ExperienceProps {
 }
 
 function getLines(content: string, separator: string = "\n", prefix: string = "• ") {
+  if (content == null) {
+    return '[no lines]'
+  }
   return content.split("\n").map(line => `${prefix}${line}`)
 }
 
@@ -41,8 +44,8 @@ function DateRangePrintable({ start, end }: { start: any, end?: any }) {
 
 function ExperienceRow(experience: ExperienceProps) {
   const descriptionLines = getLines(experience.description)
-  const [, startYear] = experience.startDate.split(" ")
-  const [, endYear] = experience.endDate.split(" ")
+  const [, startYear] = experience.startDate?.split(" ") || ['', '']
+  const [, endYear] = experience.endDate?.split(" ") || ['', 'Present']
 
   return (
     <div className="row py-3 align-items-baseline">
@@ -183,7 +186,7 @@ function Resume() {
                   </a>
                 </div>
                 <p className="fw-light">{publication.publisher}</p>
-                <div>{publication.details.split('\n').map((line, idx) => <p key={idx}>{line}</p>)}</div>
+                <div>{publication.details?.split('\n').map((line, idx) => <p key={idx}>{line}</p>)}</div>
               </div>
               <div></div>
             </div>)
