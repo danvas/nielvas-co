@@ -1,24 +1,25 @@
 {
   "name": "Daniel Vasquez",
-  "profile": "Self-driven software engineer with a passion for creating workflow tools and pipelines for 3D artists and designers in visual effects, animation, and fashion & apparel.",
+  "profile": "Self-driven software developer with a passion for creating workflow tools and pipelines for 3D artists and designers in visual effects, animation, and fashion & apparel.",
   "profileImage": "https://media.licdn.com/dms/image/C4E03AQGPdeN348ESJw/profile-displayphoto-shrink_800_800/0/1516267692651?e=1678924800&v=beta&t=fcE5_OcGbX_-PV_B5hwY6Wte7pCM4bG2LuKRaNUGFBA",
   "experience": [
     {
       "title": "Technical Artist II",
       "url": "https://ea.com",
       "company": "Electronic Arts Inc.",
-      "startDate": null,
-      "endDate": null,
-      "duration": "0 years 0 months",
+      "startDate": "March 2024",
+      "endDate": "Present",
+      "duration": "1 year 0 months",
       "location": "Vancouver, British Columbia, Canada",
       "description": "Develop and optimize content production tools within Frostbite game engine, enhancing workflow efficiency for AAA game development.\nOwnership of UFC Live Service’s content support, ensuring smooth cross-team collaboration using clear and timely communication and proficient debugging skills.\nDesign new asset data types and implement a camera system within Frostbite Schematics to streamline the character review process, enabling faster iteration cycles for stakeholders.",
       "skills": [
         "Python",
-        "C#",
+        "Perforce",
+        "Frostbite Engine",
         "Maya",
-        "Houdini",
+        "C#",
         "Photoshop",
-        "Perforce"
+        "Lua"
       ]
     },
     {
