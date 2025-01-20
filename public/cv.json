@@ -69,7 +69,7 @@
       "endDate": "August 2015",
       "duration": "1 year 3 months",
       "location": "Vancouver",
-      "description": "Designed and implemented a Python API to automate high-throughput processing of images for panoramic stitching, resulting in a co-authored publication at SIGGRAPH 2015.\nProvided technical support to over 20 internal users.\nOversaw updates on environments, ensuring timely and scheduled releases.",
+      "description": "Designed and implemented a Python API to automate high-throughput processing of images for panoramic stitching, resulting in a co-authored publication at SIGGRAPH 2015.\nProvided technical support to over 20 internal customers.\nOversaw updates on environments, ensuring timely and scheduled releases.",
       "skills": [
         "Python",
         "Nuke",
@@ -318,7 +318,7 @@
       ]
     }
   ],
-  "lastModified": "2025-01-20T20:53:04.220Z",
+  "lastModified": "2025-01-20T21:39:29.339Z",
   "highlights": "Eight years of hands-on developer experience building desktop tools, web apps, and backend solutions designed to streamline digital content creation for complex pipelines and workflows of all scales.  Effectively collaborated as a key contributor on a 3D SaaS platform at a startup that was acquired by LFX Digital.  Designed a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.",
   "skills": "Full stack development, 2D/3D content creation tooling and workflow automation, GUI design, Agile practices, CD/CI, Writing technical & end-user documentation, Mentoring and code reviewing, Integrating REST APIs, Visual programming",
   "technologies": ""
