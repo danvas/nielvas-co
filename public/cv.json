@@ -7,11 +7,11 @@
       "title": "Technical Artist II",
       "url": "https://ea.com/",
       "company": "Electronic Arts",
-      "startDate": "March 2024",
-      "endDate": " Present",
+      "startDate": null,
+      "endDate": null,
       "duration": "0 years 0 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Development of content production tools, pipelines, asset optimization/integration, and workflows on AAA games.\nOwnership of UFC Live Service’s content workflow, including production support, maintenance of tools and coordination between partner domains using strong and timely communication.\nDeveloped and implemented tools within the Frostbite engine to accelerate character review cycles.",
+      "description": "Develop and optimize content production pipelines and tools within Frostbite, enhancing workflow efficiency for AAA game development.\nOwnership of UFC Live Service’s content support, ensuring smooth cross-team collaboration using clear and timely communication, and proficient debugging skills.\nDesign new asset data types and implement a camera system within Frostbite Schematics to streamline the character review process, enabling faster iteration cycles for stakeholders.",
       "skills": [
         "Python",
         "C#",
@@ -29,7 +29,7 @@
       "endDate": "December 2023",
       "duration": "4 years 5 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Proactively led the development of web 3D viewing and annotating solutions in the digitalisation of the product life cycle at leading fashion & apparel brands.\nSupported backend engineering team in building a compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes and unit tests, and resolved bugs in our compute framework.\nStarted tenure at a startup which was acquired by LFX Digital.",
+      "description": "Proactively led the development of web 3D viewing and annotating solutions in the digitalisation of the product life cycle at leading fashion & apparel brands like Lululemon.\nSupported backend engineering team in building a compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes and unit tests, and resolved bugs in our compute framework.\nStarted tenure at a startup which was acquired by LFX Digital.",
       "skills": [
         "Python",
         "C++",
@@ -317,8 +317,8 @@
       ]
     }
   ],
-  "lastModified": "2025-01-14T08:25:57.282Z",
-  "highlights": "Eight years of hands-on experience developing desktop tools, web applications, and backend solutions designed to streamline digital content creation within complex pipelines and workflows.  Successfully launched a 3D rendering and asset delivery SaaS at a startup, accelerating digital transformation for leading apparel brands, and subsequently acquired by LFX Digital.  Designed and implemented a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.",
+  "lastModified": "2025-01-20T04:46:31.854Z",
+  "highlights": "Eight years of hands-on developer experience building desktop tools, web apps, and backend solutions designed to streamline digital content creation for complex pipelines and workflows of all scales.  Effectively collaborated as a key contributor on a 3D SaaS platform at a startup that was acquired by LFX Digital.  Designed a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.",
   "skills": "Full stack development, 2D/3D content creation tooling and workflow automation, GUI design, Agile practices, CD/CI, Unit testing, Writing technical and end-user documentation, Mentoring and code reviewing, Integrating REST APIs",
   "technologies": ""
 }
