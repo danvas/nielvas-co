@@ -7,11 +7,11 @@
       "title": "Technical Artist II",
       "url": "https://ea.com",
       "company": "Electronic Arts Inc.",
-      "startDate": "March 2024",
-      "endDate": "Present",
-      "duration": "1 year 0 months",
+      "startDate": null,
+      "endDate": null,
+      "duration": "0 years 0 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Develop and optimize content production tools within Frostbite game engine, enhancing workflow efficiency for AAA game development.\nOwnership of UFC Live Service’s content support, ensuring smooth cross-team collaboration using clear and timely communication and proficient debugging skills.\nDesign new asset data types and implement a camera system within Frostbite Schematics to streamline the character review process, enabling faster iteration cycles for stakeholders.",
+      "description": "Develop and optimize content production tools within Frostbite game engine, enhancing workflow efficiency for AAA game development.\nOwnership of Live Service content support, ensuring smooth cross-team collaboration using timely and clear communication, and proficient debugging skills.\nDesign new asset data types and implement a camera system in Frostbite Schematics to streamline the character review process, resulting in faster iteration cycles for stakeholders.",
       "skills": [
         "Python",
         "Perforce",
@@ -30,7 +30,7 @@
       "endDate": "December 2022",
       "duration": "3 years 5 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Proactively led the development of web 3D viewing and annotating solutions in the digitalisation of the product life cycle at leading apparel brands like Lululemon.\nSupported backend engineering team in building a compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended Python processes and unit tests, and resolved bugs in our compute framework.\nStarted tenure at a startup which was acquired by LFX Digital.",
+      "description": "Proactively led the development of web 3D viewing and annotating solutions for the product life cycle at leading apparel brands like Lululemon.\nWrote plugins in Python and C++ for various third-party 3D software.\nContributed to a compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended and debugged Python processes in our compute framework.\nStarted tenure at a startup which was acquired by LFX Digital.",
       "skills": [
         "Python",
         "C++",
@@ -53,7 +53,7 @@
       "endDate": "July 2018",
       "duration": "2 years 3 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Designed and developed a plugin for ZBrush to export and publish large FBX assets and texture files, and a ShotGrid/RV tool to visualize asset metadata in dailies.\nSupported over 30 artists across the pipeline, debugged issues in asset management and workflows.\nExtended PyQt tools for the setup, caching, viewing, and tracking of thousands of digital assets.",
+      "description": "Designed and developed a plugin for 3D sculpting software to export and publish large FBX assets and texture files, and a ShotGrid/RV tool to visualize asset metadata in dailies.\nSupported over 20 artists across the pipeline, debugged issues in asset management and workflows.\nExtended PyQt tools for the setup, caching, viewing, and tracking of thousands of digital assets.",
       "skills": [
         "Python",
         "Nuke",
@@ -319,7 +319,7 @@
       ]
     }
   ],
-  "lastModified": "2025-01-20T21:39:29.339Z",
+  "lastModified": "2025-01-30T15:54:03.822Z",
   "highlights": "Eight years of hands-on developer experience building desktop tools, web apps, and backend solutions designed to streamline digital content creation for complex pipelines and workflows of all scales.  Effectively collaborated as a key contributor on a 3D SaaS platform at a startup that was acquired by LFX Digital.  Designed a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.",
   "skills": "Full stack development, 2D/3D content creation tooling and workflow automation, GUI design, Agile practices, CD/CI, Writing technical & end-user documentation, Mentoring and code reviewing, Integrating REST APIs, Visual programming",
   "technologies": ""
