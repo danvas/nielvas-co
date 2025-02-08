@@ -33,6 +33,7 @@ jobs:
         with:
           name: static-build
           path: ./out
+          overwrite: true
 
   sync:
     name: S3 sync
@@ -45,6 +46,7 @@ jobs:
         with:
           name: static-build
           path: ./out
+          overwrite: true
 
       - name: Sync to S3
         uses: raulanatol/aws-s3-docker-action@master
