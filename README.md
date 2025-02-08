@@ -19,4 +19,4 @@ Take a look at it at [nielvas.co](https://da.nielvas.co).
 
 ## Status
 
-[![S3 Sync & Cloudfront Invalidation](https://github.com/danvas/nielvas-co/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/danvas/nielvas-co/actions/workflows/deploy.yml)
+[![Sync to S3 & Invalidate Cloudfront](https://github.com/danvas/nielvas-co/actions/workflows/deploy.yml/badge.svg)](https://github.com/danvas/nielvas-co/actions/workflows/deploy.yml)
