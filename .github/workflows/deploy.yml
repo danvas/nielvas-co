@@ -2,8 +2,7 @@ name: Sync to S3 & Invalidate Cloudfront
 run-name: Sync and Deploy
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
     paths:
       - '**.tsx'
       - 'public/**'
@@ -38,7 +37,7 @@ jobs:
   sync:
     name: S3 sync
     needs: build
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     environment: staging
     steps:
       - name: Download artifact
