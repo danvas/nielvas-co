@@ -4,14 +4,23 @@
   "profileImage": "https://media.licdn.com/dms/image/C4E03AQGPdeN348ESJw/profile-displayphoto-shrink_800_800/0/1516267692651?e=1678924800&v=beta&t=fcE5_OcGbX_-PV_B5hwY6Wte7pCM4bG2LuKRaNUGFBA",
   "experience": [
     {
+      "title": "Software Developer",
+      "company": "nielvas.co",
+      "url": "https://nielvas.co",
+      "startDate": "April 2025",
+      "endDate": "Present",
+      "duration": "NaN years NaN months",
+      "description": "Developing performant WebGL-based 3D interactive content, including custom shaders and post-processing effects, while maintaining visual fidelity."
+    },
+    {
       "title": "Technical Artist II",
       "url": "https://ea.com",
       "company": "Electronic Arts Inc.",
       "startDate": "March 2024",
-      "endDate": "Present",
-      "duration": "1 year",
+      "endDate": "March 2025",
+      "duration": "1 year 0 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Develop and optimize content production tools within Frostbite game engine, enhancing workflow efficiency for AAA game development.\nOwnership of Live Service content support, ensuring smooth cross-team collaboration using timely and clear communication, and proficient debugging skills.\nDesign new asset data types and implement a camera system in Frostbite Schematics to streamline the character review process, resulting in faster iteration cycles for stakeholders.",
+      "description": "Designed new data types, implemented a camera system in Frostbite, and integrated Graph Editor modules to streamline UFC character review process, enabling cross-functional teams to iterate faster.\nSpearheaded DCC and CLI tooling to automate TA tasks, accelerating productivity for UFC Live Service content, closely collaborating with Engineers, Art Directors, and Development Directors.\nWrote Python scripts to extract and transform data from game assets into structured datasets for strategic analysis.",
       "skills": [
         "Python",
         "Perforce",
@@ -30,7 +39,7 @@
       "endDate": "December 2022",
       "duration": "3 years 5 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Proactively led the development of web 3D viewing and annotating solutions for the product life cycle at leading apparel brands like Lululemon.\nWrote plugins in Python and C++ for various third-party 3D software.\nContributed to a compute graph framework on AWS for scalable cloud-native rendering and processing of 3D assets.\nExtended and debugged Python processes in our compute framework.\nStarted tenure at a startup which was acquired by LFX Digital.",
+      "description": "Led R&D to develop a feature for collaboratively viewing and annotating 3D models on a web frontend, integrated in an established DAM system.\nCollaborated with backend engineers to build a compute graph framework on AWS EC2, designed for scalable rendering and processing of 3D assets on the cloud.\nWrote Python scripts for an ETL pipeline to migrate thousands of 3D assets from SharePoint to DAM.",
       "skills": [
         "Python",
         "C++",
@@ -53,7 +62,7 @@
       "endDate": "July 2018",
       "duration": "2 years 3 months",
       "location": "Vancouver, British Columbia, Canada",
-      "description": "Designed and developed a plugin for 3D sculpting software to export and publish large FBX assets and texture files, and a ShotGrid/RV tool to visualize asset metadata in dailies.\nSupported over 20 artists across the pipeline, debugged issues in asset management and workflows.\nExtended PyQt tools for the setup, caching, viewing, and tracking of thousands of digital assets.",
+      "description": "Designed Python plugins automating 3D modeling workflows and implemented a video player plugin, leveraging ShotGrid API, to visually identify assets during playbacks, greatly improving the review experience during dailies.",
       "skills": [
         "Python",
         "Nuke",
@@ -70,7 +79,7 @@
       "endDate": "August 2015",
       "duration": "1 year 3 months",
       "location": "Vancouver",
-      "description": "Designed and implemented a Python API to automate high-throughput processing of images for panoramic stitching, resulting in a co-authored publication at SIGGRAPH 2015.\nProvided technical support to over 20 internal customers.\nOversaw updates on environments, ensuring timely and scheduled releases.",
+      "description": "Lead developer of a Python API for high-throughput image processing in a panoramic stitching pipeline, resulting in a publication at SIGGRAPH 2015.",
       "skills": [
         "Python",
         "Nuke",
@@ -201,7 +210,7 @@
     },
     {
       "school": "Seneca Polytechnic",
-      "url": "https://www.senecacollege.ca/programs/fulltime/DAN.html",
+      "url": "https://www.senecapolytechnic.ca/programs/fulltime/DAN.html",
       "degree": "Graduate Certificate",
       "fieldOfStudy": "3D Animation",
       "startDate": "2006",
@@ -219,6 +228,24 @@
     }
   ],
   "projects": [
+    {
+      "title": " Lyddy",
+      "date": "2019",
+      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
+      "url": ""
+    },
+    {
+      "title": " Spotyt",
+      "date": "2023",
+      "details": "Containerized web app to play and download Spotify playlists, achieved 10x speed improvement in batch downloads by implementing asynchronous I/O streaming from FastAPI/Uvicorn backend",
+      "url": ""
+    },
+    {
+      "title": " Self-learning",
+      "date": "2025",
+      "details": "WebGPU API in C++",
+      "url": ""
+    },
     {
       "title": " Spotyt",
       "subtitle": "Spotify playlist downloader",
@@ -319,8 +346,8 @@
       ]
     }
   ],
-  "lastModified": "2025-01-30T15:54:03.822Z",
-  "highlights": "Eight years of hands-on developer experience building desktop tools, web apps, and backend solutions designed to streamline digital content creation for complex pipelines and workflows of all scales.  Effectively collaborated as a key contributor on a 3D SaaS platform at a startup that was acquired by LFX Digital.  Designed a Python API at MPC, resulting in co-authoring a SIGGRAPH publication.",
-  "skills": "Full stack development, 2D/3D content creation tooling and workflow automation, GUI design, Agile practices, CD/CI, Writing technical & end-user documentation, Mentoring and code reviewing, Integrating REST APIs, Visual programming",
-  "technologies": ""
+  "lastModified": "2025-07-10T19:02:30.336Z",
+  "highlights": "Passionate software developer with 8+ years of hands-on experience building cross-platform applications designed to streamline 3D content creation in complex pipelines and workflows of all scales.  Effectively collaborated as a key contributor on a 3D rendering cloud platform at a startup that was acquired by LFX Digital.  Designed a Python API at MPC, resulting in a SIGGRAPH publication.",
+  "skills": "Full stack development, with emphasis on frontend, Object Oriented Programming, 2D/3D content creation tooling and workflows, UI design, Agile methodology, CI/CD, Writing technical & end-user documentation, Mentoring and code reviewing, Integrating RESTful APIs",
+  "technologies": "Python, JavaScript, TypeScript, C++, Bash, PowerShell, HTML, CSS, React.js, Next.js, Three.js, Autodesk Maya, Blender, Photoshop, Frostbite Engine, Git, Perforce, FastAPI, Flask, AWS S3/EC2, GCP, Docker, GitHub Actions"
 }
