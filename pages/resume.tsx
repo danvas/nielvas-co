@@ -12,9 +12,9 @@ interface ExperienceProps {
   startDate: string
   endDate: string
   duration: string
-  location: string
   description: string
-  skills: string[]
+  location?: string
+  skills?: string[]
 }
 
 function getLines(content: string, separator: string = "\n", prefix: string = "• ") {

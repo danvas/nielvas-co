@@ -12,7 +12,7 @@ function About() {
       </div>
       <div className="fw-light fs-5">
         <p>
-          I'm a Technical Artist II at Electronic Arts. Previously I was a software engineer at the startup <em>FNX Technologies</em> where I helped build a rendering-as-a-service product for leading fashion & apparel brands.
+          I'm currently developing 3D applications as an independent contractor. Previously, I was a Technical Artist II at <a className="text-primary" target="_blank" href="https://www.ea.com/ea-studios/ea-sports">Electronic Arts</a> working on artist tools in Frostbite Engine and optimizing content creation pipelines. I was also a software engineer at the startup <em>FNX Technologies</em> where I helped build a rendering-as-a-service product for leading fashion & apparel brands.
           We eventually got acquired by <a className="text-primary" target="_blank" href="https://unifi3d.co/">UNIFI3D</a> (<em>Li & Fung, Ltd</em>)
           where I continued to build automated workflows and integrated 3D collaboration solutions in their proprietary digital asset management system.
           In the previous 4+ years, I developed tools for artists and technical directors in the visual effects production pipeline in feature films

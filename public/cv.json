@@ -10,7 +10,12 @@
       "startDate": "April 2025",
       "endDate": "Present",
       "duration": "NaN years NaN months",
-      "description": "Developing performant WebGL-based 3D interactive content, including custom shaders and post-processing effects, while maintaining visual fidelity."
+      "description": "Developing performant WebGL-based 3D interactive content, including custom shaders and post-processing effects, while maintaining visual fidelity.",
+      "skills": [
+        "three.js",
+        "GLSL",
+        "Blender"
+      ]
     },
     {
       "title": "Technical Artist II",
@@ -229,22 +234,23 @@
   ],
   "projects": [
     {
-      "title": " Lyddy",
-      "date": "2019",
-      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
-      "url": ""
-    },
-    {
-      "title": " Spotyt",
-      "date": "2023",
-      "details": "Containerized web app to play and download Spotify playlists, achieved 10x speed improvement in batch downloads by implementing asynchronous I/O streaming from FastAPI/Uvicorn backend",
-      "url": ""
-    },
-    {
-      "title": " Self-learning",
-      "date": "2025",
-      "details": "WebGPU API in C++",
-      "url": ""
+      "title": " Ivy Energy",
+      "subtitle": "Three.js scene for client's website ivy-energy.com",
+      "startDate": "April 2025",
+      "endDate": "2025",
+      "details": "Modeled, textured, and animated a custom 3D scene in Blender, seamlessly integrating it into the client's homepage via Three.js. Implemented various visual effects while rigorously optimizing for load times and rendering performance.",
+      "links": [
+        {
+          "type": "demo",
+          "url": "https://ivy-energy.com"
+        }
+      ],
+      "skills": [
+        "Three.js",
+        "GLSL",
+        "Blender",
+        "HTML"
+      ]
     },
     {
       "title": " Spotyt",
@@ -269,17 +275,14 @@
         "FastAPI",
         "React",
         "Spotify API"
-      ],
-      "date": "2023",
-      "url": ""
+      ]
     },
     {
-      "title": " Self-learning",
+      "title": " Lyddy",
       "subtitle": "Sound-sharing social networking web app",
       "startDate": "Aug 2018",
       "endDate": "2019",
-      "details": "WebGPU API in C++",
-      "url": "",
+      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
       "links": [
         {
           "type": "app",
@@ -299,14 +302,13 @@
         "Firebase",
         "React",
         "Node.js"
-      ],
-      "date": "2023"
+      ]
     },
     {
-      "title": " Lyddy",
-      "subtitle": "Design engineering exercise using Three.js",
+      "title": " Armstrong Spacesuit",
+      "subtitle": "Three.js exercise",
       "startDate": "Dec 2023",
-      "endDate": "2024",
+      "endDate": "2023",
       "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
       "url": "",
       "links": [
@@ -327,8 +329,7 @@
         "React.js",
         "React Three",
         "Next.js"
-      ],
-      "date": "2019"
+      ]
     }
   ],
   "publications": [
