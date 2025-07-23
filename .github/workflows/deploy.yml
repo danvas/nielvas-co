@@ -4,9 +4,9 @@ on:
   push:
     branches: ["master"]
     paths:
-      - '**.tsx'
-      - 'public/**'
-      - '**.scss'
+      - "**.tsx"
+      - "public/**"
+      - "**.scss"
 
 jobs:
   build:
@@ -45,7 +45,6 @@ jobs:
         with:
           name: static-build
           path: ./out
-          overwrite: true
 
       - name: Sync to S3
         uses: raulanatol/aws-s3-docker-action@master
