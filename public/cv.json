@@ -1,42 +1,40 @@
 {
   "experience": [
     {
-      "startDate": "April 2025",
-      "company": "nielvas.co",
-      "endDate": "Present",
-      "url": "https://nielvas.co",
-      "duration": "4 Months",
       "description": "Developing performant WebGL-based 3D interactive content, including custom shaders and post-processing effects, while maintaining visual fidelity.",
+      "endDate": "Present",
       "title": "Software Developer",
       "skills": [
         "three.js",
         "GLSL",
         "Blender"
-      ]
+      ],
+      "url": "https://nielvas.co",
+      "duration": "4 Months",
+      "startDate": "April 2025",
+      "company": "nielvas.co"
     },
     {
-      "location": "Vancouver, British Columbia, Canada",
-      "duration": "1 year 0 months",
-      "company": "Electronic Arts Inc.",
+      "endDate": "March 2025",
+      "startDate": "March 2024",
       "title": "Technical Artist II",
       "description": "Designed new data types and implemented a camera system in Frostbite to streamline artist tools, enabling cross-functional teams to iterate faster on character reviews.\nWrote DCC and CLI tooling to automate content integration, accelerating productivity for Live Service game content, closely collaborating with Engineers, Art Directors, and Development Directors.\nWrote Python scripts to extract and transform data from game assets into structured datasets for strategic analysis.",
-      "endDate": "March 2025",
+      "url": "https://ea.com",
+      "duration": "1 year 0 months",
+      "location": "Vancouver, British Columbia, Canada",
       "skills": [
         "Python",
         "Perforce",
         "Frostbite Engine",
         "Maya",
         "C#",
-        "Photoshop",
-        "Lua"
+        "Photoshop"
       ],
-      "startDate": "March 2024",
-      "url": "https://ea.com"
+      "company": "Electronic Arts Inc."
     },
     {
-      "duration": "3 years 5 months",
-      "startDate": "July 2019",
-      "description": "Led R&D to develop a feature for collaboratively viewing and annotating 3D models on a web frontend, integrated in an established DAM system.\nCollaborated with backend engineers to build a compute graph framework on AWS EC2, designed for scalable rendering and processing of 3D assets on the cloud.\nWrote Python scripts for an ETL pipeline to migrate thousands of 3D assets from SharePoint to DAM.",
+      "company": "LFX Digital",
+      "title": "Software Engineer",
       "skills": [
         "Python",
         "C++",
@@ -50,17 +48,15 @@
         "Electron.js",
         "MaxScript"
       ],
-      "title": "Software Engineer",
-      "endDate": "December 2022",
+      "duration": "3 years 5 months",
+      "description": "Led R&D to develop a feature for collaboratively viewing and annotating 3D models on a web frontend, integrated in an established DAM system.\nCollaborated with backend engineers to build a compute graph framework on AWS EC2, designed for scalable rendering and processing of 3D assets on the cloud.\nWrote Python scripts for an ETL pipeline to migrate thousands of 3D assets from SharePoint to DAM.",
+      "startDate": "July 2019",
       "url": "https://lfxdigital.com/",
-      "location": "Vancouver, British Columbia, Canada",
-      "company": "LFX Digital"
+      "endDate": "December 2022",
+      "location": "Vancouver, British Columbia, Canada"
     },
     {
-      "title": "Software Developer (Pipeline TD)",
       "company": "Scanline VFX",
-      "url": "https://www.scanlinevfx.com/reels/",
-      "location": "Vancouver, British Columbia, Canada",
       "skills": [
         "Python",
         "Nuke",
@@ -68,13 +64,21 @@
         "ShotGrid / RV",
         "Maya"
       ],
-      "duration": "2 years 3 months",
-      "endDate": "July 2018",
+      "description": "Designed Python plugins automating 3D modeling workflows and implemented a video player plugin, leveraging ShotGrid API, to visually identify assets during playbacks, greatly improving the review experience during dailies.",
+      "title": "Software Developer (Pipeline TD)",
       "startDate": "April 2016",
-      "description": "Designed Python plugins automating 3D modeling workflows and implemented a video player plugin, leveraging ShotGrid API, to visually identify assets during playbacks, greatly improving the review experience during dailies."
+      "duration": "2 years 3 months",
+      "url": "https://www.scanlinevfx.com/reels/",
+      "endDate": "July 2018",
+      "location": "Vancouver, British Columbia, Canada"
     },
     {
-      "location": "Vancouver",
+      "company": "MPC",
+      "startDate": "May 2014",
+      "description": "Lead developer of a Python API for high-throughput image processing in a panoramic stitching pipeline, resulting in a publication at SIGGRAPH 2015.",
+      "url": "https://www.mpcvfx.com",
+      "title": "Software Engineer",
+      "endDate": "August 2015",
       "skills": [
         "Python",
         "Nuke",
@@ -84,148 +88,178 @@
         "ShotGrid",
         "Maya"
       ],
-      "title": "Software Engineer",
-      "company": "MPC",
-      "url": "https://www.mpcvfx.com",
-      "endDate": "August 2015",
-      "startDate": "May 2014",
-      "duration": "1 year 3 months",
-      "description": "Lead developer of a Python API for high-throughput image processing in a panoramic stitching pipeline, resulting in a publication at SIGGRAPH 2015."
+      "location": "Vancouver",
+      "duration": "1 year 3 months"
     },
     {
+      "location": "Vancouver",
+      "duration": "6 years 4 months",
+      "description": "Conceptualized and created visual media for science education, mechanism-of-action renderings, and marketing for clients such as United Nations, GenomeDx, Telus, and Nissan.\nCreated 3D content and visual effects for animated or live-action films, and mobile apps.\nWrote software tools and scripts to streamline animation process.",
+      "company": "Hey Light (freelance)",
+      "url": "",
+      "endDate": "Apr 2016",
       "skills": [
         "Maya",
         "Photoshop",
         "After Effects",
         "Python"
       ],
-      "endDate": "Apr 2016",
-      "url": "",
-      "location": "Vancouver",
       "startDate": "Jan 2010",
-      "duration": "6 years 4 months",
-      "title": "Technical Artist",
-      "description": "Conceptualized and created visual media for science education, mechanism-of-action renderings, and marketing for clients such as United Nations, GenomeDx, Telus, and Nissan.\nCreated 3D content and visual effects for animated or live-action films, and mobile apps.\nWrote software tools and scripts to streamline animation process.",
-      "company": "Hey Light (freelance)"
+      "title": "Technical Artist"
     },
     {
+      "skills": [],
+      "location": "Victoria",
+      "title": "Software Developer (internship)",
       "endDate": "Dec 2013",
       "startDate": "Sep 2013",
-      "title": "Software Developer (internship)",
       "url": "https://www.linkedin.com/company/ibm",
-      "description": "Followed UX designs in HTML, CSS and JavaScript for internal web application.\nWrote production quality, client-side code in Eclipse IDE and debugged using Chrome DevTools.\nBuilt Ajax enabled custom widgets using Dojo Toolkit framework.\nLearned the requisite web technologies while adhereing to tight deadlines in the Agile process",
-      "skills": [],
-      "company": "IBM",
       "duration": "4 months",
-      "location": "Victoria"
+      "company": "IBM",
+      "description": "Followed UX designs in HTML, CSS and JavaScript for internal web application.\nWrote production quality, client-side code in Eclipse IDE and debugged using Chrome DevTools.\nBuilt Ajax enabled custom widgets using Dojo Toolkit framework.\nLearned the requisite web technologies while adhereing to tight deadlines in the Agile process"
     },
     {
-      "endDate": "May 2010",
+      "title": "Animation Specialist",
+      "company": "Stemcell Technologies",
+      "duration": "1 year 5 months",
+      "location": "Vancouver",
       "url": "https://www.linkedin.com/company/stemcell-technologies",
+      "description": "Conceptualized and created commercial and educational videos.\nWrote scripts for the screen and developed storyboards.\nBuild and render 3D animation content.\nDirected and lit live action content.\nEdited, composited, and compressed videos.\nProgrammed in MEL and simulated natural materials using nCLoth",
       "skills": [],
       "startDate": "Jan 2009",
-      "location": "Vancouver",
-      "title": "Animation Specialist",
-      "description": "Conceptualized and created commercial and educational videos.\nWrote scripts for the screen and developed storyboards.\nBuild and render 3D animation content.\nDirected and lit live action content.\nEdited, composited, and compressed videos.\nProgrammed in MEL and simulated natural materials using nCLoth",
-      "duration": "1 year 5 months",
-      "company": "Stemcell Technologies"
+      "endDate": "May 2010"
     },
     {
+      "skills": [],
       "location": "Vancouver",
       "company": "Tangible Interaction",
-      "url": "https://www.linkedin.com/company/tangible-interaction",
       "startDate": "Mar 2010",
-      "title": "3D Animator",
       "endDate": "Apr 2010",
+      "title": "3D Animator",
       "duration": "2 months",
-      "skills": [],
-      "description": "Client: Telus.\nCreated low-polygon model.\nTextured and animated photorealistic Telus hippopotamus.\nOptimized exports to Collada format for augmented reality application"
+      "description": "Client: Telus.\nCreated low-polygon model.\nTextured and animated photorealistic Telus hippopotamus.\nOptimized exports to Collada format for augmented reality application",
+      "url": "https://www.linkedin.com/company/tangible-interaction"
     },
     {
-      "description": "Instructed seven courses in Grades 7, 8, 9, and 12 in the French curriculum.\nTaught and guided students in the subjects of math, physics, biology, and chemistry.\nPrepared workshops and activities to supplement theory.\nAssessed student progress while maintaining accurate records and reports",
-      "title": "Sciences & Math Instructor",
       "startDate": "Sep 2007",
-      "company": "Ecole Victor Hugo (EaB)",
+      "endDate": "Aug 2008",
       "url": "",
-      "skills": [],
       "location": "Paris, France",
+      "company": "Ecole Victor Hugo (EaB)",
+      "title": "Sciences & Math Instructor",
       "duration": "1 year",
-      "endDate": "Aug 2008"
+      "skills": [],
+      "description": "Instructed seven courses in Grades 7, 8, 9, and 12 in the French curriculum.\nTaught and guided students in the subjects of math, physics, biology, and chemistry.\nPrepared workshops and activities to supplement theory.\nAssessed student progress while maintaining accurate records and reports"
     },
     {
-      "startDate": "Aug 2007",
-      "duration": "7 months",
-      "skills": [],
-      "company": "Le Pivot",
-      "location": "Paris, France",
       "endDate": "Feb 2008",
-      "url": "https://www.linkedin.com/company/lepivotdesignlove",
       "title": "3D Artist",
-      "description": "Client: Nissan.\nTextured, lit, and composited photorealistic car.\nModelled and UV-mapped old lady character in a short film (Collaboration: PSST!)"
-    },
-    {
-      "endDate": "Sep 2006",
-      "duration": "4 months",
+      "duration": "7 months",
+      "url": "https://www.linkedin.com/company/lepivotdesignlove",
       "skills": [],
-      "startDate": "Jun 2006",
-      "title": "Medical Internist Assistant",
-      "company": "San Jose Hospital",
-      "description": "Effectively assisted patients and supported staff with practical assistance.\nObserved and participated in several surgical procedures, and adeptly sutured patients with minimal assistance.\nShadowed physicians and medical students in the emergency and operating room",
-      "location": "Santiago de Chile",
-      "url": ""
+      "location": "Paris, France",
+      "description": "Client: Nissan.\nTextured, lit, and composited photorealistic car.\nModelled and UV-mapped old lady character in a short film (Collaboration: PSST!)",
+      "startDate": "Aug 2007",
+      "company": "Le Pivot"
     },
     {
-      "url": "https://www.linkedin.com/company/university-of-toronto",
-      "description": "Conducted research on biomolecular pathways regulating cell fate in embryonic stem cells.\nOperated specialized instrumentation and computer software for analyzing cells.\nPresented background information on stem cell signaling and research results during lab meetings",
+      "startDate": "Jun 2006",
+      "company": "San Jose Hospital",
+      "url": "",
+      "endDate": "Sep 2006",
+      "title": "Medical Internist Assistant",
+      "description": "Effectively assisted patients and supported staff with practical assistance.\nObserved and participated in several surgical procedures, and adeptly sutured patients with minimal assistance.\nShadowed physicians and medical students in the emergency and operating room",
+      "duration": "4 months",
+      "location": "Santiago de Chile",
+      "skills": []
+    },
+    {
       "duration": "9 months",
-      "title": "Research Assistant - Stem Cell Signaling",
+      "endDate": "Dec 2005",
       "skills": [
         "Fluorescence Spectroscopy",
         "RNA Isolation"
       ],
+      "url": "https://www.linkedin.com/company/university-of-toronto",
+      "description": "Conducted research on biomolecular pathways regulating cell fate in embryonic stem cells.\nOperated specialized instrumentation and computer software for analyzing cells.\nPresented background information on stem cell signaling and research results during lab meetings",
       "startDate": "Apr 2005",
-      "endDate": "Dec 2005",
       "company": "University of Toronto",
+      "title": "Research Assistant - Stem Cell Signaling",
       "location": "Toronto"
     },
     {
-      "company": "McMaster University",
-      "url": "https://www.linkedin.com/company/mcmaster-university",
-      "startDate": "Jan 2004",
-      "location": "Hamilton",
-      "description": "Conducted research on protein dynamics using green fluorescent protein technology.\nUsed problem solving skills for optimizing experimental results.\nApplied fluorescence microscopy to generate 3D images and movies of protein in live cells.\nManaged and organized the output of thousands of files",
-      "skills": [],
       "endDate": "Dec 2004",
+      "title": "Research Assistant - Polyglutamine Neurodegenerative Diseases",
+      "skills": [],
       "duration": "1 year",
-      "title": "Research Assistant - Polyglutamine Neurodegenerative Diseases"
+      "description": "Conducted research on protein dynamics using green fluorescent protein technology.\nUsed problem solving skills for optimizing experimental results.\nApplied fluorescence microscopy to generate 3D images and movies of protein in live cells.\nManaged and organized the output of thousands of files",
+      "startDate": "Jan 2004",
+      "url": "https://www.linkedin.com/company/mcmaster-university",
+      "location": "Hamilton",
+      "company": "McMaster University"
     }
   ],
+  "education": [
+    {
+      "fieldOfStudy": "",
+      "degree": "Bachelor of Computer Science",
+      "url": "https://www.cs.ubc.ca/about",
+      "endDate": "2016",
+      "details": "Courses completed include Systematic Program Design, Software Engineering, Models of Computation, Hardware and Operating Systems, Algorithms and Data Structures, Relational Databases, and Artificial Intelligence.\nProgramming in Java, C/C++, and Python",
+      "startDate": "2012",
+      "school": "University of British Columbia"
+    },
+    {
+      "url": "https://www.senecapolytechnic.ca/programs/fulltime/DAN.html",
+      "school": "Seneca Polytechnic",
+      "degree": "Graduate Certificate",
+      "startDate": "2006",
+      "endDate": "2007",
+      "fieldOfStudy": "3D Animation",
+      "details": "Extensive training in 3D modeling and animation, including rigging, shading, lighting, rendering, and dynamics.\nFoundations in acting, life drawing and storyboarding"
+    },
+    {
+      "url": "https://www.linkedin.com/school/mcmaster-university/",
+      "school": "McMaster University",
+      "startDate": "2001",
+      "endDate": "2006",
+      "degree": "Bachelor of Science",
+      "details": "Theory and practice in a curriculum spanning biology, chemistry, physics, and genetic engineering.\nElective courses in film studies and anthropology",
+      "fieldOfStudy": "Honours Biochemistry"
+    }
+  ],
+  "technologies": "Python, JavaScript, TypeScript, C++, Bash, PowerShell, HTML, CSS, React.js, Next.js, Three.js, Autodesk Maya, Blender, Photoshop, Frostbite Engine, Git, Perforce, FastAPI, Flask, AWS S3/EC2, GCP, Docker, GitHub Actions",
+  "profile": "Self-driven software developer with a passion for creating workflow tools and pipelines for 3D artists and designers in visual effects, animation, and fashion & apparel.",
   "highlights": "Passionate software developer with 8+ years of hands-on experience building web & desktop applications designed to streamline 3D content creation in complex pipelines and workflows of all scales.  Effectively collaborated as a key contributor on a 3D rendering cloud platform at a startup that was acquired by LFX Digital.  Designed a Python API at MPC, resulting in a SIGGRAPH publication.",
-  "lastModified": "2025-07-23T01:57:31.846Z",
-  "skills": "Full stack development, with emphasis on frontend, Object Oriented Programming, 2D/3D content creation tooling and workflows, UI design, Agile methodology, CI/CD, Writing technical & end-user documentation, Mentoring and code reviewing, Integrating RESTful APIs",
-  "profileImage": "https://media.licdn.com/dms/image/C4E03AQGPdeN348ESJw/profile-displayphoto-shrink_800_800/0/1516267692651?e=1678924800&v=beta&t=fcE5_OcGbX_-PV_B5hwY6Wte7pCM4bG2LuKRaNUGFBA",
-  "name": "Daniel Vasquez",
   "projects": [
     {
-      "skills": [
-        "Three.js",
-        "GLSL",
-        "Blender",
-        "HTML"
-      ],
-      "endDate": "2025",
-      "title": " Ivy Energy",
+      "subtitle": "Three.js scene for client's website ivy-energy.com",
+      "startDate": "April 2025",
       "links": [
         {
           "url": "https://ivy-energy.com",
           "type": "demo"
         }
       ],
-      "subtitle": "Three.js scene for client's website ivy-energy.com",
-      "startDate": "April 2025",
-      "details": "Modeled, textured, and animated a custom 3D scene in Blender, seamlessly integrating it into the client's homepage via Three.js. Implemented various visual effects while rigorously optimizing for load times and rendering performance."
+      "details": "Modeled, textured, and animated a custom 3D scene in Blender, seamlessly integrating it into the client's homepage via Three.js. Implemented various visual effects while rigorously optimizing for load times and rendering performance.",
+      "title": " Ivy Energy",
+      "skills": [
+        "Three.js",
+        "GLSL",
+        "Blender",
+        "HTML"
+      ],
+      "endDate": "2025"
     },
     {
+      "skills": [
+        "Python",
+        "Docker",
+        "Google Cloud",
+        "FastAPI",
+        "React",
+        "Spotify API"
+      ],
       "links": [
         {
           "type": "demo",
@@ -236,53 +270,40 @@
           "type": "code"
         }
       ],
-      "startDate": "Feb 2023",
       "details": "Containerized web application to play and download Spotify playlists, achieved 10x speed improvement in batch downloads by implementing asynchronous I/O streaming from backend",
       "subtitle": "Spotify playlist downloader",
-      "title": " Spotyt",
-      "skills": [
-        "Python",
-        "Docker",
-        "Google Cloud",
-        "FastAPI",
-        "React",
-        "Spotify API"
-      ],
-      "endDate": "2023"
+      "startDate": "Feb 2023",
+      "endDate": "2023",
+      "title": " Spotyt"
     },
     {
-      "endDate": "2019",
-      "startDate": "Aug 2018",
-      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
-      "subtitle": "Sound-sharing social networking web app",
       "skills": [
         "Javascript",
         "Firebase",
         "React",
         "Node.js"
       ],
+      "title": " Lyddy",
       "links": [
         {
-          "type": "app",
-          "url": "https://lyddy.stream/nielvas"
+          "url": "https://lyddy.stream/nielvas",
+          "type": "app"
         },
         {
-          "type": "demo",
-          "url": "https://vimeo.com/341738887"
+          "url": "https://vimeo.com/341738887",
+          "type": "demo"
         },
         {
           "url": "https://bitbucket.org/danvasq/lyddy-stream/src/master/",
           "type": "code"
         }
       ],
-      "title": " Lyddy"
+      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
+      "endDate": "2019",
+      "startDate": "Aug 2018",
+      "subtitle": "Sound-sharing social networking web app"
     },
     {
-      "endDate": "2023",
-      "startDate": "Dec 2023",
-      "url": "",
-      "title": " Armstrong Spacesuit",
-      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
       "links": [
         {
           "url": "https://armstrong-spacesuit.vercel.app",
@@ -293,7 +314,8 @@
           "url": "https://github.com/danvas/misc-exercises/tree/main/packages/armstrong-spacesuit"
         }
       ],
-      "subtitle": "Three.js exercise",
+      "endDate": "2023",
+      "startDate": "Dec 2023",
       "skills": [
         "TypeScript",
         "Three.js",
@@ -302,53 +324,30 @@
         "React.js",
         "React Three",
         "Next.js"
-      ]
+      ],
+      "subtitle": "Three.js exercise",
+      "details": "Social media network using an undirected graph structure in Firebase Realtime Database, with a React frontend",
+      "url": "",
+      "title": " Armstrong Spacesuit"
     }
   ],
+  "lastModified": "2025-07-23T03:16:40.521Z",
+  "skills": "Full stack development, with emphasis on frontend, Object Oriented Programming, 2D/3D content creation tooling and workflows, UI design, Agile methodology, CI/CD, Writing technical & end-user documentation, Mentoring and code reviewing, Integrating RESTful APIs",
   "publications": [
     {
-      "details": "For \"Godzilla\" and many upcoming films at MPC, hundreds of panoramic images were acquired and a proper pipeline was needed to supply departments with quick previews and automated stitching. We were tasked with capturing and recreating many on-set locations. Roundshots are panoramic images captured on set for use in compositing, lighting and environments.\nAccurate incorporation and interpretation of the captured images for use in film is essential to maintain the visual and spatial information as well as to better accommodate creative direction. Several new processes were required to update MPC's pipeline to accommodate a large amount of data with a dynamic workflow. With such a broad array of images, a combination of automation and stakeholder visibility were needed to use them effectively.",
+      "title": "Roundshot Pipeline at MPC for \"Godzilla\"",
+      "publisher": "SIGGRAPH",
       "contributors": [
         {
           "name": "Kirk Chantraine",
           "url": "https://ca.linkedin.com/in/kchantraine"
         }
       ],
+      "details": "For \"Godzilla\" and many upcoming films at MPC, hundreds of panoramic images were acquired and a proper pipeline was needed to supply departments with quick previews and automated stitching. We were tasked with capturing and recreating many on-set locations. Roundshots are panoramic images captured on set for use in compositing, lighting and environments.\nAccurate incorporation and interpretation of the captured images for use in film is essential to maintain the visual and spatial information as well as to better accommodate creative direction. Several new processes were required to update MPC's pipeline to accommodate a large amount of data with a dynamic workflow. With such a broad array of images, a combination of automation and stakeholder visibility were needed to use them effectively.",
       "date": "July 31, 2015",
-      "title": "Roundshot Pipeline at MPC for \"Godzilla\"",
-      "publisher": "SIGGRAPH",
       "url": "https://dl.acm.org/citation.cfm?id=2792565"
     }
   ],
-  "technologies": "Python, JavaScript, TypeScript, C++, Bash, PowerShell, HTML, CSS, React.js, Next.js, Three.js, Autodesk Maya, Blender, Photoshop, Frostbite Engine, Git, Perforce, FastAPI, Flask, AWS S3/EC2, GCP, Docker, GitHub Actions",
-  "profile": "Self-driven software developer with a passion for creating workflow tools and pipelines for 3D artists and designers in visual effects, animation, and fashion & apparel.",
-  "education": [
-    {
-      "url": "https://www.cs.ubc.ca/about",
-      "school": "University of British Columbia",
-      "startDate": "2012",
-      "degree": "Bachelor of Computer Science",
-      "endDate": "2016",
-      "details": "Courses completed include Systematic Program Design, Software Engineering, Models of Computation, Hardware and Operating Systems, Algorithms and Data Structures, Relational Databases, and Artificial Intelligence.\nProgramming in Java, C/C++, and Python",
-      "fieldOfStudy": "Computer Science"
-    },
-    {
-      "endDate": "2007",
-      "school": "Seneca Polytechnic",
-      "startDate": "2006",
-      "degree": "Graduate Certificate",
-      "details": "Extensive training in 3D modeling and animation, including rigging, shading, lighting, rendering, and dynamics.\nFoundations in acting, life drawing and storyboarding",
-      "fieldOfStudy": "3D Animation",
-      "url": "https://www.senecapolytechnic.ca/programs/fulltime/DAN.html"
-    },
-    {
-      "url": "https://www.linkedin.com/school/mcmaster-university/",
-      "degree": "Bachelor of Science",
-      "endDate": "2006",
-      "startDate": "2001",
-      "school": "McMaster University",
-      "fieldOfStudy": "Honours Biochemistry",
-      "details": "Theory and practice in a curriculum spanning biology, chemistry, physics, and genetic engineering.\nElective courses in film studies and anthropology"
-    }
-  ]
+  "profileImage": "https://media.licdn.com/dms/image/C4E03AQGPdeN348ESJw/profile-displayphoto-shrink_800_800/0/1516267692651?e=1678924800&v=beta&t=fcE5_OcGbX_-PV_B5hwY6Wte7pCM4bG2LuKRaNUGFBA",
+  "name": "Daniel Vasquez"
 }
