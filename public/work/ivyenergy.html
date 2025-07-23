@@ -1,0 +1,1339 @@
+<!-- Вставьте этот код целиком в один HTML Embed элемент в Webflow -->
+<script type="importmap" id="threejs-imports">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.175.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.175.0/examples/jsm/"
+    }
+  }
+</script>
+
+<script type="module">
+  // From https://github.com/gkjohnson/threejs-sandbox/tree/master/conditional-lines , thank you Garrett Johnson!!
+
+  import { BufferGeometry, Vector3, BufferAttribute, Triangle } from "three";
+
+  const vec0 = new Vector3();
+  const vec1 = new Vector3();
+  const vec2 = new Vector3();
+  const vec3 = new Vector3();
+  const vec4 = new Vector3();
+
+  const triangle0 = new Triangle();
+  const triangle1 = new Triangle();
+  const normal0 = new Vector3();
+  const normal1 = new Vector3();
+
+  class ConditionalEdgesGeometry extends BufferGeometry {
+    constructor(geometry) {
+      super();
+
+      const edgeInfo = {};
+
+      const position = geometry.attributes.position;
+      let index;
+      if (geometry.index) {
+        index = geometry.index;
+      } else {
+        const arr = new Array(position.count / 3).fill().map((_, i) => i);
+        index = new BufferAttribute(new Uint32Array(arr), 1, false);
+      }
+
+      for (let i = 0, l = index.count; i < l; i += 3) {
+        const indices = [
+          index.getX(i + 0),
+          index.getX(i + 1),
+          index.getX(i + 2),
+        ];
+
+        for (let j = 0; j < 3; j++) {
+          const index0 = indices[j];
+          const index1 = indices[(j + 1) % 3];
+
+          const hash = `${index0}_${index1}`;
+          const reverseHash = `${index1}_${index0}`;
+          if (reverseHash in edgeInfo) {
+            edgeInfo[reverseHash].controlIndex1 = indices[(j + 2) % 3];
+            edgeInfo[reverseHash].tri1 = i / 3;
+          } else {
+            edgeInfo[hash] = {
+              index0,
+              index1,
+
+              controlIndex0: indices[(j + 2) % 3],
+              controlIndex1: null,
+
+              tri0: i / 3,
+              tri1: null,
+            };
+          }
+        }
+      }
+
+      const edgePositions = [];
+      const edgeDirections = [];
+      const edgeControl0 = [];
+      const edgeControl1 = [];
+      for (const key in edgeInfo) {
+        const { index0, index1, controlIndex0, controlIndex1, tri0, tri1 } =
+          edgeInfo[key];
+
+        if (controlIndex1 === null) {
+          continue;
+        }
+
+        triangle0.a.fromBufferAttribute(position, index.getX(tri0 * 3 + 0));
+        triangle0.b.fromBufferAttribute(position, index.getX(tri0 * 3 + 1));
+        triangle0.c.fromBufferAttribute(position, index.getX(tri0 * 3 + 2));
+
+        triangle1.a.fromBufferAttribute(position, index.getX(tri1 * 3 + 0));
+        triangle1.b.fromBufferAttribute(position, index.getX(tri1 * 3 + 1));
+        triangle1.c.fromBufferAttribute(position, index.getX(tri1 * 3 + 2));
+
+        triangle0.getNormal(normal0).normalize();
+        triangle1.getNormal(normal1).normalize();
+
+        if (normal0.dot(normal1) < 0.01) {
+          continue;
+        }
+
+        // positions
+        vec0.fromBufferAttribute(position, index0);
+        vec1.fromBufferAttribute(position, index1);
+
+        // direction
+        vec2.subVectors(vec0, vec1);
+
+        // control positions
+        vec3.fromBufferAttribute(position, controlIndex0);
+        vec4.fromBufferAttribute(position, controlIndex1);
+
+        // create arrays
+        edgePositions.push(vec0.x, vec0.y, vec0.z);
+        edgeDirections.push(vec2.x, vec2.y, vec2.z);
+        edgeControl0.push(vec3.x, vec3.y, vec3.z);
+        edgeControl1.push(vec4.x, vec4.y, vec4.z);
+
+        edgePositions.push(vec1.x, vec1.y, vec1.z);
+        edgeDirections.push(vec2.x, vec2.y, vec2.z);
+        edgeControl0.push(vec3.x, vec3.y, vec3.z);
+        edgeControl1.push(vec4.x, vec4.y, vec4.z);
+      }
+
+      this.setAttribute(
+        "position",
+        new BufferAttribute(new Float32Array(edgePositions), 3, false),
+      );
+      this.setAttribute(
+        "direction",
+        new BufferAttribute(new Float32Array(edgeDirections), 3, false),
+      );
+      this.setAttribute(
+        "control0",
+        new BufferAttribute(new Float32Array(edgeControl0), 3, false),
+      );
+      this.setAttribute(
+        "control1",
+        new BufferAttribute(new Float32Array(edgeControl1), 3, false),
+      );
+    }
+  }
+  window.ConditionalEdgesGeometry = ConditionalEdgesGeometry;
+</script>
+
+<script type="module">
+  import { Color } from "three";
+
+  const ConditionalEdgesShader = {
+    uniforms: {
+      diffuse: {
+        value: new Color(),
+      },
+
+      opacity: {
+        value: 1.0,
+      },
+    },
+
+    vertexShader: /* glsl */ `
+		attribute vec3 control0;
+		attribute vec3 control1;
+		attribute vec3 direction;
+
+		#include <common>
+		#include <color_pars_vertex>
+		#include <fog_pars_vertex>
+		#include <logdepthbuf_pars_vertex>
+		#include <clipping_planes_pars_vertex>
+		void main() {
+
+			#include <color_vertex>
+
+			vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+			gl_Position = projectionMatrix * mvPosition;
+
+			// Transform the line segment ends and control points into camera clip space
+			vec4 c0 = projectionMatrix * modelViewMatrix * vec4( control0, 1.0 );
+			vec4 c1 = projectionMatrix * modelViewMatrix * vec4( control1, 1.0 );
+			vec4 p0 = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			vec4 p1 = projectionMatrix * modelViewMatrix * vec4( position + direction, 1.0 );
+
+			c0 /= c0.w;
+			c1 /= c1.w;
+			p0 /= p0.w;
+			p1 /= p1.w;
+
+			// Get the direction of the segment and an orthogonal vector
+			vec2 dir = p1.xy - p0.xy;
+			vec2 norm = vec2( -dir.y, dir.x );
+
+			// Get control point directions from the line
+			vec2 c0dir = c0.xy - p1.xy;
+			vec2 c1dir = c1.xy - p1.xy;
+
+			// If the vectors to the controls points are pointed in different directions away
+			// from the line segment then the line should not be drawn.
+			float d0 = dot( normalize( norm ), normalize( c0dir ) );
+			float d1 = dot( normalize( norm ), normalize( c1dir ) );
+			float discardFlag = float( sign( d0 ) != sign( d1 ) );
+			gl_Position = discardFlag > 0.5 ? c0 : gl_Position;
+
+			#include <logdepthbuf_vertex>
+			#include <clipping_planes_vertex>
+			#include <fog_vertex>
+
+		}
+	`,
+
+    fragmentShader: /* glsl */ `
+		uniform vec3 diffuse;
+		uniform float opacity;
+
+		#include <common>
+		#include <color_pars_fragment>
+		#include <fog_pars_fragment>
+		#include <logdepthbuf_pars_fragment>
+		#include <clipping_planes_pars_fragment>
+		void main() {
+
+			#include <clipping_planes_fragment>
+
+			vec3 outgoingLight = vec3( 0.0 );
+			vec4 diffuseColor = vec4( diffuse, opacity );
+
+			#include <logdepthbuf_fragment>
+			#include <color_fragment>
+
+			outgoingLight = diffuseColor.rgb; // simple shader
+			gl_FragColor = vec4( outgoingLight, diffuseColor.a );
+
+			#include <tonemapping_fragment>
+			#include <colorspace_fragment>
+			#include <fog_fragment>
+			#include <premultiplied_alpha_fragment>
+
+		}
+	`,
+  };
+  window.ConditionalEdgesShader = ConditionalEdgesShader;
+</script>
+<script type="module">
+  import * as THREE from "three";
+  import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js";
+
+  class ConditionalLineSegmentsGeometry extends LineSegmentsGeometry {
+    fromConditionalEdgesGeometry(geometry) {
+      super.fromEdgesGeometry(geometry);
+
+      const { direction, control0, control1 } = geometry.attributes;
+
+      this.setAttribute(
+        "direction",
+        new THREE.InterleavedBufferAttribute(
+          new THREE.InstancedInterleavedBuffer(direction.array, 6, 1),
+          3,
+          0,
+        ),
+      );
+
+      this.setAttribute(
+        "control0",
+        new THREE.InterleavedBufferAttribute(
+          new THREE.InstancedInterleavedBuffer(control0.array, 6, 1),
+          3,
+          0,
+        ),
+      );
+
+      this.setAttribute(
+        "control1",
+        new THREE.InterleavedBufferAttribute(
+          new THREE.InstancedInterleavedBuffer(control1.array, 6, 1),
+          3,
+          0,
+        ),
+      );
+
+      return this;
+    }
+  }
+  window.ConditionalLineSegmentsGeometry = ConditionalLineSegmentsGeometry;
+</script>
+<script type="module">
+  import { ShaderMaterial, UniformsLib, UniformsUtils, Vector2 } from "three";
+  /**
+   * parameters = {
+   *  color: <hex>,
+   *  linewidth: <float>,
+   *  dashed: <boolean>,
+   *  dashScale: <float>,
+   *  dashSize: <float>,
+   *  gapSize: <float>,
+   *  resolution: <Vector2>, // to be set by renderer
+   * }
+   */
+
+  const uniforms = {
+    linewidth: { value: 1 },
+    resolution: { value: new Vector2(1, 1) },
+    dashScale: { value: 1 },
+    dashSize: { value: 1 },
+    gapSize: { value: 1 }, // todo FIX - maybe change to totalSize
+    opacity: { value: 1 },
+  };
+
+  const shader = {
+    uniforms: UniformsUtils.merge([
+      UniformsLib.common,
+      UniformsLib.fog,
+      uniforms,
+    ]),
+
+    vertexShader: /* glsl */ `
+		#include <common>
+		#include <color_pars_vertex>
+		#include <fog_pars_vertex>
+		#include <logdepthbuf_pars_vertex>
+		#include <clipping_planes_pars_vertex>
+
+		uniform float linewidth;
+		uniform vec2 resolution;
+
+		attribute vec3 control0;
+		attribute vec3 control1;
+		attribute vec3 direction;
+
+		attribute vec3 instanceStart;
+		attribute vec3 instanceEnd;
+
+		attribute vec3 instanceColorStart;
+		attribute vec3 instanceColorEnd;
+
+		varying vec2 vUv;
+
+		#ifdef USE_DASH
+
+			uniform float dashScale;
+			attribute float instanceDistanceStart;
+			attribute float instanceDistanceEnd;
+			varying float vLineDistance;
+
+		#endif
+
+		void trimSegment( const in vec4 start, inout vec4 end ) {
+
+			// trim end segment so it terminates between the camera plane and the near plane
+
+			// conservative estimate of the near plane
+			float a = projectionMatrix[ 2 ][ 2 ]; // 3nd entry in 3th column
+			float b = projectionMatrix[ 3 ][ 2 ]; // 3nd entry in 4th column
+			float nearEstimate = - 0.5 * b / a;
+
+			float alpha = ( nearEstimate - start.z ) / ( end.z - start.z );
+
+			end.xyz = mix( start.xyz, end.xyz, alpha );
+
+		}
+
+		void main() {
+
+			#ifdef USE_COLOR
+
+				vColor.xyz = ( position.y < 0.5 ) ? instanceColorStart : instanceColorEnd;
+
+			#endif
+
+			#ifdef USE_DASH
+
+				vLineDistance = ( position.y < 0.5 ) ? dashScale * instanceDistanceStart : dashScale * instanceDistanceEnd;
+
+			#endif
+
+			float aspect = resolution.x / resolution.y;
+
+			vUv = uv;
+
+			// camera space
+			vec4 start = modelViewMatrix * vec4( instanceStart, 1.0 );
+			vec4 end = modelViewMatrix * vec4( instanceEnd, 1.0 );
+
+			// special case for perspective projection, and segments that terminate either in, or behind, the camera plane
+			// clearly the gpu firmware has a way of addressing this issue when projecting into ndc space
+			// but we need to perform ndc-space calculations in the shader, so we must address this issue directly
+			// perhaps there is a more elegant solution -- WestLangley
+
+			bool perspective = ( projectionMatrix[ 2 ][ 3 ] == - 1.0 ); // 4th entry in the 3rd column
+
+			if ( perspective ) {
+
+				if ( start.z < 0.0 && end.z >= 0.0 ) {
+
+					trimSegment( start, end );
+
+				} else if ( end.z < 0.0 && start.z >= 0.0 ) {
+
+					trimSegment( end, start );
+
+				}
+
+			}
+
+			// clip space
+			vec4 clipStart = projectionMatrix * start;
+			vec4 clipEnd = projectionMatrix * end;
+
+			// ndc space
+			vec2 ndcStart = clipStart.xy / clipStart.w;
+			vec2 ndcEnd = clipEnd.xy / clipEnd.w;
+
+			// direction
+			vec2 dir = ndcEnd - ndcStart;
+
+			// account for clip-space aspect ratio
+			dir.x *= aspect;
+			dir = normalize( dir );
+
+			// perpendicular to dir
+			vec2 offset = vec2( dir.y, - dir.x );
+
+			// undo aspect ratio adjustment
+			dir.x /= aspect;
+			offset.x /= aspect;
+
+			// sign flip
+			if ( position.x < 0.0 ) offset *= - 1.0;
+
+			// endcaps
+			if ( position.y < 0.0 ) {
+
+				offset += - dir;
+
+			} else if ( position.y > 1.0 ) {
+
+				offset += dir;
+
+			}
+
+			// adjust for linewidth
+			offset *= linewidth;
+
+			// adjust for clip-space to screen-space conversion // maybe resolution should be based on viewport ...
+			offset /= resolution.y;
+
+			// select end
+			vec4 clip = ( position.y < 0.5 ) ? clipStart : clipEnd;
+
+			// back to clip space
+			offset *= clip.w;
+
+			clip.xy += offset;
+
+			gl_Position = clip;
+
+			vec4 mvPosition = ( position.y < 0.5 ) ? start : end; // this is an approximation
+
+			#include <logdepthbuf_vertex>
+			#include <clipping_planes_vertex>
+			#include <fog_vertex>
+
+			// conditional logic
+			// Transform the line segment ends and control points into camera clip space
+			vec4 c0 = projectionMatrix * modelViewMatrix * vec4( control0, 1.0 );
+			vec4 c1 = projectionMatrix * modelViewMatrix * vec4( control1, 1.0 );
+			vec4 p0 = projectionMatrix * modelViewMatrix * vec4( instanceStart, 1.0 );
+			vec4 p1 = projectionMatrix * modelViewMatrix * vec4( instanceStart + direction, 1.0 );
+
+			c0 /= c0.w;
+			c1 /= c1.w;
+			p0 /= p0.w;
+			p1 /= p1.w;
+
+			// Get the direction of the segment and an orthogonal vector
+			vec2 segDir = p1.xy - p0.xy;
+			vec2 norm = vec2( - segDir.y, segDir.x );
+
+			// Get control point directions from the line
+			vec2 c0dir = c0.xy - p1.xy;
+			vec2 c1dir = c1.xy - p1.xy;
+
+			// If the vectors to the controls points are pointed in different directions away
+			// from the line segment then the line should not be drawn.
+			float d0 = dot( normalize( norm ), normalize( c0dir ) );
+			float d1 = dot( normalize( norm ), normalize( c1dir ) );
+			float discardFlag = float( sign( d0 ) != sign( d1 ) );
+			gl_Position = discardFlag > 0.5 ? c0 : gl_Position;
+			// end conditional line logic
+
+		}
+		`,
+
+    fragmentShader: /* glsl */ `
+		uniform vec3 diffuse;
+		uniform float opacity;
+
+		#ifdef USE_DASH
+
+			uniform float dashSize;
+			uniform float gapSize;
+
+		#endif
+
+		varying float vLineDistance;
+
+		#include <common>
+		#include <color_pars_fragment>
+		#include <fog_pars_fragment>
+		#include <logdepthbuf_pars_fragment>
+		#include <clipping_planes_pars_fragment>
+
+		varying vec2 vUv;
+
+		void main() {
+
+			#include <clipping_planes_fragment>
+
+			#ifdef USE_DASH
+
+				if ( vUv.y < - 1.0 || vUv.y > 1.0 ) discard; // discard endcaps
+
+				if ( mod( vLineDistance, dashSize + gapSize ) > dashSize ) discard; // todo - FIX
+
+			#endif
+
+			if ( abs( vUv.y ) > 1.0 ) {
+
+				float a = vUv.x;
+				float b = ( vUv.y > 0.0 ) ? vUv.y - 1.0 : vUv.y + 1.0;
+				float len2 = a * a + b * b;
+
+				if ( len2 > 1.0 ) discard;
+
+			}
+
+			vec4 diffuseColor = vec4( diffuse, opacity );
+
+			#include <logdepthbuf_fragment>
+			#include <color_fragment>
+
+			gl_FragColor = vec4( diffuseColor.rgb, diffuseColor.a );
+
+			#include <tonemapping_fragment>
+			#include <colorspace_fragment>
+			#include <fog_fragment>
+			#include <premultiplied_alpha_fragment>
+
+		}
+		`,
+  };
+
+  class ConditionalLineMaterial extends ShaderMaterial {
+    constructor(parameters) {
+      super({
+        type: "ConditionalLineMaterial",
+
+        uniforms: UniformsUtils.clone(shader.uniforms),
+
+        vertexShader: shader.vertexShader,
+        fragmentShader: shader.fragmentShader,
+
+        clipping: true, // required for clipping support
+      });
+
+      this.dashed = false;
+
+      Object.defineProperties(this, {
+        color: {
+          enumerable: true,
+
+          get: function () {
+            return this.uniforms.diffuse.value;
+          },
+
+          set: function (value) {
+            this.uniforms.diffuse.value = value;
+          },
+        },
+
+        linewidth: {
+          enumerable: true,
+
+          get: function () {
+            return this.uniforms.linewidth.value;
+          },
+
+          set: function (value) {
+            this.uniforms.linewidth.value = value;
+          },
+        },
+
+        dashScale: {
+          enumerable: true,
+
+          get: function () {
+            return this.uniforms.dashScale.value;
+          },
+
+          set: function (value) {
+            this.uniforms.dashScale.value = value;
+          },
+        },
+
+        dashSize: {
+          enumerable: true,
+
+          get: function () {
+            return this.uniforms.dashSize.value;
+          },
+
+          set: function (value) {
+            this.uniforms.dashSize.value = value;
+          },
+        },
+
+        gapSize: {
+          enumerable: true,
+
+          get: function () {
+            return this.uniforms.gapSize.value;
+          },
+
+          set: function (value) {
+            this.uniforms.gapSize.value = value;
+          },
+        },
+
+        opacity: {
+          enumerable: true,
+
+          get: function () {
+            return this.uniforms.opacity.value;
+          },
+
+          set: function (value) {
+            this.uniforms.opacity.value = value;
+          },
+        },
+
+        resolution: {
+          enumerable: true,
+
+          get: function () {
+            return this.uniforms.resolution.value;
+          },
+
+          set: function (value) {
+            this.uniforms.resolution.value.copy(value);
+          },
+        },
+      });
+
+      this.setValues(parameters);
+    }
+  }
+
+  ConditionalLineMaterial.prototype.isConditionalLineMaterial = true;
+
+  // Attach to global scope
+  window.ConditionalLineMaterial = ConditionalLineMaterial;
+</script>
+<div id="container">
+  <canvas id="three-canvas"></canvas>
+</div>
+<!-- Значение высоты также влияет на скорость перемещения камеры. Большая высота приводит к замедлению движения камеры. -->
+<div id="scroll-zone-element" style="height: 200vh"></div>
+
+<style>
+  #three-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+</style>
+<script>
+  // ЗАМЕНИТЕ ЭТО
+  let GLB_PATH = "solarpower_scene.glb.txt";
+
+  // Включите, чтобы увидеть производительность
+  const ENABLE_STATS = false;
+  const ENABLE_FREECAM = false;
+  const ENABLE_CONTROLS = false;
+
+  // Отключите, если производительность низкая
+  const ENABLE_DOF = true;
+  const ENABLE_FOG = true;
+
+  const OUTLINE_PARAMS = {
+    threshold: 50,
+    linewidth: 1.6,
+  };
+
+  const PACIFIC_COLOR = {
+    black: 0x111b21,
+    dark: 0x242f37,
+    darkGrey: 0x8696a1,
+    grey: 0xc1cbd1,
+    lightGrey: 0xe7eaed,
+    lightestGrey: 0xf1f4f7,
+    white: 0xffffff,
+  };
+
+  const POWERFLOW_GLOBAL_PARAMS = {
+    speedFactor: 1.0, // коэффициент скорости
+    flowColor: 0xffba9e, // цвет потока
+    baseColor: 0xaaaaaa, // основной цвет
+  };
+
+  const POWERFLOW_TOWER_PARAMS = {
+    isStaggered: false, // Установите значение «true», чтобы включить анимацию ступенчатого потока энергии в электрических кабелях башни. Если значение «false», анимация в каждом кабеле будет синхронизирована.
+    offset: 0.3, // Позиционный набор анимации потока
+    reverseDirection: false, // Анимация направления потока энергии на тросах башни
+    flowWidth: 0.09,
+    flowSpeed: 0.5,
+  };
+
+  const POWERFLOW_PARAMS = {
+    offset: 0.0, // Позиционный набор анимации потока
+    reverseDirection: true, // Анимация направления потока энергии на тросах башни
+    flowWidth: 0.3,
+    flowSpeed: 1.0,
+  };
+
+  const PARALLAX_PARAMS = {
+    // Tolerance for camera parallax movement
+    panTolerance: 0.0005,
+    yawMax: 0.04,
+    pitchMax: 0.04,
+  };
+</script>
+<script type="module">
+  import * as THREE from "three";
+  import * as BufferGeometryUtils from "three/addons/utils/BufferGeometryUtils.js";
+  import Stats from "three/addons/libs/stats.module.js";
+  import { LineMaterial } from "three/addons/lines/LineMaterial.js";
+  import { GUI } from "three/addons/libs/lil-gui.module.min.js";
+  import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+  import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+  import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+  import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+  import { BokehPass } from "three/addons/postprocessing/BokehPass.js";
+  import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+  import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+  import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+  import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js";
+  import { LineSegments2 } from "three/addons/lines/LineSegments2.js";
+  var outlineParams = {
+    color: PACIFIC_COLOR.black,
+    threshold: OUTLINE_PARAMS.threshold,
+    linewidth: OUTLINE_PARAMS.linewidth,
+  };
+  let importMapScript = document.getElementById("threejs-imports"),
+    importMap = JSON.parse(importMapScript.textContent),
+    postprocessing = {},
+    sharedTimeUniform = { value: 0 },
+    powerFlowMaterials = [],
+    stats,
+    dirLight,
+    lightTarget,
+    scene = new THREE.Scene(),
+    lastCamPosition = [0, 0, 0, 0],
+    lastMousePosition,
+    initBokehParams = { focus: 15, aperture: 15, maxblur: 0.005 },
+    camera,
+    near = ((GLB_PATH = GLB_PATH || "public/solarpower_scene.glb"), 10),
+    far = 130,
+    fogController = { near: near, far: far };
+  ENABLE_FOG && (scene.fog = new THREE.Fog(PACIFIC_COLOR.white, near, far));
+  let mixer,
+    cameraAnimClip,
+    controls,
+    canvas = document.getElementById("three-canvas"),
+    container = document.getElementById("container"),
+    scrollZoneElement = document.getElementById("scroll-zone-element"),
+    renderer =
+      (ENABLE_FREECAM && scrollZoneElement.setAttribute("style", ""),
+      new THREE.WebGLRenderer({
+        canvas: canvas,
+        powerPreference: "high-performance",
+        antialias: !1,
+        stencil: !1,
+        depth: !1,
+      }));
+  function disposeMaterial(o) {
+    if (o) {
+      if (
+        ([
+          "map",
+          "lightMap",
+          "bumpMap",
+          "normalMap",
+          "specularMap",
+          "envMap",
+          "alphaMap",
+          "aoMap",
+          "displacementMap",
+          "emissiveMap",
+          "metalnessMap",
+          "roughnessMap",
+        ].forEach((e) => {
+          o[e] && o[e].isTexture && o[e].dispose();
+        }),
+        o.uniforms)
+      )
+        for (var e in o.uniforms) {
+          e = o.uniforms[e];
+          e.value && e.value.isTexture && e.value.dispose();
+        }
+      o.dispose();
+    }
+  }
+  function loadCamera(e) {
+    (ENABLE_FREECAM
+      ? ((camera = new THREE.PerspectiveCamera(
+          45,
+          window.innerWidth / window.innerHeight,
+          1,
+          1e4,
+        )).copy(e.cameras[0], !0),
+        ((controls = new OrbitControls(
+          camera,
+          renderer.domElement,
+        )).enableDamping = !0),
+        camera.position.set(...Object.values(e.cameras[0].parent.position)),
+        camera.rotation.set(...Object.values(e.cameras[0].parent.rotation)),
+        camera.quaternion.set(...Object.values(e.cameras[0].parent.quaternion)),
+        controls.update())
+      : ((camera = e.cameras[0]),
+        (mixer = new THREE.AnimationMixer(e.scene)),
+        (cameraAnimClip = e.animations[0]),
+        mixer.clipAction(cameraAnimClip).play()),
+      (lastCamPosition = [
+        camera.position.x,
+        camera.position.z,
+        camera.rotation.y,
+        camera.rotation.x,
+      ]));
+  }
+  function createOpacityMap(e, o, a, t, r, n = 0) {
+    var i = document.createElement("canvas"),
+      s = ((i.width = e), (i.height = o), i.getContext("2d")),
+      a = s.createRadialGradient(a, t, 0, a, t, r),
+      t =
+        (a.addColorStop(0, "white"),
+        a.addColorStop(0.84, "white"),
+        a.addColorStop(0.86, "white"),
+        a.addColorStop(0.96, "black"),
+        (s.fillStyle = a),
+        s.fillRect(0, 0, e, o),
+        new THREE.CanvasTexture(i));
+    return ((t.needsUpdate = !0), t);
+  }
+  function createShadowDirectionalLight(e, o, a, t) {
+    e = new THREE.DirectionalLight(PACIFIC_COLOR.white, e);
+    return (
+      e.position.set(11, 31, 46),
+      e.scale.set(1, 1, 1),
+      (e.castShadow = !0),
+      (e.shadow.bias = -1e-4),
+      (e.shadow.mapSize.width = 1024),
+      (e.shadow.mapSize.height = 1024),
+      (e.shadow.blurSamples = a),
+      (e.shadow.radius = t),
+      (e.shadow.camera.near = 0.5),
+      (e.shadow.camera.far = 150),
+      (e.shadow.camera.left = -70),
+      (e.shadow.camera.right = 70),
+      (e.shadow.camera.top = 80),
+      (e.shadow.camera.bottom = -30),
+      (e.shadow.intensity = o),
+      (lightTarget = new THREE.Object3D()).position.set(11, 19, 46),
+      (e.target = lightTarget),
+      e
+    );
+  }
+  function createGridTexture(o, a, t) {
+    var e = document.createElement("canvas"),
+      r = ((e.width = o), (e.height = a), e.getContext("2d"));
+    ((r.fillStyle = "#ffffff"),
+      r.fillRect(0, 0, o, a),
+      (r.strokeStyle = "#111B21"),
+      (r.lineWidth = 0.8));
+    for (let e = 0; e <= o; e += t)
+      (r.beginPath(), r.moveTo(e, 0), r.lineTo(e, a), r.stroke());
+    for (let e = 0; e <= a; e += t)
+      (r.beginPath(), r.moveTo(0, e), r.lineTo(o, e), r.stroke());
+    return new THREE.CanvasTexture(e);
+  }
+  function createGridMaterialWithWhiteEdges(e) {
+    let o = createGridTexture(4096, 4096, 80);
+    if (!o)
+      return (
+        console.error("createGridTexture failed to produce a valid texture"),
+        new THREE.MeshBasicMaterial({ color: 16711935 })
+      );
+    let a = new THREE.MeshBasicMaterial({
+      name: e,
+      map: o,
+      transparent: !1,
+      side: THREE.FrontSide,
+    });
+    return (
+      (a.onBeforeCompile = function (e) {
+        ((e.uniforms.center = { value: new THREE.Vector2(0.5, 0.5) }),
+          (e.uniforms.radius = { value: 0.43 }),
+          (e.uniforms.falloff = { value: 0.05 }),
+          (e.uniforms.rotation = { value: 0.26 }),
+          (e.uniforms.offset = { value: new THREE.Vector2(0, 0) }),
+          (e.uniforms.ellipseScale = { value: new THREE.Vector2(0.7, 1) }),
+          (e.fragmentShader =
+            `
+      uniform vec2 center;
+      uniform float radius;
+      uniform float falloff;
+      uniform float rotation;
+      uniform vec2 offset;
+      uniform vec2 ellipseScale;
+      varying vec2 vUv;
+    ` + e.fragmentShader),
+          (e.fragmentShader = e.fragmentShader.replace(
+            "#include <map_fragment>",
+            `
+        vec2 uv = vMapUv;
+        // Apply offset and rotation
+        vec2 transformedUv = uv - center - offset;
+        float cosA = cos(rotation);
+        float sinA = sin(rotation);
+        transformedUv = vec2(
+          transformedUv.x * cosA - transformedUv.y * sinA,
+          transformedUv.x * sinA + transformedUv.y * cosA
+        );
+        transformedUv += center;
+        transformedUv = clamp(transformedUv, 0.0, 1.0);
+        vec4 texColor = texture2D(map, transformedUv);
+        vec2 scaledUv = (uv - center) / ellipseScale;
+        float dist = length(scaledUv);
+        float fade = smoothstep(radius - falloff, radius, dist);
+        diffuseColor = mix(texColor, vec4(1.0, 1.0, 1.0, texColor.a), fade);
+      `,
+          )),
+          (a.userData.shader = e));
+      }),
+      (a.customProgramCacheKey = function () {
+        return "" + e + `_${o.uuid}_0.36_0.03_1.75_ellipse`;
+      }),
+      a
+    );
+  }
+  function createOutline(e, t, r = "edges") {
+    var n,
+      i = new THREE.Group();
+    ((i.name = e.name + "_OUTLINE"),
+      i.position.copy(e.position),
+      i.quaternion.copy(e.quaternion),
+      i.scale.copy(e.scale));
+    let o = [];
+    e.traverse((e) => {
+      e.isMesh && o.push(e);
+    });
+    for (n of o)
+      if (n.geometry) {
+        let e, o, a;
+        if ("conditional" === r) {
+          for (var s in (o = n.geometry.clone()).attributes)
+            "position" !== s && o.deleteAttribute(s);
+          ((a = BufferGeometryUtils.mergeVertices(o)),
+            (e = new window.ConditionalEdgesGeometry(a)));
+        } else e = new THREE.EdgesGeometry(n.geometry, t.threshold);
+        var l =
+            "conditional" === r
+              ? new window.ConditionalLineSegmentsGeometry().fromConditionalEdgesGeometry(
+                  e,
+                )
+              : new LineSegmentsGeometry().fromEdgesGeometry(e),
+          d =
+            "conditional" === r
+              ? new window.ConditionalLineMaterial(t)
+              : new LineMaterial({ ...t, vertexColors: !1 }),
+          l =
+            (d.resolution.set(window.innerWidth, window.innerHeight),
+            new LineSegments2(l, d));
+        ((l.name = n.name + "_LINESEGMENT"),
+          i.add(l),
+          e.dispose(),
+          o && o.dispose(),
+          a && a.dispose());
+      }
+    return i;
+  }
+  function setShadows(e, o) {
+    e.traverse((e) => {
+      e.isMesh && ((e.castShadow = o), (e.receiveShadow = o));
+    });
+  }
+  function replaceMaterial(e, o) {
+    var a = e.material;
+    ((e.material = o), a && disposeMaterial(a));
+  }
+  function _initTowerMeshes(e) {
+    e = e.getObjectByName("Tower_GRP");
+    if (e) {
+      let o = POWERFLOW_TOWER_PARAMS.offset;
+      e.traverse((e) => {
+        (e.isMesh && (e.castShadow = !0),
+          e.name.includes("PowerLine") &&
+            (replaceMaterial(
+              e,
+              (e = createAnimatedPowerFlowMaterial({
+                name: e.name + "_MAT",
+                reverseDirection: POWERFLOW_TOWER_PARAMS.reverseDirection,
+                flowWidth: POWERFLOW_TOWER_PARAMS.flowWidth,
+                speed: POWERFLOW_TOWER_PARAMS.flowSpeed,
+                offset: o,
+              })),
+            ),
+            powerFlowMaterials.push(e),
+            POWERFLOW_TOWER_PARAMS.isStaggered) &&
+            (o += POWERFLOW_TOWER_PARAMS.offset));
+      });
+    }
+  }
+  function _initBuildingMeshes(e) {
+    e = e.getObjectByName("Building_GRP001");
+    let o = ["Buildingmesh1_1", "BatteryUnit", "BalconyPanels"];
+    e.traverse((e) => {
+      e.isMesh &&
+        (setShadows(e, !0), o.includes(e.name)) &&
+        scene.add(createOutline(e, outlineParams, "edges"));
+    });
+    var a = e.getObjectByName("Cable2");
+    a &&
+      (replaceMaterial(
+        a,
+        (r = createAnimatedPowerFlowMaterial({
+          name: a.name + "_MAT",
+          offset: POWERFLOW_PARAMS.offset,
+          reverseDirection: POWERFLOW_PARAMS.reverseDirection,
+          flowWidth: POWERFLOW_PARAMS.flowWidth,
+          speed: POWERFLOW_PARAMS.flowSpeed,
+        })),
+      ),
+      powerFlowMaterials.push(r),
+      scene.add(createOutline(a, outlineParams, "conditional")));
+    let t = e.clone();
+    (t.position.set(-7, 0, 35.2),
+      (t.rotation.y = 0.05),
+      scene.add(t),
+      o.forEach((e) => {
+        e = createOutline(t.getObjectByName(e), outlineParams, "edges");
+        (e.position.set(-7, 0, 35.2), (e.rotation.y = 0.05), scene.add(e));
+      }));
+    var r = createOutline(
+      t.getObjectByName("Cable2"),
+      outlineParams,
+      "conditional",
+    );
+    (r.position.set(-7, 0, 35.2), (r.rotation.y = 0.05), scene.add(r));
+  }
+  function initMeshes(e) {
+    var o = e.getObjectByName("ParkadeShelter"),
+      o =
+        (setShadows(o, !0),
+        scene.add(createOutline(o, outlineParams, "edges")),
+        e.getObjectByName("GroundShadow")),
+      o =
+        ((o.receiveShadow = !0),
+        (o.position.y = 0.001),
+        replaceMaterial(o, new THREE.ShadowMaterial()),
+        e.getObjectByName("Cable1")),
+      a = createAnimatedPowerFlowMaterial({
+        name: o.name + "_MAT",
+        offset: POWERFLOW_PARAMS.offset,
+        reverseDirection: POWERFLOW_PARAMS.reverseDirection,
+        flowWidth: POWERFLOW_PARAMS.flowWidth,
+        speed: POWERFLOW_PARAMS.flowSpeed,
+      }),
+      a =
+        (replaceMaterial(o, a),
+        powerFlowMaterials.push(a),
+        scene.add(createOutline(o, outlineParams, "conditional")),
+        e.getObjectByName("Ground")),
+      o =
+        (replaceMaterial(a, createGridMaterialWithWhiteEdges("grid_MAT")),
+        (a.position.y = -0.01),
+        a.clone()),
+      a =
+        (o.position.set(-7.5, -0.01, 57.5),
+        scene.add(o),
+        e.getObjectByName("CarRoot")),
+      a =
+        (a &&
+          (setShadows(a, !0),
+          scene.add(createOutline(a, outlineParams, "edges")),
+          ((o = a.clone()).position.x += 3.3),
+          scene.add(o),
+          setShadows(o, !0),
+          scene.add(createOutline(o, outlineParams, "edges"))),
+        _initTowerMeshes(e),
+        _initBuildingMeshes(e),
+        e.getObjectByName("Cable3"));
+    a &&
+      (a.position.set(-7.8, 0.1, 25.4),
+      (a.rotation.y = (90 * Math.PI) / 180),
+      replaceMaterial(
+        a,
+        createAnimatedPowerFlowMaterial({
+          name: a.name + "_MAT",
+          reverseDirection: !0,
+          flowWidth: 0.2,
+          speed: 1,
+          offset: POWERFLOW_PARAMS.offset,
+        }),
+      ),
+      powerFlowMaterials.push(a.material),
+      scene.add(createOutline(a, outlineParams, "conditional")));
+  }
+  function createAnimatedPowerFlowMaterial({
+    name: e = "",
+    reverseDirection: o = !1,
+    offset: a = 0,
+    speed: t = 1,
+    flowWidth: r = 0.3,
+    baseColor: n = POWERFLOW_GLOBAL_PARAMS.baseColor,
+  } = {}) {
+    r = {
+      time: sharedTimeUniform,
+      glowColor: { value: new THREE.Color(POWERFLOW_GLOBAL_PARAMS.flowColor) },
+      glowWidth: { value: r },
+      baseColor: { value: new THREE.Color(n) },
+      speed: { value: t * POWERFLOW_GLOBAL_PARAMS.speedFactor },
+      reverseDirection: { value: o ? 1 : 0 },
+      offset: { value: a },
+    };
+    return new THREE.ShaderMaterial({
+      name: e,
+      uniforms: r,
+      vertexShader: `
+    varying vec2 vUv;
+    void main() {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  `,
+      fragmentShader: `
+    uniform float time;
+    uniform vec3 glowColor;
+    uniform float glowWidth;
+    uniform vec3 baseColor;
+    uniform float speed;
+    uniform int reverseDirection;
+    uniform float offset;
+    varying vec2 vUv;
+
+    void main() {
+      float animProgress = fract(time * speed + offset);
+      float range = 1.0 + glowWidth;
+      float glowPosition = reverseDirection == 1 ? 1.0 + glowWidth - animProgress * range : animProgress * range - glowWidth;
+      float glow = smoothstep(glowPosition - glowWidth, glowPosition, vUv.y) * smoothstep(glowPosition + glowWidth, glowPosition, vUv.y);
+      vec3 finalColor = mix(baseColor, glowColor, glow);
+      gl_FragColor = vec4(finalColor, 1.0);
+    }
+  `,
+    });
+  }
+  function onLoadGltf(e) {
+    var o = performance.now(),
+      e =
+        (loadCamera(e),
+        scene.add(e.scene),
+        initMeshes(e.scene),
+        new THREE.DirectionalLight(PACIFIC_COLOR.white, 0.8)),
+      e =
+        (e.position.set(3.7, -6.4, -8.5),
+        scene.add(e),
+        ((dirLight = createShadowDirectionalLight(
+          2,
+          0.75,
+          25,
+          10,
+        )).shadow.camera.far = 50),
+        (dirLight.shadow.camera.bottom = -50),
+        scene.add(dirLight),
+        scene.add(dirLight.target),
+        createShadowDirectionalLight(4, 0.7, 16, 10));
+    ((e.castShadow = !0),
+      e.position.set(56, 56, -8),
+      (e.shadow.camera.left = -100),
+      scene.add(e),
+      ENABLE_CONTROLS &&
+        (scene.add(new THREE.CameraHelper(dirLight.shadow.camera)),
+        scene.add(new THREE.CameraHelper(e.shadow.camera))),
+      (scene.background = new THREE.Color(PACIFIC_COLOR.white)),
+      ENABLE_STATS && ((stats = new Stats()), container.appendChild(stats.dom)),
+      initPostprocessing(),
+      (renderer.autoClear = !1),
+      animate());
+    let a = { ...initBokehParams };
+    function t() {
+      postprocessing.bokeh &&
+        ((postprocessing.bokeh.uniforms.focus.value = a.focus),
+        (postprocessing.bokeh.uniforms.aperture.value = 1e-5 * a.aperture),
+        (postprocessing.bokeh.uniforms.maxblur.value = a.maxblur));
+    }
+    var r,
+      n,
+      e = () => {
+        scene.fog &&
+          ((scene.fog.near = fogController.near),
+          (scene.fog.far = fogController.far));
+      };
+    (ENABLE_CONTROLS &&
+      ((n = (r = new GUI()).addFolder("Depth of Field"))
+        .add(a, "focus", 0.1, 120, 1)
+        .onChange(t),
+      n.add(a, "aperture", 0, 40, 0.5).onChange(t),
+      n.add(a, "maxblur", 0, 0.05, 0.001).onChange(t),
+      n.open(),
+      (n = r.addFolder("Fog"))
+        .add(fogController, "near", -10, 100, 1)
+        .onChange(e),
+      n.add(fogController, "far", 10, 300, 1).onChange(e),
+      n.open(),
+      (n = r.addFolder("Camera Parallax")).add(
+        PARALLAX_PARAMS,
+        "panTolerance",
+        0,
+        0.002,
+        1e-4,
+      ),
+      n.add(PARALLAX_PARAMS, "yawMax", 0, 0.1, 0.01),
+      n.add(PARALLAX_PARAMS, "pitchMax", 0, 0.1, 0.01),
+      n.open()),
+      e(),
+      t(),
+      setCameraAspectFromWindowSize(),
+      renderer.setPixelRatio(window.devicePixelRatio),
+      console.log(
+        `Scene setup time: ${(performance.now() - o) / 1e3} seconds`,
+      ));
+  }
+  function initPostprocessing() {
+    var e = renderer.getDrawingBufferSize(new THREE.Vector2()),
+      e = new THREE.WebGLRenderTarget(e.width, e.height, {
+        samples: 2,
+        type: THREE.UnsignedByteType,
+      }),
+      e = new EffectComposer(renderer, e),
+      o = ((postprocessing.composer = e), new RenderPass(scene, camera)),
+      o =
+        (e.addPass(o),
+        ENABLE_DOF &&
+          ((o = new BokehPass(scene, camera, initBokehParams)),
+          e.addPass(o),
+          (postprocessing.bokeh = o)),
+        new OutputPass());
+    e.addPass(o);
+  }
+  function animate() {
+    (requestAnimationFrame(animate),
+      (sharedTimeUniform.value += 0.01),
+      controls && controls.update(),
+      postprocessing.composer.render(),
+      ENABLE_STATS && stats.update());
+  }
+  ((renderer.shadowMap.enabled = !0),
+    (renderer.shadowMap.type = THREE.VSMShadowMap),
+    (renderer.outputColorSpace = THREE.SRGBColorSpace),
+    renderer.setPixelRatio(window.devicePixelRatio),
+    renderer.setSize(window.innerWidth, window.innerHeight));
+  let manager = new THREE.LoadingManager(),
+    dracoLoader = new DRACOLoader(),
+    loader =
+      (dracoLoader.setDecoderPath(
+        importMap.imports["three/addons/"] + "libs/draco/",
+      ),
+      new GLTFLoader(manager));
+  function onScrollHandler(e) {
+    var o;
+    ENABLE_FREECAM ||
+      ((o =
+        window.scrollY /
+        (scrollZoneElement.scrollHeight - canvas.scrollHeight)),
+      mixer && o < 1 && mixer.setTime(o));
+  }
+  function onMouseMoveHandler(a) {
+    if (null != camera && !ENABLE_FREECAM) {
+      null == lastMousePosition &&
+        ((lastMousePosition = [a.clientX, a.clientY]),
+        (lastCamPosition = [
+          camera.position.x,
+          camera.position.z,
+          camera.rotation.y,
+          camera.rotation.x,
+        ]));
+      var t = window.innerWidth / 2,
+        [r, n] = lastMousePosition;
+      let e = a.clientX - r;
+      Math.abs(e) > t && ((r = e < 0 ? -1 : 1), (e = t * r));
+      r = window.innerHeight / 2;
+      let o = a.clientY - n;
+      Math.abs(o) > r && ((a = o < 0 ? -1 : 1), (o = r * a));
+      var [n, a, i, s] = lastCamPosition,
+        n =
+          ((camera.position.x = PARALLAX_PARAMS.panTolerance * e - n),
+          (camera.position.z = PARALLAX_PARAMS.panTolerance * o - a),
+          (e / t) * PARALLAX_PARAMS.yawMax * -1),
+        a = (o / r) * PARALLAX_PARAMS.pitchMax * -1;
+      ((camera.rotation.y = n + i), (camera.rotation.x = a + s));
+    }
+  }
+  function setCameraAspectFromWindowSize() {
+    ((camera.aspect = window.innerWidth / window.innerHeight),
+      camera.updateProjectionMatrix(),
+      renderer.setSize(window.innerWidth, window.innerHeight),
+      postprocessing.composer.setSize(window.innerWidth, window.innerHeight),
+      scene &&
+        scene.traverse((e) => {
+          e.isLineSegments2 &&
+            e.material.resolution.set(window.innerWidth, window.innerHeight);
+        }));
+  }
+  (loader.setDRACOLoader(dracoLoader),
+    loader.load(
+      GLB_PATH,
+      onLoadGltf,
+      function (e) {},
+      function (e) {
+        console.error(e);
+      },
+    ),
+    window.addEventListener("scroll", onScrollHandler),
+    window.addEventListener("pointermove", onMouseMoveHandler),
+    window.addEventListener("resize", setCameraAspectFromWindowSize, !1));
+</script>

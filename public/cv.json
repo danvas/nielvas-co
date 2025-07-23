@@ -237,8 +237,12 @@
       "startDate": "April 2025",
       "links": [
         {
-          "url": "https://ivy-energy.com",
+          "url": "/work/ivyenergy",
           "type": "demo"
+        },
+        {
+          "url": "https://ivy-energy.com",
+          "type": "app"
         }
       ],
       "details": "Modeled, textured, and animated a custom 3D scene in Blender, seamlessly integrating it into the client's homepage via Three.js. Implemented various visual effects while rigorously optimizing for load times and rendering performance.",

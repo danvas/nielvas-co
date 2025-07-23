@@ -35,7 +35,7 @@ function parseProjectProps(projectData: any): ProjectProps {
       icon: <CodeSlashIcon size="18" className="mb-1" />
     },
     "app": {
-      title: "App",
+      title: "Link",
       icon: <BoxArrowUpRightIcon size="16" className="mb-1" />
     }
   }
