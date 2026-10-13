@@ -47,9 +47,15 @@ const ThemeToggle = () => {
   }
 
   return (
-    <div className="pointer-cursor" onClick={onClickToggler}>
+    <button
+      type="button"
+      className="pointer-cursor"
+      onClick={onClickToggler}
+      aria-label={theme == 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+      style={{ background: "none", border: 0, padding: 0, color: "inherit", lineHeight: 0 }}
+    >
       <ThemeIcon theme={theme} />
-    </div>
+    </button>
   )
 }
 
