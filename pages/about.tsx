@@ -19,7 +19,7 @@ function About() {
         </div>
 
         <div className={styles.paragraph}>
-          I'm currently developing 3D applications as an independent contractor. Previously, I was a Technical Artist II at <a href="https://www.ea.com/ea-studios/ea-sports" target="_blank" rel="noreferrer">Electronic Arts</a> working on artist tools in Frostbite Engine and optimizing content creation pipelines. I was also a software engineer at the startup <em>FNX Technologies</em> where I helped build a rendering-as-a-service product for leading fashion & apparel brands.
+          I'm currently a Senior Software Engineer at <a href="https://corporate.lululemon.com/" target="_blank" rel="noreferrer">lululemon</a>, building 3D tools and automated rendering pipelines for apparel design. Previously, I was a Technical Artist II at <a href="https://www.ea.com/ea-studios/ea-sports" target="_blank" rel="noreferrer">Electronic Arts</a> working on artist tools in Frostbite Engine and optimizing content creation pipelines. I was also a software engineer at the startup <em>FNX Technologies</em> where I helped build a rendering-as-a-service product for leading fashion & apparel brands.
           We eventually got acquired by <a href="https://unifi3d.co/" target="_blank" rel="noreferrer">UNIFI3D</a> (<em>Li & Fung, Ltd</em>)
           where I continued to build automated workflows and integrated 3D collaboration solutions in their proprietary digital asset management system.
           In the previous 4+ years, I developed tools for artists and technical directors in the visual effects production pipeline in feature films
