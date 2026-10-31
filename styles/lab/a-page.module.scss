@@ -1,0 +1,99 @@
+@use "a-theme";
+
+// Shared layout for the simple single-column pages (About, Work).
+.root {
+  @include a-theme.light-tokens;
+  @include a-theme.base;
+  padding-inline: clamp(20px, 4vw, 64px);
+  padding-block: clamp(24px, 4vw, 48px) clamp(48px, 8vw, 96px);
+}
+
+// Theme set by ThemeToggle on <html data-bs-theme>, shared with the rest of the site.
+:global([data-bs-theme="dark"]) .root {
+  @include a-theme.dark-tokens;
+}
+
+.toggle {
+  @include a-theme.theme-toggle;
+}
+
+.page {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.title {
+  margin: clamp(32px, 6vw, 64px) 0 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.muted {
+  color: var(--ink-muted);
+}
+
+.lead {
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.paragraph {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.hello {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.projects {
+  margin-top: 2.5rem;
+}
+
+// Year column on the left, project on the right; stacked on phones.
+.project {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 0 1.5rem;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--rule);
+
+  &:last-child {
+    border-bottom: 1px solid var(--rule);
+  }
+}
+
+.projectTitle {
+  font-weight: 700;
+}
+
+.details {
+  margin-top: 0.5rem;
+}
+
+.detail {
+  margin-bottom: 0.5rem;
+}
+
+.skills {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 600px) {
+  .project {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

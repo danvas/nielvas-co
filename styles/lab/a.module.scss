@@ -68,6 +68,13 @@
   line-height: 1.7;
 }
 
+.pages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
 .bio + .bio {
   margin-top: 1rem;
 }

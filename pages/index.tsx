@@ -40,6 +40,10 @@ function Home() {
               I'm now exploring how machine learning and graphics engineering can work together, building tools
               for immersive experiences, visual storytelling, and scientific discovery.
             </div>
+            <nav className={styles.pages}>
+              <Link href="/work">Work →</Link>
+              <Link href="/about">About →</Link>
+            </nav>
           </section>
         </main>
 
