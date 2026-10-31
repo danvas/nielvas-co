@@ -92,6 +92,15 @@
   margin-top: 0.6rem;
 }
 
+// Wide art scrolls inside its own box, never the page.
+.art {
+  margin: clamp(24px, 5vw, 48px) 0 0;
+  overflow-x: auto;
+  font: inherit;
+  font-size: clamp(0.72rem, 2.8vw, 0.95rem);
+  line-height: 1.2;
+}
+
 @media (max-width: 600px) {
   .project {
     grid-template-columns: minmax(0, 1fr);
