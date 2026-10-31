@@ -10,8 +10,8 @@ import '../styles.scss'
 function Root({ Component, pageProps }) {
   const router = useRouter();
   const enabledBg = router.asPath === "/" ? "nv-cloud-bg" : "";
-  // Design explorations under /lab render full-bleed, without the site chrome.
-  const isLab = router.pathname.startsWith("/lab");
+  // These pages render full-bleed, without the old site chrome.
+  const isBare = ["/", "/resume"].includes(router.pathname);
 
   useEffect(() => trackErrors(), []);
 
@@ -44,7 +44,7 @@ function Root({ Component, pageProps }) {
         <link rel="icon" href="https://symbl-world.akamaized.net/i/webp/78/4c77a8fb21eeb70940ce079977345c.webp" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </Head>
-      {isLab ? (
+      {isBare ? (
         <Component {...pageProps} />
       ) : (
         <div id="root-container" className={`d-flex flex-column ${enabledBg}`}>
