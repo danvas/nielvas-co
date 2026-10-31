@@ -7,15 +7,15 @@ import styles from "../styles/lab/a-page.module.scss"
 
 export default function Custom404() {
   return (
-    <div className={`${styles.root} ${mono.className}`}>
+    <div className={`${styles.root} ${styles.notFoundPage} ${mono.className}`}>
       <Head><title>Page not found · Daniel Vasquez</title></Head>
       <div className={styles.toggle}><ThemeToggle /></div>
 
-      <main className={styles.page}>
+      <main className={styles.notFoundText}>
         <Link href="/">← Back home</Link>
         <h1 className={styles.notFound}>sorry, this page isn't found!</h1>
-        <pre className={styles.art} aria-hidden="true">{sadFace}</pre>
       </main>
+      <pre className={styles.art} aria-hidden="true">{sadFace}</pre>
     </div>
   )
 }

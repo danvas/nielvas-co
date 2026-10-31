@@ -93,25 +93,54 @@
 }
 
 .notFound {
-  margin: clamp(24px, 4vw, 40px) 0 1rem;
+  margin: 1.25rem 0 0;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
 }
 
+// The face fills the window; the message sits in the empty corner beside it.
+.notFoundPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 0;
+}
+
+.notFoundText {
+  position: absolute;
+  top: clamp(24px, 4vw, 48px);
+  left: clamp(20px, 4vw, 64px);
+}
+
 // The art is 229 columns by 125 rows, and Source Code Pro is 0.6em wide per column,
 // so sizing the font from the window keeps the whole face on screen at any size.
 .art {
+  --line-height: 1.17;
   --fit-width: calc((100vw - 2 * clamp(20px, 4vw, 64px)) / (229 * 0.6));
-  --fit-height: calc((100vh - 12rem) / 125);
-  width: fit-content;
-  margin: 0 auto;
-  overflow: hidden;
+  --fit-height: calc(100vh / (125 * var(--line-height)));
+  margin: 0;
+  overflow: visible;
   font: inherit;
   font-size: min(var(--fit-width), var(--fit-height));
-  line-height: 1;
+  font-weight: 700;
+  line-height: var(--line-height);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+// Narrow screens: the face is shorter than the window, so the text gets its own row.
+@media (max-width: 900px) {
+  .notFoundPage {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .notFoundText {
+    position: static;
+    margin-block: clamp(24px, 4vw, 48px) 1.5rem;
+  }
 }
 
 @media (max-width: 600px) {
