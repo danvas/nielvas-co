@@ -1,0 +1,51 @@
+// Both texts share one grid cell, so swapping them doesn't shift the layout.
+.location {
+  display: inline-grid;
+  outline: none;
+  cursor: default;
+
+  // Faded, the city paints above the links, so it must also stop catching clicks.
+  &:hover .city,
+  &:focus-within .city,
+  &.open .city {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover .territories,
+  &:focus-within .territories,
+  &.open .territories {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.city,
+.territories {
+  grid-area: 1 / 1;
+  transition: opacity 0.25s;
+}
+
+// Not clickable while invisible, so a first tap reveals the names rather than opening a link.
+.territories {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media print {
+  .location {
+    display: inline;
+  }
+
+  .territories {
+    display: none;
+  }
+
+  // Printing while hovered or focused must not lose the city.
+  .location .city,
+  .location:hover .city,
+  .location:focus-within .city,
+  .location.open .city {
+    opacity: 1;
+  }
+}

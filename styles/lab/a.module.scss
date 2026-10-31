@@ -1,0 +1,164 @@
+@use "a-theme";
+
+.root {
+  @include a-theme.light-tokens;
+  @include a-theme.base;
+  padding-inline: clamp(20px, 4vw, 64px);
+  padding-block: clamp(32px, 6vw, 80px);
+}
+
+// Theme set by ThemeToggle on <html data-bs-theme>, shared with the rest of the site.
+:global([data-bs-theme="dark"]) .root {
+  @include a-theme.dark-tokens;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) minmax(0, 40rem) minmax(10rem, 1fr);
+  grid-template-areas: "contact main resume";
+  gap: clamp(32px, 5vw, 80px);
+  max-width: 88rem;
+  margin-inline: auto;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.main {
+  grid-area: main;
+}
+
+.resume {
+  grid-area: resume;
+}
+
+// Side columns stay in view while the posts scroll.
+.contact,
+.resume {
+  position: sticky;
+  top: calc(env(safe-area-inset-top, 0px) + 32px);
+  align-self: start;
+}
+
+.label {
+  @include a-theme.label;
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.muted {
+  color: var(--ink-muted);
+}
+
+.links {
+  margin-bottom: 0.9rem;
+
+  li {
+    padding-block: 0.1rem;
+  }
+}
+
+.toggle {
+  @include a-theme.theme-toggle;
+}
+
+.summary {
+  margin-bottom: clamp(48px, 8vw, 96px);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.bio + .bio {
+  margin-top: 1rem;
+}
+
+.name {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 0 1.5rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--rule);
+
+  &:last-child {
+    border-bottom: 1px solid var(--rule);
+  }
+}
+
+.date {
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.postTitle {
+  font-weight: 700;
+}
+
+.readMore {
+  display: inline-block;
+  margin-top: 0.4rem;
+
+  .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+
+  &:hover .arrow {
+    transform: translateX(0.25em);
+  }
+}
+
+.entries {
+  margin-bottom: 2rem;
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.entryTitle {
+  font-weight: 700;
+}
+
+.pdf {
+  display: inline-block;
+}
+
+// Medium screens: posts on top, contact and resume side by side below.
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "main main"
+      "contact resume";
+    max-width: 44rem;
+  }
+
+  .contact,
+  .resume {
+    position: static;
+  }
+}
+
+// Phones: everything in one column.
+@media (max-width: 600px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "main"
+      "resume"
+      "contact";
+  }
+
+  .post {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

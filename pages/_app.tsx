@@ -1,8 +1,10 @@
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Script from 'next/script'
 import Navbar from "../components/NavBar"
 import Footer from "../components/Footer"
+import { trackErrors } from "../lib/analytics"
 import '../styles.scss'
 
 function Root({ Component, pageProps }) {
@@ -10,13 +12,17 @@ function Root({ Component, pageProps }) {
   const enabledBg = router.asPath === "/" ? "nv-cloud-bg" : "";
   // Design explorations under /lab render full-bleed, without the site chrome.
   const isLab = router.pathname.startsWith("/lab");
+
+  useEffect(() => trackErrors(), []);
+
   return (
     <>
       <Script
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-DFH13LLV4W">
       </Script>
       <Script
+        id="ga-config"
         strategy="afterInteractive"
       >
         {`

@@ -17,33 +17,39 @@ const ThemeIcon = ({ theme }: { theme: string }) => {
   }
 }
 
+const getPreferredTheme = () => {
+  const storedTheme = localStorage.getItem('theme')
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+
+  return storedTheme ?? systemTheme
+}
+
 const ThemeToggle = () => {
   const [theme, setTheme] = useState<string>()
 
-
-  const getPreferredTheme = () => {
-    const storedTheme = localStorage.getItem('theme')
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-
-    return storedTheme ?? systemTheme
-  }
-
-  const useSetTheme = (e) => { setTheme(e.matches ? 'dark' : 'light') }
   useEffect(() => {
-    const htmlElement = document.querySelectorAll('[data-bs-theme]')[0] as HTMLElement;
-    htmlElement.dataset.bsTheme = (theme ?? getPreferredTheme())
-    localStorage.setItem('theme', (theme ?? getPreferredTheme()))
-    setTheme(theme ?? getPreferredTheme())
+    setTheme(getPreferredTheme())
+    // Follow the system only until the user picks a theme. Besides real changes, this
+    // event fires around printing, which renders in light mode, and must not override a choice.
+    const onSystemChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light')
+    }
     const matchMediaScheme = window.matchMedia('(prefers-color-scheme: dark)')
-    matchMediaScheme.addEventListener('change', useSetTheme)
+    matchMediaScheme.addEventListener('change', onSystemChange)
 
     return () => {
-      matchMediaScheme.removeEventListener('change', useSetTheme)
+      matchMediaScheme.removeEventListener('change', onSystemChange)
     }
+  }, [])
+
+  useEffect(() => {
+    if (theme) document.documentElement.dataset.bsTheme = theme
   }, [theme])
 
   const onClickToggler = () => {
-    setTheme(theme == 'dark' ? 'light' : 'dark')
+    const next = theme == 'dark' ? 'light' : 'dark'
+    localStorage.setItem('theme', next)
+    setTheme(next)
   }
 
   return (

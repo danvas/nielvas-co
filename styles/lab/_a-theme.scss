@@ -1,0 +1,79 @@
+// Shared palette and base styles for design A pages (/lab/a and /lab/a/resume).
+
+@mixin light-tokens {
+  --ink: #1b1b1d;
+  --ink-muted: rgba(27, 27, 29, 0.55);
+  --rule: rgba(27, 27, 29, 0.12);
+  --bg: #faf9f6;
+}
+
+@mixin dark-tokens {
+  --ink: #e8e6e1;
+  --ink-muted: rgba(232, 230, 225, 0.55);
+  --rule: rgba(232, 230, 225, 0.16);
+  --bg: #111214;
+  color-scheme: dark;
+}
+
+// Paper: plain black on white regardless of the screen theme.
+@mixin print-tokens {
+  --ink: #000;
+  --ink-muted: #555;
+  --rule: #ccc;
+  --bg: #fff;
+  color-scheme: light;
+}
+
+@mixin base {
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 0.9rem;
+  line-height: 1.6;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--rule);
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 0.2s;
+
+    &:hover {
+      text-decoration-color: currentColor;
+    }
+  }
+
+  // :where() keeps this reset at low specificity so classes can set margins.
+  :where(ul, ol) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Theme toggle pinned to the top-right corner of the screen. The background keeps it
+// legible when content scrolls beneath it.
+@mixin theme-toggle {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  right: calc(env(safe-area-inset-right, 0px) + 12px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--bg);
+
+  @media print {
+    display: none;
+  }
+}
+
+@mixin label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-muted);
+}
