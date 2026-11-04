@@ -69,10 +69,12 @@ const hasEdits = (edits: Edits) =>
 // Markup is in reading order (title → company · dates → bullets) so resume parsers
 // (ATS) extract each entry correctly; the on-screen year column is placed by CSS grid.
 function Resume() {
+  // Fixed time zone so the build server and every visitor's browser show the same date.
   const lastModified = new Date(cv.lastModified).toLocaleDateString("en-CA", {
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "America/Vancouver",
   })
 
   const [edits, setEdits] = useState<Edits>({})
