@@ -61,11 +61,24 @@ jobs:
     needs: sync
     runs-on: ubuntu-latest
     environment: staging
+    env:
+      # The site's second distribution; skipped while the secret is unset.
+      DISTRIBUTION_2: ${{ secrets.DISTRIBUTION_2 }}
     steps:
       - name: Invalidate CloudFront distro
         uses: chetan/invalidate-cloudfront-action@v2
         env:
           DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
+          PATHS: "/*"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ vars.AWS_REGION }}
+
+      - name: Invalidate second CloudFront distro
+        if: ${{ env.DISTRIBUTION_2 != '' }}
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ env.DISTRIBUTION_2 }}
           PATHS: "/*"
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
