@@ -1,7 +1,7 @@
 {
   "experience": [
 {
-      "description": "Own end-to-end development of 3D tooling for apparel Design & Development, partnering with designers, product managers, and backend engineers to turn workflow pain points into DCC plugins and automated rendering pipelines that get products development-ready earlier in the line cycle.\nDriving a modular redesign of the asset processing platform, separating Blender, VStitcher, and Illustrator domains with tests, documentation, and CI, so the product can be extended and maintained without cross-team handoffs.\nServed as lead engineer overseeing delivery of an Illustrator plugin with broad, company-wide adoption, guiding scope, technical direction, and release alongside cross-functional stakeholders.",
+      "description": "Diagnosed a 2.3× render slowdown after a Blender major-version upgrade on EC2 GPU render nodes and fixed a latent GPU misconfiguration, producing 1.5× faster render times than before the upgrade.\nOwn end-to-end development of 3D tooling for apparel Design & Development, partnering with designers, product managers, and backend engineers to turn workflow pain points into DCC plugins and automated rendering pipelines that get products development-ready earlier in the line cycle.\nDesigned a DCC-agnostic Python framework for validating assets with TOML-declared rules and structured JSON reports, allowing vendors and designers to catch non-compliant assets before they enter the rendering pipeline, enforcing quality standards early.\nDriving a modular redesign of the asset processing platform, separating Blender, VStitcher, and Illustrator domains with tests, documentation, and CI, so the product can be extended and maintained without cross-team handoffs.\nServed as lead engineer overseeing delivery of an Illustrator plugin with broad, company-wide adoption, guiding scope, technical direction, and release alongside cross-functional stakeholders.",
       
       "endDate": "Present",
       "title": "Senior Software Engineer",
@@ -43,7 +43,7 @@
       "endDate": "March 2025",
       "startDate": "March 2024",
       "title": "Technical Artist II",
-      "description": "Designed new data types and implemented a camera system in Frostbite to streamline artist tools, enabling cross-functional teams to iterate faster on character reviews.\nWrote DCC and CLI tooling to automate content integration, accelerating productivity for Live Service game content, closely collaborating with Engineers, Art Directors, and Development Directors.\nWrote Python scripts to extract and transform data from game assets into structured datasets for strategic analysis.",
+      "description": "Designed new data types and implemented an artist-friendly camera system in Frostbite to streamline the character review process and enable cross-functional teams to iterate on designs faster.\nBuilt DCC and CLI tooling to automate content integration, accelerating productivity for Live Service game content, closely collaborating with Engineers and Art Directors.\nWrote pandas/Python scripts to extract, clean, and transform data from game assets into structured datasets for strategic analysis.",
       "url": "https://ea.com",
       "duration": "1 year 0 months",
       "location": "Vancouver, British Columbia, Canada",
@@ -74,7 +74,7 @@
         "MaxScript"
       ],
       "duration": "3 years 5 months",
-      "description": "Led R&D to develop a feature for collaboratively viewing and annotating 3D models on a web frontend, integrated in an established DAM system.\nCollaborated with backend engineers to build a compute graph framework on AWS EC2, designed for scalable rendering and processing of 3D assets on the cloud.\nWrote Python scripts for an ETL pipeline to migrate thousands of 3D assets from SharePoint to DAM.",
+      "description": "Led R&D to develop a feature for collaboratively viewing and annotating 3D models on a web frontend, integrated in an established DAM system.\nCollaborated with backend engineers to build a distributed compute graph framework on AWS EC2 for scalable batch rendering and processing of 3D assets.\nWrote Python scripts for an ETL pipeline to migrate thousands of 3D assets from SharePoint to DAM.",
       "startDate": "July 2019",
       "url": "https://lfxdigital.com/",
       "endDate": "December 2022",
@@ -100,7 +100,7 @@
     {
       "company": "MPC",
       "startDate": "May 2014",
-      "description": "Lead developer of a Python API for high-throughput image processing in a panoramic stitching pipeline, resulting in a publication at SIGGRAPH 2015.",
+      "description": "Lead developer of a Python API for high-throughput image processing in a panoramic stitching pipeline for Nuke, resulting in a publication at SIGGRAPH 2015.",
       "url": "https://www.mpcvfx.com",
       "title": "Software Engineer",
       "endDate": "August 2015",
@@ -253,9 +253,9 @@
       "fieldOfStudy": "Honours Biochemistry"
     }
   ],
-  "technologies": "Python, JavaScript, TypeScript, C++, Bash, PowerShell, HTML, CSS, React.js, Next.js, Three.js, Autodesk Maya, Blender, Photoshop, Frostbite Engine, Git, Perforce, FastAPI, Flask, AWS S3/EC2, GCP, Docker, GitHub Actions",
+  "technologies": "Python, JavaScript, TypeScript, C++, Bash, PowerShell, HTML, CSS, React.js, Next.js, Three.js, Autodesk Maya, Blender, Photoshop, Frostbite Engine, Git, Perforce, FastAPI, Flask, AWS S3/EC2, GCP, Docker, GitHub Actions, OOP, API design, CI/CD pipelines, ShotGrid, Nuke",
   "profile": "Self-driven software developer with a passion for creating workflow tools and pipelines for 3D artists and designers in visual effects, animation, and fashion & apparel.",
-  "highlights": "10+ years of hands-on experience building cross-platform applications designed to streamline 3D content creation in complex pipelines and workflows of all scales. Key contributor on a 3D rendering platform at a startup that was acquired by LFX Digital. Currently building working knowledge of ComfyUI and n8n for generative AI workflows and automation.",
+  "highlights": "10+ years of hands-on experience building tools, services, and automation that streamline 3D content creation in complex pipelines and workflows of all scales. Co-built a distributed compute graph framework for cloud 3D rendering at a startup acquired by LFX Digital. Exploring generative AI workflows with ComfyUI and n8n.",
   "projects": [
     {
       "subtitle": "Three.js scene for client's website ivy-energy.com",
@@ -360,7 +360,7 @@
       "title": " Armstrong Spacesuit"
     }
   ],
-  "lastModified": "2026-11-04T03:09:43.000Z",
+  "lastModified": "2026-11-04T05:37:40.000Z",
   "skills": "Full stack development, with emphasis on frontend, Object Oriented Programming, 2D/3D content creation tooling and workflows, UI design, Agile methodology, CI/CD, Writing technical & end-user documentation, Mentoring and code reviewing, Integrating RESTful APIs",
   "publications": [
     {
