@@ -1,8 +1,7 @@
 {
   "experience": [
-{
-      "description": "Diagnosed a 2.3× render slowdown after a Blender major-version upgrade on EC2 GPU render nodes and fixed a latent GPU misconfiguration, producing 1.5× faster render times than before the upgrade.\nOwn end-to-end development of 3D tooling for apparel Design & Development, partnering with designers, product managers, and backend engineers to turn workflow pain points into DCC plugins and automated rendering pipelines that get products development-ready earlier in the line cycle.\nDesigned a DCC-agnostic Python framework for validating assets with TOML-declared rules and structured JSON reports, allowing vendors and designers to catch non-compliant assets before they enter the rendering pipeline, enforcing quality standards early.\nDriving a modular redesign of the asset processing platform, separating Blender, VStitcher, and Illustrator domains with tests, documentation, and CI, so the product can be extended and maintained without cross-team handoffs.\nServed as lead engineer overseeing delivery of an Illustrator plugin with broad, company-wide adoption, guiding scope, technical direction, and release alongside cross-functional stakeholders.",
-      
+    {
+      "description": "Own end-to-end development of 2D/3D tooling, partnering with go-to-market stakeholders to turn pain points into user-friendly interfaces and automated workflows for faster, repeatable development handoffs.\nDesigned a DCC-agnostic Python framework for validating assets with TOML-declared rules and structured JSON reports, letting vendors and designers catch non-compliant assets before they enter the rendering pipeline, enforcing quality standards early.\nBuilt an MCP server that exposes the asset-validation framework to AI agents through a bridge plugin for VStitcher, letting agents run validations.\nDiagnosed and resolved a render performance regression on GPU nodes, achieving 1.5× faster renders than the previous baseline.\nTrained random forest and k-means models to predict the draping behavior of proprietary fabrics, and designed and implemented the MLOps pipeline for their training scripts.\nLed the delivery of an Illustrator plugin with broad, company-wide adoption, guiding scope, technical direction, and release alongside cross-functional stakeholders.\nLeading a redesign of our 3D rendering service to decouple runtime domains, introducing tests, documentation, and CI/CD checks to enable safer, independent changes.",
       "endDate": "Present",
       "title": "Senior Software Engineer",
       "skills": [
@@ -32,7 +31,6 @@
         "GLSL",
         "3D modelling",
         "Blender"
-        
       ],
       "url": "https://nielvas.co",
       "duration": "4 Months",
@@ -43,7 +41,7 @@
       "endDate": "March 2025",
       "startDate": "March 2024",
       "title": "Technical Artist II",
-      "description": "Designed new data types and implemented an artist-friendly camera system in Frostbite to streamline the character review process and enable cross-functional teams to iterate on designs faster.\nBuilt DCC and CLI tooling to automate content integration, accelerating productivity for Live Service game content, closely collaborating with Engineers and Art Directors.\nWrote pandas/Python scripts to extract, clean, and transform data from game assets into structured datasets for strategic analysis.",
+      "description": "Built DCC and CLI tooling to automate content integration, accelerating productivity for Live Service game content, closely collaborating with Engineers and Art Directors.\nDesigned new data types and implemented an artist-friendly camera system in Frostbite to streamline the character review process and enable cross-functional teams to iterate on designs faster.\nWrote pandas/Python scripts to extract, clean, and transform data from game assets into structured datasets for strategic analysis.",
       "url": "https://ea.com",
       "duration": "1 year 0 months",
       "location": "Vancouver, British Columbia, Canada",
@@ -74,7 +72,7 @@
         "MaxScript"
       ],
       "duration": "3 years 5 months",
-      "description": "Led R&D to develop a feature for collaboratively viewing and annotating 3D models on a web frontend, integrated in an established DAM system.\nCollaborated with backend engineers to build a distributed compute graph framework on AWS EC2 for scalable batch rendering and processing of 3D assets.\nWrote Python scripts for an ETL pipeline to migrate thousands of 3D assets from SharePoint to DAM.",
+      "description": "Led R&D to develop a feature for collaboratively viewing and annotating 3D models on a web frontend, integrated in an established DAM system.\nCollaborated with backend engineers to build a distributed compute graph framework on AWS EC2 for scalable batch rendering and processing of 3D assets.\nWrote Python ETL scripts to migrate thousands of 3D assets from SharePoint to DAM.",
       "startDate": "July 2019",
       "url": "https://lfxdigital.com/",
       "endDate": "December 2022",
@@ -253,9 +251,9 @@
       "fieldOfStudy": "Honours Biochemistry"
     }
   ],
-  "technologies": "Python, JavaScript, TypeScript, C++, Bash, PowerShell, HTML, CSS, React.js, Next.js, Three.js, Autodesk Maya, Blender, Photoshop, Frostbite Engine, Git, Perforce, FastAPI, Flask, AWS S3/EC2, GCP, Docker, GitHub Actions, OOP, API design, CI/CD pipelines, ShotGrid, Nuke",
+  "technologies": "Python, C#, C++, DCC tool development, Autodesk Maya, Photoshop, Blender, Frostbite Engine, Perforce, Git, ShotGrid, Nuke, OOP, API design, CI/CD pipelines, Bash, PowerShell, JavaScript, TypeScript, HTML, CSS, React.js, Next.js, Three.js, FastAPI, Flask, AWS S3/EC2, GCP, Docker, GitHub Actions",
   "profile": "Self-driven software developer with a passion for creating workflow tools and pipelines for 3D artists and designers in visual effects, animation, and fashion & apparel.",
-  "highlights": "10+ years of hands-on experience building tools, services, and automation that streamline 3D content creation in complex pipelines and workflows of all scales. Co-built a distributed compute graph framework for cloud 3D rendering at a startup acquired by LFX Digital. Exploring generative AI workflows with ComfyUI and n8n.",
+  "highlights": "10+ years of hands-on experience shipping content creation tools, rendering pipelines, backend services, and API integrations designed to streamline workflows for cross-functional production teams in games, visual effects, and apparel. Built Frostbite and DCC tooling at Electronic Arts, and co-built a distributed compute graph framework for cloud 3D rendering at a startup acquired by LFX Digital. Uses agentic coding workflows daily.",
   "projects": [
     {
       "subtitle": "Three.js scene for client's website ivy-energy.com",
@@ -360,8 +358,8 @@
       "title": " Armstrong Spacesuit"
     }
   ],
-  "lastModified": "2026-11-04T05:37:40.000Z",
-  "skills": "Full stack development, with emphasis on frontend, Object Oriented Programming, 2D/3D content creation tooling and workflows, UI design, Agile methodology, CI/CD, Writing technical & end-user documentation, Mentoring and code reviewing, Integrating RESTful APIs",
+  "lastModified": "2026-11-25T06:04:50.000Z",
+  "skills": "Python, C++, JavaScript, TypeScript, Bash, Git, Linux/UNIX, SQL, Object-Oriented Design (OOP), REST API design, CI/CD pipelines, DCC plugin development, BSDF-based shaders, texture mapping, Physically-Based Rendering, Autodesk Maya, Blender, Frostbite Engine, ShotGrid, Nuke, Three.js, AWS S3/EC2, Docker, Full Stack web development, Writing technical & end-user documentation, Mentoring and code reviewing",
   "publications": [
     {
       "title": "Roundshot Pipeline at MPC for \"Godzilla\"",
@@ -373,7 +371,7 @@
         }
       ],
       "details": "For \"Godzilla\" and many upcoming films at MPC, hundreds of panoramic images were acquired and a proper pipeline was needed to supply departments with quick previews and automated stitching. We were tasked with capturing and recreating many on-set locations. Roundshots are panoramic images captured on set for use in compositing, lighting and environments.\nAccurate incorporation and interpretation of the captured images for use in film is essential to maintain the visual and spatial information as well as to better accommodate creative direction. Several new processes were required to update MPC's pipeline to accommodate a large amount of data with a dynamic workflow. With such a broad array of images, a combination of automation and stakeholder visibility were needed to use them effectively.",
-      "detailsResume": "Automated a high-throughput panoramic image stitching pipeline and quick-preview tools for feature films (Godzilla), streamlining environmental ingestion for compositing and lighting teams.",
+      "detailsResume": "Automated a high-throughput panoramic image stitching pipeline and quick-preview tools for feature films, streamlining environmental ingestion for compositing and lighting teams.",
       "date": "July 31, 2015",
       "url": "https://dl.acm.org/citation.cfm?id=2792565"
     }
