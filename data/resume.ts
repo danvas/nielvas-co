@@ -10,7 +10,7 @@ export const publications = cv.publications
 export const currentTitle =
   experiences[0]?.endDate === "Present" ? experiences[0].title : "Software Engineer"
 
-export const skills = cv.technologies.split(",").map((s) => s.trim()).filter(Boolean)
+export const skills = cv.skills.split(",").map((s) => s.trim()).filter(Boolean)
 
 export const yearOf = (date?: string | number) => (date ? String(date).split(" ").pop() : "")
 
